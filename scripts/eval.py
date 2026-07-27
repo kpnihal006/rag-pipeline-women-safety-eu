@@ -111,7 +111,16 @@ _JUDGE_SYSTEM = (
 
 
 def llm_judge(question: str, expected: str, generated: str) -> tuple[str, str]:
-    """Return (verdict, reason). verdict is 'PASS' or 'FAIL'."""
+    """Return (verdict, reason). verdict is 'PASS' or 'FAIL'.
+
+    An empty or whitespace-only answer short-circuits to FAIL without consulting
+    the judge. This is not an optimisation: the local judge model rates a
+    whitespace-only answer as PASS, so routing blanks through it would award
+    credit for producing nothing.
+    """
+    if not generated or not generated.strip():
+        return "FAIL", "Empty answer."
+
     client = _get_openai_client()
     prompt = (
         f"Question: {question}\n\n"

@@ -31,6 +31,8 @@ dependencies = [
     "botbuilder-integration-aiohttp>=4.17.1",
     "botbuilder-schema>=4.17.1",
     "ngrok>=1.7.0",
+    # Report -> PDF rendering (scripts/make_pdf.py)
+    "markdown>=3.5",
 ]
 
 [tool.pytest.ini_options]

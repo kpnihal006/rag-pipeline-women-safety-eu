@@ -51,7 +51,12 @@ from scripts.chunk import load_artifacts, retrieve  # noqa: E402
 
 DATA_DIR = Path(os.environ.get("PDF_OUTPUT_DIR", "data"))
 
-DEFAULT_MODELS = ["llama3.1:8b", "qwen3.5:4b", "qwen3.5:9b"]
+#: Candidates that actually emit an answer. qwen3.5:2b and qwen3.5:4b are
+#: excluded deliberately: both are reasoning models that consume an entire
+#: 800-token budget on internal reasoning and return an empty string, so they
+#: cannot be compared on answer quality at any practical budget. That is a
+#: finding, not a configuration error — see the report.
+DEFAULT_MODELS = ["llama3.1:8b", "gemma4:e4b", "qwen3.5:9b"]
 
 _ANSWER_SYSTEM = """\
 You answer questions about EU women's safety law using ONLY the passages given.
@@ -101,12 +106,20 @@ def has_citation(answer: str) -> bool:
     return bool(re.search(r"\.pdf|page\s+\d+|\[\d+\]|source", answer, re.IGNORECASE))
 
 
+#: Reasoning models (the qwen3.5 family) spend their budget on internal
+#: reasoning before emitting anything. At max_tokens=400 qwen3.5:4b consumed the
+#: entire budget and returned an EMPTY string, which scored groundedness 0.00
+#: and silently invalidated its whole column. A budget large enough for the
+#: reasoning plus the answer is required for the comparison to be meaningful.
+MAX_ANSWER_TOKENS = 1500
+
+
 def ask(client, model: str, question: str, context: str) -> tuple[str, float, dict]:
     t0 = time.perf_counter()
     resp = client.chat.completions.create(
         model=model,
         temperature=0,
-        max_tokens=400,
+        max_tokens=MAX_ANSWER_TOKENS,
         messages=[
             {"role": "system", "content": _ANSWER_SYSTEM},
             {"role": "user",
@@ -122,6 +135,12 @@ def ask(client, model: str, question: str, context: str) -> tuple[str, float, di
 
 
 def judge(client, model: str, question: str, expected: str, got: str) -> str:
+    # An empty or whitespace-only answer is a failure by definition. It must
+    # never reach the judge: the local judge rates "   " as PASS, so asking it
+    # would silently award credit for producing nothing.
+    if not got or not got.strip():
+        return "FAIL"
+
     resp = client.chat.completions.create(
         model=model, temperature=0, max_tokens=8,
         messages=[
@@ -200,8 +219,13 @@ def main() -> None:
                 continue
             verdict = judge(client, judge_model, it["question"],
                             it["expected_answer"], answer)
+            if not answer.strip():
+                print(f"  [{n}] EMPTY answer from {model} "
+                      f"({usage['completion_tokens']} completion tokens spent)")
+
             recs.append({
                 "id": it.get("id", f"q{n:02d}"),
+                "empty": not answer.strip(),
                 "sub_type": it.get("sub_type", ""),
                 "verdict": verdict,
                 "grounded": round(groundedness(answer, ctx), 4),
@@ -222,6 +246,7 @@ def main() -> None:
             "pass_rate": round(sum(r["verdict"] == "PASS" for r in recs) / n, 4),
             "groundedness": round(sum(r["grounded"] for r in recs) / n, 4),
             "citation_rate": round(sum(r["cited"] for r in recs) / n, 4),
+            "empty_answers": sum(r["empty"] for r in recs),
             "median_latency_s": round(
                 sorted(r["latency_s"] for r in recs)[n // 2], 2),
             "mean_completion_tokens": round(
@@ -234,12 +259,12 @@ def main() -> None:
     print("GENERATION MODEL COMPARISON — identical retrieved context")
     print("=" * 78)
     print(f"  {'model':<16}{'pass':>8}{'grounded':>11}{'cited':>8}"
-          f"{'median s':>10}{'out tok':>9}")
-    print("  " + "-" * 74)
+          f"{'median s':>10}{'out tok':>9}{'empty':>7}")
+    print("  " + "-" * 81)
     for r in sorted(rows, key=lambda x: -x["pass_rate"]):
         print(f"  {r['model']:<16}{r['pass_rate']:>7.1%}{r['groundedness']:>11.3f}"
               f"{r['citation_rate']:>7.1%}{r['median_latency_s']:>10.1f}"
-              f"{r['mean_completion_tokens']:>9.0f}")
+              f"{r['mean_completion_tokens']:>9.0f}{r['empty_answers']:>7}")
     print("=" * 78)
     print(f"  n = {rows[0]['n'] if rows else 0} questions · judge = {judge_model}")
     print("  Retrieval held identical across all conditions.")

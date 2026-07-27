@@ -116,3 +116,39 @@ class TestQueryMatching:
         q = query_identifiers("what happens in 2027?")
         score = identifier_overlap(q, extract_metadata(SAMPLE))
         assert 0.0 < score <= 1.0
+
+
+class TestIdentifierBoostWiring:
+    """The boost must actually be reachable from retrieval.
+
+    An earlier version of this project documented an identifier boost that was
+    never wired into `retrieve()` — the functions existed and were unit-tested,
+    but nothing called them. These tests pin the wiring, not just the maths.
+    """
+
+    def test_retrieve_accepts_the_boost_parameter(self):
+        import inspect
+        from scripts.chunk import retrieve
+
+        assert "identifier_boost" in inspect.signature(retrieve).parameters
+
+    def test_retrieve_actually_calls_the_overlap_function(self):
+        import inspect
+        from scripts.chunk import retrieve
+
+        src = inspect.getsource(retrieve)
+        assert "identifier_overlap" in src
+        assert "query_identifiers" in src
+
+    def test_default_weight_is_on_the_cross_encoder_scale(self):
+        from scripts.chunk import IDENTIFIER_BOOST
+
+        # Cross-encoder logits span roughly [-11, 11]; a sub-1.0 weight is inert.
+        assert IDENTIFIER_BOOST >= 3.0
+
+    def test_bm25_indexes_the_metadata_header_when_present(self):
+        import inspect
+        from scripts.chunk import load_artifacts
+
+        # Indexing only `text` leaves the metadata header invisible to BM25.
+        assert "embed_text" in inspect.getsource(load_artifacts)
