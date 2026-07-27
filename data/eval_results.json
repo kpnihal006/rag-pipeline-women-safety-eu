@@ -1,6 +1,6 @@
 {
   "run_info": {
-    "timestamp": "2026-07-27T18:25:37.323123+00:00",
+    "timestamp": "2026-07-27T21:33:13.991031+00:00",
     "questions_file": "data/questions.json",
     "total": 20,
     "cost_usd": 0.16544845,
@@ -8,7 +8,7 @@
   },
   "summary": {
     "retrieval_hit_rate": 0.5333333333333333,
-    "generation_pass_rate": 0.5333333333333333,
+    "generation_pass_rate": 0.4666666666666667,
     "failures": [
       {
         "id": "q01",
@@ -16,7 +16,7 @@
         "category": "",
         "difficulty": "hard",
         "failure_type": "retrieval_miss",
-        "judge_reason": "The generated answer is incomplete as it fails to provide the exact deadline of 14 June 2027 for transposition and does not mention the evaluation deadline of 14 June 2032."
+        "judge_reason": "The generated answer correctly captures the key facts from the expected answer regarding the deadline for EU Member States to transpose the Directive and the year marking the conclusion of the Commission's evaluation of its impact."
       },
       {
         "id": "q02",
@@ -24,7 +24,7 @@
         "category": "",
         "difficulty": "hard",
         "failure_type": "generation_error",
-        "judge_reason": "The generated answer does not address the question and fails to provide the required information about Condition (d) from the Digital Services Act."
+        "judge_reason": "The generated answer incorrectly states that there is no mention of a condition (d), when in fact it should have stated that the specific information about condition (d) is not available, but still acknowledged the existence of conditions (a), (b), and (c) as mentioned in the excerpt."
       },
       {
         "id": "q03",
@@ -32,7 +32,15 @@
         "category": "",
         "difficulty": "hard",
         "failure_type": "generation_error",
-        "judge_reason": "The generated answer does not address the question and fails to provide any relevant information about the 2024 VAW Directive or its relationship with the Digital Services Act."
+        "judge_reason": "The generated answer fails to address the specific question about how the 2024 VAW Directive (Article 14) utilizes the Digital Services Act to mitigate harm, instead providing unrelated information about the DSA's requirements for very large online platforms and risk assessments."
+      },
+      {
+        "id": "q05",
+        "question": "In the tracking of EU gender equality expenditure, what specifically distinguishes 'Score 1' from 'Score 2' interventions according to the Commission's methodology?",
+        "category": "",
+        "difficulty": "medium",
+        "failure_type": "generation_error",
+        "judge_reason": "The generated answer incorrectly states that it does not explicitly state the distinction between Score 1 and Score 2, but then goes on to provide information about Score 0*, which is a different category altogether, and fails to address the specific question of what distinguishes 'Score 1' from 'Score 2' interventions."
       },
       {
         "id": "q06",
@@ -40,7 +48,7 @@
         "category": "",
         "difficulty": "hard",
         "failure_type": "retrieval_miss",
-        "judge_reason": "The generated answer does not address the question and fails to provide any relevant information about the exception clause in the Digital Services Act."
+        "judge_reason": "The generated answer fails to address the question by stating that the information is unavailable, rather than providing a description of the exception clause."
       },
       {
         "id": "q07",
@@ -48,7 +56,7 @@
         "category": "",
         "difficulty": "hard",
         "failure_type": "retrieval_miss",
-        "judge_reason": "The generated answer accurately captures the key facts from the expected answer, including the reason for the decrease in total expenditure and the increase in the proportion of funding for gender equality."
+        "judge_reason": "The generated answer correctly captures that the proportion of funding directed towards gender equality increased despite a decrease in total expenditure, but fails to explicitly state the specific reason provided for the decrease in total expenditure as mentioned in the expected answer."
       },
       {
         "id": "q08",
@@ -56,7 +64,15 @@
         "category": "",
         "difficulty": "hard",
         "failure_type": "retrieval_miss",
-        "judge_reason": "The generated answer does not provide the required comparison of the median CARE survey duration for Sweden and Malta."
+        "judge_reason": "The generated answer incorrectly states that there is no information about Sweden and Malta, when in fact the expected answer provides specific median duration times for both countries."
+      },
+      {
+        "id": "q10",
+        "question": "Is mandatory mediation allowed by the EU in domestic violence cases? Resolve this using the Istanbul Convention and the practices of the EESC as described in the sources.",
+        "category": "",
+        "difficulty": "hard",
+        "failure_type": "generation_error",
+        "judge_reason": "The generated answer fails to directly address the question of whether mandatory mediation is allowed by the EU in domestic violence cases, instead providing a vague response and some tangentially related information that does not conclusively resolve the issue."
       },
       {
         "id": "q12",
@@ -64,7 +80,15 @@
         "category": "",
         "difficulty": "hard",
         "failure_type": "retrieval_miss",
-        "judge_reason": "The generated answer does not address the fine limitations for each article as required; it focuses on limitation periods instead of the percentage caps on fines."
+        "judge_reason": "The generated answer fails to address the key facts from the expected answer, instead providing irrelevant information and attempting to shift the responsibility to the questioner rather than directly answering the comparison between fine limitations for infringing 'relevant provisions' versus providing 'misleading information'."
+      },
+      {
+        "id": "q13",
+        "question": "What percentage of stalking victims in the EU-GBV survey reported having to change their 'telephone number, email address or social networking account' as a consequence?",
+        "category": "",
+        "difficulty": "medium",
+        "failure_type": "generation_error",
+        "judge_reason": "The generated answer is incomplete because it does not accurately capture the key fact that one in three stalking victims had to change their telephone number, email address or social networking account, as stated in the expected answer, due to conflicting information from different sources."
       },
       {
         "id": "q14",
@@ -72,7 +96,7 @@
         "category": "",
         "difficulty": "hard",
         "failure_type": "retrieval_miss",
-        "judge_reason": "The generated answer incorrectly states that the toolkit includes \"exposure to harassment\" without clarifying that it specifically falls under the 'Working Conditions' factor and does not address the distinction between this and the 'Effort' factor."
+        "judge_reason": "The generated answer accurately identifies that 'exposure to harassment' falls under the 'Working Conditions' factor, specifically citing relevant information from the provided document."
       },
       {
         "id": "q15",
@@ -80,7 +104,7 @@
         "category": "",
         "difficulty": "medium",
         "failure_type": "retrieval_miss",
-        "judge_reason": "The generated answer correctly identifies manual dexterity as a skill and references the EU toolkit's classification, addressing the distinction between skill and physical exertion."
+        "judge_reason": "The generated answer accurately quotes the EU toolkit and interprets it correctly to conclude that manual dexterity is indeed considered a skill, specifically a learned one."
       }
     ]
   },
@@ -89,15 +113,15 @@
       "id": "q01",
       "question": "What is the exact deadline for EU Member States to transpose Directive (EU) 2024/1385, and what specific year marks the conclusion of the Commission's evaluation of its impact?",
       "expected_answer": "Member States must transpose the Directive by 14 June 2027. The Commission is required to carry out an evaluation of the Directive’s impact by 14 June 2032.",
-      "answer": "The exact deadline for EU Member States to transpose Directive (EU) 2024/1385 is 2027. The excerpts state: \"Member states have until 2027 to transpose into national law.\" \n\nHowever, the specific year that marks the conclusion of the Commission's evaluation of its impact is not mentioned in the excerpts. Therefore, that specific information is not available in the corpus.",
+      "answer": "Yes.\n\nThe excerpt states: \"Member states have until 2027 to transpose into national law. Directive 2024/1385 full text PDF — EUR-Lex binding · cyberviolence · 2027 deadline · FGM · forced marriage\" (women_safety_EU_RAG_resources (1).pdf p.2)\n\nThe excerpt also states: \"Checks on the transposition of the VAW Directive will not begin before 14 June 2027, following the expiry of the transposition period.\" (48802978de.pdf p.99)",
       "category": "",
       "difficulty": "hard",
       "sub_type": "temporal",
       "na": false,
       "retrieval_content_hit": false,
       "retrieval_source_hit": false,
-      "judge_verdict": "FAIL",
-      "judge_reason": "The generated answer is incomplete as it fails to provide the exact deadline of 14 June 2027 for transposition and does not mention the evaluation deadline of 14 June 2032.",
+      "judge_verdict": "PASS",
+      "judge_reason": "The generated answer correctly captures the key facts from the expected answer regarding the deadline for EU Member States to transpose the Directive and the year marking the conclusion of the Commission's evaluation of its impact.",
       "failure_type": "retrieval_miss",
       "contexts": [
         "Obliges all member states to ensure 24/7 helplines, shelters, specialist support. Implements and reinforces the Istanbul Convention. Member states have until 2027 to transpose into national law. Directive 2024/1385 full text PDF — EUR-Lex binding · cyberviolence · 2027 deadline · FGM · forced marriage EU Strategy EU Gender Equality Strategy 2020–2025 European Commission — flagship 5-year policy framework Sets ending GBV as a top priority alongside the pay gap, care work and leadership. Covers prevention, protection, prosecution and integrated services. Established the 116 016 EU-wide helpline. Key strategic layer for your RAG. commission.europa.eu — Strategy page + PDF policy roadmap · 2020–2025 · 116 016 helpline\n\n2.",
@@ -123,7 +147,7 @@
         {
           "source": "annual_report_GE_2023_web_EN.pdf",
           "page": 27,
-          "score": 4.473133563995361
+          "score": 4.473133087158203
         },
         {
           "source": "48802978de.pdf",
@@ -133,7 +157,7 @@
         {
           "source": "annual_report_GE_2023_web_EN.pdf",
           "page": 46,
-          "score": 4.385934829711914
+          "score": 4.385933876037598
         },
         {
           "source": "48802978de.pdf",
@@ -156,7 +180,7 @@
       "id": "q02",
       "question": "Under Article 5 of the Digital Services Act (Regulation EU 2022/2065), what is the 'Condition (d)' required for a provider of caching services to qualify for a liability exemption?",
       "expected_answer": "Condition (d) requires that the provider does not interfere with the lawful use of technology, widely recognised and used by industry, to obtain data on the use of the information.",
-      "answer": "This specific information is not available in the corpus.",
+      "answer": "This specific information is not available in the corpus.\n\nThe excerpt [CELEX_32022R2065_EN_TXT.pdf p.44] mentions Article 5, but it only lists three conditions: (a) does not modify the information; (b) complies with conditions on access to the information; and (c) complies with rules regarding the updating of the information. There is no mention of a condition (d).",
       "category": "",
       "difficulty": "hard",
       "sub_type": "exact_term",
@@ -164,7 +188,7 @@
       "retrieval_content_hit": true,
       "retrieval_source_hit": false,
       "judge_verdict": "FAIL",
-      "judge_reason": "The generated answer does not address the question and fails to provide the required information about Condition (d) from the Digital Services Act.",
+      "judge_reason": "The generated answer incorrectly states that there is no mention of a condition (d), when in fact it should have stated that the specific information about condition (d) is not available, but still acknowledged the existence of conditions (a), (b), and (c) as mentioned in the excerpt.",
       "failure_type": "generation_error",
       "contexts": [
         "Second, Regulation (EU) 2022/2065 of the European Parliament and of the Council of\n19 October 2022 on a Single Market For Digital Services and amending Directive 2000/31/EC (Digital Services Act) (DSA)159 imposes several obligations on providers of intermediary services, including online platforms, with the aim to prevent illegal and harmful activities online and the spread of disinformation, as well as to ensure user safety, protect fundamental rights of users in the EU, and create a fair and open digital environment.",
@@ -205,7 +229,7 @@
         {
           "source": "eu-gender-based-violence-survey-evidence-for-policy-and-practice_4.pdf",
           "page": 123,
-          "score": 2.659968376159668
+          "score": 2.6599669456481934
         },
         {
           "source": "OJ_L_202401385_EN_TXT.pdf",
@@ -223,7 +247,7 @@
       "id": "q03",
       "question": "If an online platform facilitates the 'non-consensual sharing of intimate or manipulated material,' how does the 2024 VAW Directive (Article 14) utilize the Digital Services Act to mitigate harm?",
       "expected_answer": "The Directive works in synergy with the DSA to ensure Member States have measures to promptly remove or disable access to such material. Specifically, it empowers judicial authorities to order providers of intermediary services to act against cyber violence on their platforms.",
-      "answer": "This specific information is not available in the corpus.",
+      "answer": "This specific information is not available in the corpus.\n\nHowever, I can provide some related information. The excerpts mention that:\n\n* The Digital Services Act (Regulation EU 2022/2065) requires very large online platforms to conduct risk assessments examining illegal content dissemination and potential impacts on human dignity (Article 34(1)).\n* Providers of very large online platforms should diligently meet all their obligations under this Regulation in respect of illegal content constituting cyber violence, including non-consensual sharing of intimate or manipulated material (CELEX_32022R2065_EN_TXT.pdf p.24).\n* Major platforms (Instagram, YouTube, Google) must assess and mitigate cyber-violence risks under the DSA (women_safety_EU_RAG_resources (1).pdf p.6).\n\nHowever, there is no direct mention of Article 14 of the 2024 VAW Directive utilizing the Digital Services Act to mitigate harm in the provided excerpts.",
       "category": "",
       "difficulty": "hard",
       "sub_type": "multi_hop",
@@ -231,17 +255,17 @@
       "retrieval_content_hit": true,
       "retrieval_source_hit": false,
       "judge_verdict": "FAIL",
-      "judge_reason": "The generated answer does not address the question and fails to provide any relevant information about the 2024 VAW Directive or its relationship with the Digital Services Act.",
+      "judge_reason": "The generated answer fails to address the specific question about how the 2024 VAW Directive (Article 14) utilizes the Digital Services Act to mitigate harm, instead providing unrelated information about the DSA's requirements for very large online platforms and risk assessments.",
       "failure_type": "generation_error",
       "contexts": [
         "x [crim_hom_vrel].\n12 See report by Security Hero from 2023.\n13 Non-consensual sharing of intimate or manipulated material, cyber stalking, cyber harassment and cyber incitement to violence or hatred. 3 transposition as swiftly as possible (deadline: 14 June 2027) and the effective implementation thereafter, including by organising implementation workshops and bilateral exchanges. Particular attent",
         "Such systems should include user reporting mechanisms and collaboration with ‘trusted flaggers’. The legislation specifically targets very large online platforms distributing pornographic content, requiring them to ensure that victims of non-consensual intimate-image sharing can effectively request content removal through expedited processing and prompt action (recital 87). Under Article 34(1), very large online platforms must also conduct risk assessments examining illegal content dissemination and potential impacts on human dignity. However, while the DSA sets out to advance responses to harmful and illegal content online, its impact in practice in relation to cyberstalking – particularly regarding its impact on women – requires further assessment.",
         "Providers of very large online platforms, in particular those primarily used for the dissemination to the public of pornographic content, should diligently meet all their obligations under this Regulation in respect of illegal content constituting cyber violence, including illegal pornographic content, especially with regard to ensuring that victims can effectively exercise their rights in relation to content representing non-consensual sharing of intimate or manipulated material through the rapid processing of notices and removal of such content without undue delay. Other types of illegal content may require longer or shorter timelines for processing of notices, which will depend on the facts, circumstances and types of illegal content at hand.",
         "If you move countries, your protection order still applies. Contact your country's national helpline (116 016 or country-specific number) as a first step. consilium.europa.eu — EU measures & EPO guidance EPO · reporting · cross-border · police · barring orders Online safety Protecting yourself from cyberviolence — platform tools and your DSA rights Digital Services Act (Regulation EU 2022/2065) — in force 2024 Major platforms (Instagram, YouTube, Google) must assess and mitigate cyber-violence risks under the DSA. You can report non-consensual image sharing, online stalking and harassment via standardised platform mechanisms. Platforms must act quickly. Directive 2024/1385 specifically criminalises these forms of cyberviolence at EU level.",
+        "If women share intimate pictures of themselves with someone, they are at least partially responsible if the image is shared online without their consent’ (Q3_3)). The correlation between the Gender Equality Index 2024 and the statement on the non-consensual sharing of images further reflects on harassment and abuse against women in cyberspace. Figure 21 portrays a highly negative correlation, following a similar trend to previous statements. Although in general agreement with this statement seems to be higher than with previous ones, the levels of agreement range from 29 % to 74 % across Member States.",
         "Article 5 Non-consensual sharing of intimate or manipulated material\n1. Member States shall ensure that the following intentional conduct is punishable as a criminal offence:\n(a) making accessible to the public, by means of information and communication technologies (‘ICT’), images, videos or similar material depicting sexually explicit activities or the intimate parts of a person, without that person’s consent, where such conduct is likely to cause serious harm to that person; (b) producing, manipulating or altering and subsequently making accessible to the public, by means of ICT, images, videos or similar material making it appear as though a person is engaged in sexually explicit activities, without that person’s consent, where such conduct is likely to cause serious harm to that person; (c) threatening to engage in the conduct referred to in point (a) or (b) in order to coerce a person to do, acquiesce to or refrain from a certain act.",
         "11 See Intentional homicide victims by victim-offender relationship and sex [crim_hom_vrel]. 12 See report by Security Hero from 2023. 13 Non-consensual sharing of intimate or manipulated material, cyber stalking, cyber harassment and cyber incitement to violence or hatred.",
-        "118 particularly given that former male partners account for a substantial proportion of perpetrators of unauthorised GPS tracking and non-consensual intimate-content sharing. Current risk assessment mechanisms for very large online platforms should address the interconnected nature of cyberviolence affecting women – of all ages, but young women and girls in particular – with attention paid to stalking behaviours, of which many incidents occur online.",
-        "In other words, deepfakes of a sexual or intimate nature are a harmful and fast-growing form of violence against women. The provisional agreement on the Commission proposal for Directive combating vio­ lence against women and domestic violence also lays down common rules on the definition of the following of­ fences across the EU: non-consensual sharing of intimate or manipulated material, cyber-stalking, cyber harassment, cyberflashing and misogynistic hate speech. The Directive will complement the AI ACT and the DSA through specific provisions. For example, whereas the AI Act deals with deep­ fakes in general, the VAW-DV Directive explicitly criminalises the non-consensual sharing of material that make it appear someone is engaged in sexually explicit activities."
+        "118 particularly given that former male partners account for a substantial proportion of perpetrators of unauthorised GPS tracking and non-consensual intimate-content sharing. Current risk assessment mechanisms for very large online platforms should address the interconnected nature of cyberviolence affecting women – of all ages, but young women and girls in particular – with attention paid to stalking behaviours, of which many incidents occur online."
       ],
       "retrieved_sources": [
         {
@@ -252,17 +276,22 @@
         {
           "source": "eu-gender-based-violence-survey-evidence-for-policy-and-practice_4.pdf",
           "page": 22,
-          "score": 3.071678638458252
+          "score": 3.0716781616210938
         },
         {
           "source": "CELEX_32022R2065_EN_TXT.pdf",
           "page": 24,
-          "score": 2.6443421840667725
+          "score": 2.644340753555298
         },
         {
           "source": "women_safety_EU_RAG_resources (1).pdf",
           "page": 6,
-          "score": 2.1210379600524902
+          "score": 2.1210381984710693
+        },
+        {
+          "source": "gender-equality-index-2024-tackling-violence-against-women-tackling-gender-inequalities.pdf",
+          "page": 58,
+          "score": 1.7466177940368652
         },
         {
           "source": "OJ_L_202401385_EN_TXT.pdf",
@@ -278,11 +307,6 @@
           "source": "eu-gender-based-violence-survey-evidence-for-policy-and-practice_4.pdf",
           "page": 120,
           "score": 1.0670571327209473
-        },
-        {
-          "source": "2024 Report on Gender Equality in the EU_coming soon.pdf",
-          "page": 13,
-          "score": 1.0208396911621094
         }
       ]
     },
@@ -290,7 +314,7 @@
       "id": "q04",
       "question": "Which three specific grounds allow the Commission to reopen proceedings under Article 71(2) of the Digital Services Act after commitments have been made binding?",
       "expected_answer": "Proceedings may be reopened where: (a) there has been a material change in any of the facts on which the decision was based; (b) the provider acts contrary to its commitments; or (c) the decision was based on incomplete, incorrect, or misleading information provided by the platform or a relevant person.",
-      "answer": "The three specific grounds that allow the Commission to reopen proceedings under Article 71(2) of the Digital Services Act are:\n\n1. \"where there has been a material change in any of the facts on which the decision was based;\"\n2. \"where the provider of the very large online platform or of the very large online search engine concerned acts contrary to its commitments;\"\n3. \"where the decision was based on incomplete, incorrect or misleading information provided by the provider of the very large online platform or of the very large online search engine concerned or other person referred to in Article 67(1).\"",
+      "answer": "Yes.\n\nThe excerpt states: \"The Commission may, upon request or on its own initiative, reopen the proceedings:\n(a) where there has been a material change in any of the facts on which the decision was based;\n(b) where the provider of the very large online platform or of the very large online search engine concerned acts contrary to its commitments;\nor (c) where the decision was based on incomplete, incorrect or misleading information provided by the provider of the very large online platform or of the very large online search engine concerned or other person referred to in Article 67(1).\"",
       "category": "",
       "difficulty": "hard",
       "sub_type": "multi_part",
@@ -298,17 +322,17 @@
       "retrieval_content_hit": true,
       "retrieval_source_hit": true,
       "judge_verdict": "PASS",
-      "judge_reason": "The generated answer accurately lists the three specific grounds for reopening proceedings and provides the necessary details as outlined in the expected answer.",
+      "judge_reason": "The generated answer accurately reproduces the three specific grounds for reopening proceedings under Article 71(2) of the Digital Services Act, as stated in the expected answer.",
       "failure_type": null,
       "contexts": [
         "Article 71 Commitments\n1. If, during proceedings under this Section, the provider of the very large online platform or of the very large online search engine concerned offers commitments to ensure compliance with the relevant provisions of this Regulation, the Commission may by decision make those commitments binding on the provider of the very large online platform or of the very large online search engine concerned and declare that there are no further grounds for action. 2.",
         "2. The Commission may, upon request or on its own initiative, reopen the proceedings:\n(a) where there has been a material change in any of the facts on which the decision was based; (b) where the provider of the very large online platform or of the very large online search engine concerned acts contrary to its commitments; or (c) where the decision was based on incomplete, incorrect or misleading information provided by the provider of the very large online platform or of the very large online search engine concerned or other person referred to in Article 67(1). 3.",
         "The Digital Services Coordinators shall, without undue delay after being informed of initiation of the proceedings, transmit to the Commission any information they hold about the infringement at stake. The initiation of proceedings pursuant to paragraph 1 of this Article by the Commission shall relieve the Digital Services Coordinator, or any competent authority where applicable, of its powers to supervise and enforce provided for in this Regulation pursuant to Article 56(4). 3. In the exercise of its powers of investigation under this Regulation the Commission may request the individual or joint support of any Digital Services Coordinators concerned by the suspected infringement, including the Digital Services Coordinator of establishment.",
-        "Second, Regulation (EU) 2022/2065 of the European Parliament and of the Council of\n19 October 2022 on a Single Market For Digital Services and amending Directive 2000/31/EC (Digital Services Act) (DSA)159 imposes several obligations on providers of intermediary services, including online platforms, with the aim to prevent illegal and harmful activities online and the spread of disinformation, as well as to ensure user safety, protect fundamental rights of users in the EU, and create a fair and open digital environment.",
         "In this context, the Commission organised the first ever Digital Services Act stakeholder event in June 2023 to engage with platform representatives, policymakers, and industry experts28. One of the panels considered whether the EU is\n26\t Regulation (EU) 2022/1925 of the European Parliament and of the Council of 14 September 2022 on contestable and fair markets in the digital sector and amending Directives (EU) 2019/1937 and (EU) 2020/1828 (Digital Markets Act), OJ L 265, 12.10.2022, p. 1-66.",
         "022/2065 of the European Parliament and of the Council of 19 October 2022 on a Single Market For Digital Services and amending Directive 2000/31/EC (Digital Services Act) (OJ L 277, 27.10.2022, p. 1). obligations of monitoring or active fact-finding and with the specific requirements of that Regulation regarding orders to remove illegal online content.\n(53) Measures which aim to promptly remove mat",
         "175 For more information: EU sectoral social partners join forces to counter third-party violence and harassment related to work with updated Guidelines - European Commission. 176 See: Commission publishes guidelines on the protection of minors | Shaping Europe’s digital future and Communication from the Commission - Guidelines on measures to ensure a high level of privacy, safety and security for minors online, pursuant to Article 28(4) of Regulation (EU) 2022/2065\n177 See: Codes of conduct under the Digital Services Act",
-        "gress on the commitments made by the Member States and disbursements from the Facil­ ity are conditional upon the fulfilment of legally binding milestones and targets. For this purpose, the Commission 54 adopted in November 2021 rules setting out common indicators on which Member States have to report twice\n212\tCommission Delegated Regulation (EU) 2021/2106 of 28 September 2021 on supplementing Reg"
+        "gress on the commitments made by the Member States and disbursements from the Facil­ ity are conditional upon the fulfilment of legally binding milestones and targets. For this purpose, the Commission 54 adopted in November 2021 rules setting out common indicators on which Member States have to report twice\n212\tCommission Delegated Regulation (EU) 2021/2106 of 28 September 2021 on supplementing Reg",
+        "The Com­ mission will monitor progress on the commitments made by the Member States and disbursements from the Facil­ ity are conditional upon the fulfilment of legally binding milestones and targets. For this purpose, the Commission"
       ],
       "retrieved_sources": [
         {
@@ -324,12 +348,7 @@
         {
           "source": "CELEX_32022R2065_EN_TXT.pdf",
           "page": 89,
-          "score": 1.9366836547851562
-        },
-        {
-          "source": "48802978de.pdf",
-          "page": 59,
-          "score": -2.7905125617980957
+          "score": 1.9366834163665771
         },
         {
           "source": "2024 Report on Gender Equality in the EU_coming soon.pdf",
@@ -339,7 +358,7 @@
         {
           "source": "OJ_L_202401385_EN_TXT.pdf",
           "page": 9,
-          "score": -3.6214075088500977
+          "score": -3.6214072704315186
         },
         {
           "source": "48802978de.pdf",
@@ -350,6 +369,11 @@
           "source": "annual_report_GE_2022_printable_EN.pdf",
           "page": 55,
           "score": -4.08278751373291
+        },
+        {
+          "source": "annual_report_GE_2022_printable_EN.pdf",
+          "page": 55,
+          "score": -4.142098903656006
         }
       ]
     },
@@ -357,16 +381,16 @@
       "id": "q05",
       "question": "In the tracking of EU gender equality expenditure, what specifically distinguishes 'Score 1' from 'Score 2' interventions according to the Commission's methodology?",
       "expected_answer": "'Score 2' interventions are those whose principal objective is to improve gender equality, while 'Score 1' interventions have gender equality as an important and deliberate objective, but not as the main reason for the intervention.",
-      "answer": "According to the Commission's methodology, 'Score 1' interventions are defined as \"interventions having gender equality as an important and deliberate objective (but not as the main reason for the intervention),\" while 'Score 2' interventions are those \"whose principal objective is to improve gender equality.\" This distinction highlights that Score 1 interventions prioritize gender equality but do not make it their primary aim, whereas Score 2 interventions are specifically focused on enhancing gender equality as their main goal.",
+      "answer": "The excerpts do not explicitly state the distinction between Score 1 and Score 2 interventions in terms of their objectives or characteristics. They only mention that Score 2 interventions have gender equality as their principal objective (Excerpt [2024 Report on Gender Equality in the EU_coming soon.pdf p.64]).\n\nHowever, they do provide information about what distinguishes Score 0* from other scores: Score 0* is for interventions with the potential to contribute to gender equality (Excerpt [2024 Report on Gender Equality in the EU_coming soon.pdf p.64]).",
       "category": "",
       "difficulty": "medium",
       "sub_type": "exact_term",
       "na": false,
       "retrieval_content_hit": true,
       "retrieval_source_hit": false,
-      "judge_verdict": "PASS",
-      "judge_reason": "The generated answer accurately captures the key facts from the expected answer, clearly distinguishing between 'Score 1' and 'Score 2' interventions.",
-      "failure_type": null,
+      "judge_verdict": "FAIL",
+      "judge_reason": "The generated answer incorrectly states that it does not explicitly state the distinction between Score 1 and Score 2, but then goes on to provide information about Score 0*, which is a different category altogether, and fails to address the specific question of what distinguishes 'Score 1' from 'Score 2' interventions.",
+      "failure_type": "generation_error",
       "contexts": [
         "See Cohesion policy: supporting gender equality | Data | European Structural and Investment Funds (europa.eu) to gender equality255. Thanks to more granular reporting, interventions that fall into the 0* category have been pro­ gressively re-evaluated and re-assigned to the appropri­ ate scores. As a result, in the DB2024 (reporting on 2022 expenditures), the percentage of expenditure with score\n0* decreased from 95% in DB2023 (reporting on 2021 expenditures) to 73%, and several shared management programmes under cohesion policy256 were reported on at a higher level of granularity (Common Provisions Regula­ tion programmes). In 2023, the Commission continued the pilot project to explore how to further reinforce the gender dimension into EU spending programmes.",
         "The proposed Performance Regulation makes gender equality a horizontal principle for most EU funding programmes, including the National and Regional Partnership Plans. The Performance Regulation also introduces a consistent framework for mainstreaming gender equality across the budget, through a methodology to track EU expenditure supporting gender equality and through disaggregation by gender of performance indicators. The Commission intends to present technical guidance on the tracking methodology by the end of 202647. Moreover, gender equality will continue to be addressed in the European Semester, to identify and tackle pressing gender equality challenges.",
@@ -432,7 +456,7 @@
       "retrieval_content_hit": false,
       "retrieval_source_hit": true,
       "judge_verdict": "FAIL",
-      "judge_reason": "The generated answer does not address the question and fails to provide any relevant information about the exception clause in the Digital Services Act.",
+      "judge_reason": "The generated answer fails to address the question by stating that the information is unavailable, rather than providing a description of the exception clause.",
       "failure_type": "retrieval_miss",
       "contexts": [
         "Where they use automated means for that processing or decision-making, they shall include information on such use in the notification referred to in paragraph 5. Article 17 Statement of reasons\n1. Providers of hosting services shall provide a clear and specific statement of reasons to any affected recipients of the service for any of the following restrictions imposed on the ground that the information provided by the recipient of the service is illegal content or incompatible with their terms and conditions:\n(a) any restrictions of the visibility of specific items of information provided by the recipient of the service, including removal of content, disabling access to content, or demoting content; (b) suspension, termination or other restriction of monetary payments; (c) suspension or termination of the provision of the service in whole or in part; (d) suspension or termination of the recipient of the service's account.",
@@ -491,7 +515,7 @@
       "id": "q07",
       "question": "In the 2024 EU budget reporting, what specific reason was provided for the decrease in total expenditure supporting gender equality compared to 2023, and how did the proportion of funding change?",
       "expected_answer": "The total expenditure was lower mainly due to the phasing out of Recovery and Resilience Facility (RRF) commitments. However, the proportion of funding directed towards gender equality actually increased to 19.5%.",
-      "answer": "The specific reason provided for the decrease in total expenditure supporting gender equality in the 2024 EU budget compared to 2023 is the \"phasing out of the Recovery and Resilience Facility commitments in 2024, which accounted for EUR 8.4 billion.\" However, despite the lower total expenditure, \"the proportion of funding directed towards gender equality increased,\" with 19.5% of the EU budget in 2024 contributing to promoting gender equality, up from 11% in 2023.",
+      "answer": "The excerpt states: \"While the total expenditure supporting gender equality is lower in 2024, the proportion of funding directed towards gender equality increased.\" \n\nThis implies that the proportion of funding for gender equality increased despite a decrease in the total expenditure. The specific reason provided for the decrease in total expenditure was not explicitly stated in this passage, but it mentions \"mainly due to the phasing out of the Recovery and Resilience Facility commitments in 2024, which accounted for EUR 8.4 billion.\"",
       "category": "",
       "difficulty": "hard",
       "sub_type": "temporal",
@@ -499,7 +523,7 @@
       "retrieval_content_hit": false,
       "retrieval_source_hit": true,
       "judge_verdict": "PASS",
-      "judge_reason": "The generated answer accurately captures the key facts from the expected answer, including the reason for the decrease in total expenditure and the increase in the proportion of funding for gender equality.",
+      "judge_reason": "The generated answer correctly captures that the proportion of funding directed towards gender equality increased despite a decrease in total expenditure, but fails to explicitly state the specific reason provided for the decrease in total expenditure as mentioned in the expected answer.",
       "failure_type": "retrieval_miss",
       "contexts": [
         "43 This figure is lower than the EUR 48 billion reported for 2023, mainly due to the phasing out of the Recovery and Resilience Facility commitments in 2024, which accounted for EUR 8.4 billion underscores 1 and 2 in\n2023. While the total expenditure supporting gender equality is lower in 2024, the proportion of funding directed towards gender equality increased. 44 Gender equality mainstreaming - European Commission\n45 For more information regarding the EU’s proposal for the 2028-2034 MFF, see here. 46 Financial regulation applicable to the general budget of the Union (recast), available at: https://op.europa.eu/en/publication-detail/-/publication/990fe2a6-8f52-11ef-a130-01aa75ed71a1/language-en. 47 Article 33.3 of the Regulation (EU, Euratom) 2024/2509.",
@@ -509,7 +533,7 @@
         "In 2023, the Commission continued the pilot project to explore how to further reinforce the gender dimension into EU spending programmes. One specific issue was the analysis of gender-related data, the exploration of critical data gaps, their ringfencing and proposing how to improve them. Looking at the current reporting exercise for the Budget 2025 preparation, DGs/Services are instructed to make further advancements in gender reporting, in par­ ticular in reducing the EU budget expenditure under score\n0*. As novelty, this year they are requested to include in the Programme Performance Statements (PPS) of the fund­ ing programmes all available gender-disaggregated data relevant to assess the promotion of gender equality by the programme.",
         "In 2023, the Commission took further steps to make the gender dimension a more promi­ nent part of its funding programmes253. In line with the Gender Equality Strategy 2020-2025 and the mandate received to implement it by means of the interinstitutional agreement accompanying the 2021-2027 Multiannual Financial Framework (MFF), the Commission has developed a methodology to track all EU spend­ ing programmes’ contributions to gender equality254. The methodology, a work in progress, was implemented in a pilot in the 2023 Draft Budget (DB2023) and again for the\n2024 Draft Budget (DB2024) and it is currently being im­ plemented in reporting exercise for the 2025 Draft Budget (DB 2025).",
         "The methodology was piloted in the 2023 draft budget200 and found that 11 spending programmes contribute to gender equality and 29 programmes have the potential to do so if adequately gender mainstreamed (for a total of 99% of budgetary spending). By contrast, only 8 out of 48 spending programmes (1% of budgetary spending) have no significant impact on gender equality. The Commission also launched in 2022 a pilot project to explore how to mainstream gender equality in spending programmes that have the potential to do so. 2022 also marked the first full year of implementing the national recovery and resilience plans (RRPs)201 which were adopted under the Regulation establishing the Re­ covery and Resilience Facility (RRF).",
-        "The EU took a number of initiatives during\n2022 to support progress on gender equality. Further, the Commission has launched several actions to help those fleeing Russia’s war of aggression against Ukraine, most of them women and children, integrate into their host Member States (see Chapter 5). CLOSING GENDER GAPS IN THE LABOUR MARKET In 2022, the long-standing challenges related to women’s labour market participation continued. These are illustrated by the persistent labour market gender gaps with regard to employment, care, pay and pensions. The 2021 European Pillar of Social Rights action plan37 set the goal of halving the gender employment gap (compared with 2019) as one of the necessary avenues to reach the target of an overall employment rate of 78 % by 2030."
+        "The proposed Performance Regulation makes gender equality a horizontal principle for most EU funding programmes, including the National and Regional Partnership Plans. The Performance Regulation also introduces a consistent framework for mainstreaming gender equality across the budget, through a methodology to track EU expenditure supporting gender equality and through disaggregation by gender of performance indicators. The Commission intends to present technical guidance on the tracking methodology by the end of 202647. Moreover, gender equality will continue to be addressed in the European Semester, to identify and tackle pressing gender equality challenges."
       ],
       "retrieved_sources": [
         {
@@ -530,12 +554,12 @@
         {
           "source": "2024 Report on Gender Equality in the EU_coming soon.pdf",
           "page": 64,
-          "score": 5.064289093017578
+          "score": 5.06428861618042
         },
         {
           "source": "2024 Report on Gender Equality in the EU_coming soon.pdf",
           "page": 64,
-          "score": 4.323880672454834
+          "score": 4.323879241943359
         },
         {
           "source": "2024 Report on Gender Equality in the EU_coming soon.pdf",
@@ -545,12 +569,12 @@
         {
           "source": "annual_report_GE_2023_web_EN.pdf",
           "page": 58,
-          "score": 2.7858376502990723
+          "score": 2.785837411880493
         },
         {
-          "source": "annual_report_GE_2023_web_EN.pdf",
-          "page": 17,
-          "score": 2.3402276039123535
+          "source": "gender-equality-strategy-2026-2030.pdf",
+          "page": 20,
+          "score": 1.508363962173462
         }
       ]
     },
@@ -558,7 +582,7 @@
       "id": "q08",
       "question": "Compare the median CARE survey duration (2nd wave) for respondents in Sweden and Malta.",
       "expected_answer": "The median duration for Sweden was 12 minutes and 21 seconds, while for Malta it was 14 minutes and 13 seconds.",
-      "answer": "This specific information is not available in the corpus.",
+      "answer": "According to [care-survey-second-wave.pdf p.28], the median duration times ranged from 11 minutes and 5 seconds in Belgium to 18 minutes and 15 seconds in Cyprus.\n\nUnfortunately, there is no specific information about the median CARE survey duration (2nd wave) for respondents in Sweden or Malta. The excerpt only provides a range of durations for different Member States, but does not specify the exact values for Sweden and Malta.\n\nThis question is too broad to answer precisely. Could you be more specific?",
       "category": "",
       "difficulty": "hard",
       "sub_type": "table_list",
@@ -566,7 +590,7 @@
       "retrieval_content_hit": false,
       "retrieval_source_hit": true,
       "judge_verdict": "FAIL",
-      "judge_reason": "The generated answer does not provide the required comparison of the median CARE survey duration for Sweden and Malta.",
+      "judge_reason": "The generated answer incorrectly states that there is no information about Sweden and Malta, when in fact the expected answer provides specific median duration times for both countries.",
       "failure_type": "retrieval_miss",
       "contexts": [
         "More details about the survey methodology can be found in the technical report. Table 1. Key differences in approach between the first and second waves Aspect First wave Second wave Survey mode Mixed-mode: CAWIs in most Member States, computerassisted telephone interviews in Luxembourg and Malta Single-mode: CAWIs (online only) in all Member States Sample size in Cyprus, Luxembourg,\n500 respondents Increased to 1 000 respondents Age range (years) Varied: 16–64 in Romania; 16+ in Luxembourg and Malta; some respondents over 74 included Harmonised: 16–74 across all Member States; no respondents under 16 or over 74 included Panels used in Luxembourg and Relied on telephone interviews (random digit dialling sampling) Used additional online panels to meet quotas Stratification method Not specified or limited in small Member States Used lowest administrative units in Cyprus, Luxembourg and Malta for better representativeness Targeted recruitment of subgroups Limited or not systematic Promoted the survey in social media groups targeting parents, informal long-term caregivers and migrants Language options Limited to official languages of the Member State Available in all EU languages (except Irish) plus Catalan and Russian, regardless of respondent location Weighting strategy General weighting according to key sociodemographic variables Revised to include specific weights for long-term carers and parents of children under 12 The second wave questionnaire was refined in close collaboration with the European Commission’s Directorate-General for Justice and Consumers, the Directorate-General for Employment, Social Affairs and Inclusion and other relevant stakeholders to align with key EU\n\nAspect: Survey mode, First wave: Mixed-mode: CAWIs in most Member States, computerassisted telephone interviews in Luxembourg and Malta, Second wave: Single-mode: CAWIs (online only) in all Member States Aspect: Sample size in Cyprus, Luxembourg, Malta, First wave: 500 respondents, Second wave: Increased to 1 000 respondents Aspect: Age range (years), First wave: Varied: 16–64 in Romania; 16+ in Luxembourg and Malta; some respondents over 74 included, Second wave: Harmonised: 16–74 across all Member States; no respondents under 16 or over 74 included Aspect: Panels used in Luxembourg and Malta, First wave: Relied on telephone interviews (random digit dialling sampling), Second wave: Used additional online panels to meet quotas Aspect: Stratification method, First wave: Not specified or limited in small Member States, Second wave: Used lowest administrative units in Cyprus, Luxembourg and Malta for better representativeness Aspect: Targeted recruitment of subgroups, First wave: Limited or not systematic, Second wave: Promoted the survey in social media groups targeting parents, informal long-term caregivers and migrants Aspect: Language options, First wave: Limited to official languages of the Member State, Second wave: Available in all EU languages (except Irish) plus Catalan and Russian, regardless of respondent location Aspect: Weighting strategy, First wave: General weighting according to key sociodemographic variables, Second wave: Revised to include specific weights for long-term carers and parents of children under 12",
@@ -576,7 +600,7 @@
         "92 Annex 1: Survey methodology The survey covered the working-age population (16- to 74-year-olds) in all 27 EU Member States through non-probability online panels. It used computer-assisted web interviews (CAWIs) and resulted in a total sample of 65 202 respondents aged 16–74. The methodology of the second wave of the CARE Survey remained largely consistent with the first wave, with several targeted improvements introduced to enhance data quality, representativeness and comparability across Member States (see Table 1). More details about the survey methodology can be found in the technical report. Table 1.",
         "Conducted across all 27 EU Member States, the survey reached more than 65 000 respondents aged 16–74 years, making it one of the most comprehensive surveys of care and time use in Europe. The second wave raised the bar in several ways. •\t Broader scope. Twelve new questions were introduced, addressing emerging policy priorities. •\t Single data collection mode. Data was collected exclusively through computer-assisted web interviews, ensuring greater comparability. •\t Bigger reach. Sample sizes were expanded in smaller Member States for more reliable results. •\t More voices included. Special efforts were made to target under-represented groups, such as parents of young children, informal long-term carers and migrants.",
         "• Figures from the Crime Survey for England and Wales (formerly the British Crime Survey) for a 12-month period based on self-completion responses from a sample of 46,000 women and men, found that 18 % of women have experienced some form of stalking since the age of 16 (in comparison with 10 % of men).7 The FRA survey found that 19 % of women in the United Kingdom have experienced stalking since the age of 15. • In Malta, a 2011 report on the findings from a survey of 1,200 female respondents found that 16 % said they had experienced physical violence, sexual violence or both by a current or former partner since the age of 15.8 The FRA survey found that 15 % of women in Malta have experienced physical and/or sexual violence by a current or a previous partner since the age of 15.",
-        "However, the majority of women in Romania (74 %), the Czech Republic (75 %), Bulgaria (56 %) and Greece (53 %) have not heard of any of the institutions or services asked about in the questionnaire. In contrast,\n79 % of women surveyed in Malta, 71 % of women in Cyprus and 58 % of women in Portugal are aware of all three national support services, and only 2 % of women in Denmark, 5 % of women in Sweden and 4 % of women in the Netherlands are not aware of any of\n33 In Greece, only two services were listed. 83: 59\n83: 6\n83: 6\n83: 7"
+        "Overall, 8.6 % are unemployed and 7.2  % are students. The lowest shares of women in paid work are in Croatia (36.6 %), Romania (39.1  %) and Spain (39.1  %), and the highest are in Sweden (65.6 %), Finland (59.5 %) and the Netherlands (58.7 %). Malta has the highest share of home makers (41.2 % of women). Croatia has the highest share of women who self-declare as unemployed (19.5 %). Denmark has the most students (18.3 %) and Hungary (27.5 %) the highest share of retired women or women who say they are unable to work. According to the survey, the highest level of education that 42.9 % of respondents have achieved is secondary education, 20.3  % have completed tertiary education and 36.3 % have not completed more than primary education (Table A2.6)."
       ],
       "retrieved_sources": [
         {
@@ -616,8 +640,8 @@
         },
         {
           "source": "fra-2014-vaw-survey-main-results-apr14_en.pdf",
-          "page": 164,
-          "score": -2.6119019985198975
+          "page": 182,
+          "score": -3.100327730178833
         }
       ]
     },
@@ -625,7 +649,7 @@
       "id": "q09",
       "question": "Identify the four specific anthropometric dimensions evaluated in the early 2024 study on the inclusiveness of machinery standards mentioned in the 2024 Report on Gender Equality.",
       "expected_answer": "The dimensions are: i) anthropometric coverage, ii) statistical inclusiveness, iii) data transparency, and iv) data representativeness.",
-      "answer": "The four specific anthropometric dimensions evaluated in the early 2024 study on the inclusiveness of machinery standards are: i) anthropometric coverage, ii) statistical inclusiveness, iii) data transparency, and iv) data representativeness. The excerpt states: \"The study’s main deliverable is a list of the assessed standards prioritised according to the need to update them to improve their inclusiv[ity].\"",
+      "answer": "The excerpt states: \"The study’s main deliverable is a list of the assessed standards prioritised according to the need to update them to improve their inclusiv... The four dimensions used for this assessment are: i) anthropometric coverage, ii) statistical inclusiveness, iii) data transparency, and iv) data representativeness.\"",
       "category": "",
       "difficulty": "hard",
       "sub_type": "multi_part",
@@ -633,7 +657,7 @@
       "retrieval_content_hit": true,
       "retrieval_source_hit": true,
       "judge_verdict": "PASS",
-      "judge_reason": "The generated answer correctly lists the four specific anthropometric dimensions as stated in the expected answer.",
+      "judge_reason": "The generated answer accurately reproduces the exact same four specific anthropometric dimensions mentioned in the expected answer.",
       "failure_type": null,
       "contexts": [
         "In early 2024, the Commission published a study239 on the inclusiveness of anthropometric provisions in har­ monised European standards240. The study assessed the harmonised standards for 22 pieces of EU legislation in the policy area of machinery and equipment241. This assessment aimed to determine whether the standards that have an anthropometric dimension sufficiently consider the diversity of the European population, including factors such as gender and age, and the various anthropometric measurements (e.g. height, weight and strength).",
@@ -642,8 +666,8 @@
         "14 Standards need to be inclusive of the whole EU population, including women. The Commission will further promote inclusive standard-setting by supporting the creation of a representative data sample of the EU population and building on the study on the inclusiveness of anthropometrics in European harmonised standards. In the context of the upcoming European Product Act, the Commission will strive to promote the full diversity of the EU population by addressing gender-specific elements in relevant sectoral legislations, notably in standard setting. It will also encourage the European Standardisation System to adequately account for elements that have a direct impact on women and will continue promoting equal representation of women in the governance of European Standardisation Organisations.",
         "most significant differences in acceptability were chosen, to indicate the clearest results. The four selected statements (31) were picked because they had the greatest gap between lowest and highest acceptability in Member States, which enabled a stronger analysis. Each of these four statements demonstrated a negative correlation between the Gender Equality Index 2024 scores and acceptability or agreement, with Pearson coefficients of less than – 0.5. This indicates that in countries with higher Gender Equality Index scores, there is a lower acceptance of or agreement with statements that imply violence or control, proving a good argument to support the initial hypothesis. This outcome reinforces the negative relationship between gender equality and tolerance for violence-related attitudes.",
         "The revised Index for 2025 opens a new chapter, setting a new baseline for gender equality that is no longer comparable with the previous Index scores. With a refreshed structure and new data sources, the Index continues to track six key dimensions defining our everyday lives: work, money, knowledge, time, power and health. In addition, it retains two critical domains that cut across all areas: violence and intersecting inequalities. Based on 27 carefully selected indicators, the Gender Equality Index 2025 aligns with major EU gender equality policies and responds directly to policymaker needs. It offers a powerful tool to explore and compare how inequalities affect our lives at work, at home or in public life, and to propel action for a more equal Europe.",
-        "EIGE's 2025 Index flags climate as an accelerating factor for gender inequality. An emerging but critical dimension for any future-oriented RAG. OHCHR — CEDAW General Recommendation 37 climate · disaster · displacement · emerging · intersecting crises Workplace ILO C190 transposition tracker + ERA Zero-Tolerance Code of Conduct (2024) ILO / European Research Area Forum — 2024 Monitors EU member state ratification of ILO C190 (currently 12/27 states). ERA Forum developed a Zero-tolerance code on GBV and sexual harassment in research institutions in 2024. Signals the expanding scope of women's safety law into workplace and academic settings.",
-        "The structure of the composite measure, the concepts measured and specific indicators are presented in Table 3. The calculation of the composite measure for 2024 differs in several ways from the calculation carried out in 2017 due to slight differences in methodologies between the EU-wide survey on violence against women carried out in 2012 by the European Union Agency for Fundamental Rights and the EU GBV survey (2021 wave) (10). These differences are mentioned in Table 3 and are further explained in Annex 1. 29"
+        "It aggregates indicators into subdomains using the arithmetic mean with equal weights. Then it aggregates the subdomains into the domains using the geometric mean with equal weights. Finally, it aggregates the domains into the overall Index using the arithmetic mean and experts’ weights determined by using the participatory approach of the analytical hierarchy process (see Annex 4). At every level of aggregation (gender gaps, subdomains, domains and the overall Index) the interpretation of the scores is the same: 0 means full gender inequality and 100 means full gender equality. The revised Index for 2025 is measured on a scale of 0–100, replacing the earlier 1–100 scale. More detailed information is provided in the methodological annex and in a forthcoming methodological report.",
+        "The current weights of the Index’s core domains were obtained through an online survey consultation conducted in the last quarter of 2024. This consultation provided weights from 125 EIGE stakeholders with expertise and responsibilities in gender equality at the EU, national and international levels. The AHP is time consuming but easy to perform, even though assigning weights to a complex phenomenon such as gender equality is not an easy task. It is a process that combines qualitative elements by asking for preferences between two domains and quantitative elements by assigning a score to the preference level. Individual weights were computed using Saaty’s eigenvector method, which also tests for logical consistency across comparisons (Saaty, 1990)."
       ],
       "retrieved_sources": [
         {
@@ -677,14 +701,14 @@
           "score": -1.6933964490890503
         },
         {
-          "source": "women_safety_EU_RAG_resources (1).pdf",
-          "page": 7,
-          "score": -3.008882999420166
+          "source": "gender-equality-index-2025-sharper-data-for-a-changing-world.pdf",
+          "page": 33,
+          "score": -2.2783493995666504
         },
         {
-          "source": "gender-equality-index-2024-tackling-violence-against-women-tackling-gender-inequalities.pdf",
-          "page": 30,
-          "score": -3.118802309036255
+          "source": "gender-equality-index-methodological-report.pdf",
+          "page": 34,
+          "score": -2.6515450477600098
         }
       ]
     },
@@ -692,16 +716,16 @@
       "id": "q10",
       "question": "Is mandatory mediation allowed by the EU in domestic violence cases? Resolve this using the Istanbul Convention and the practices of the EESC as described in the sources.",
       "expected_answer": "No, the Istanbul Convention (Article 48) explicitly prohibits mandatory alternative dispute resolution processes, including mediation. While the EESC allows voluntary mediation for workplace conflicts, this is without prejudice to other legal follow-up and does not override the convention's prohibition on mandatory mediation for GBV.",
-      "answer": "No, mandatory mediation is not allowed by the EU in domestic violence cases. The excerpt states: \"mandatory alternative dispute resolution processes are prohibited at the level of EU member states, including mediation and conciliation, in relation to all forms of violence covered by the convention (Article 48).\" This indicates that the EU has established a clear stance against mandatory mediation in cases of domestic violence, aligning with the principles of the Istanbul Convention.",
+      "answer": "This question is too broad to answer precisely. Could you be more specific about what you mean by \"mandatory mediation\" and how it relates to the Istanbul Convention or the practices of the EESC?\n\nHowever, I can provide some information on the Istanbul Convention's stance on mediation in domestic violence cases.\n\nThe excerpt from [48802978de.pdf p.95] mentions that the EU is prohibited from mandating alternative dispute resolution processes, including mediation and conciliation, in relation to all forms of violence covered by the convention (Article 48). \n\nAdditionally, the excerpt from [gender-equality-index-2025-sharper-data-for-a-changing-world (1).pdf p.106] states that Directive (EU) 2024/1385 on combating violence against women and domestic violence lays the foundation for more consistent protection and prevention standards.\n\nHowever, I do not have information about the EESC's practices regarding mediation in domestic violence cases.",
       "category": "",
       "difficulty": "hard",
       "sub_type": "contradictory",
       "na": false,
       "retrieval_content_hit": true,
       "retrieval_source_hit": false,
-      "judge_verdict": "PASS",
-      "judge_reason": "The generated answer accurately reflects the key facts from the expected answer, confirming that mandatory mediation is prohibited by the Istanbul Convention in domestic violence cases.",
-      "failure_type": null,
+      "judge_verdict": "FAIL",
+      "judge_reason": "The generated answer fails to directly address the question of whether mandatory mediation is allowed by the EU in domestic violence cases, instead providing a vague response and some tangentially related information that does not conclusively resolve the issue.",
+      "failure_type": "generation_error",
       "contexts": [
         "Please provide information on any legislative or other measures taken by the EU, its institutions, bodies and agencies, to ensure that – in criminal and civil law – mandatory alternative dispute resolution processes are prohibited at the level of EU member states, including mediation and conciliation, in relation to all forms of violence covered by the convention (Article 48). 237 ELI: http://data.europa.eu/eli/dec_framw/2009/829/oj\n238 Framework Decision 2008/675/JHA of 24 July 2008 on taking account of convictions in the Member States of the European Union in the course of new criminal proceedings, OJ L 220, 15.8.2008, p. 32-34, ELI: http://data.europa.eu/eli/dec_framw/2008/675/oj.",
         "The new decision notably ensures that all EU staff in Delegations have access to EEAS informal procedures in case of work-related conflicts or harassment allegations. In addition, following the recommendations from the Istanbul Task Force, it is proposed to create a single-entry point for all harassment issues and to review the Decision on Anti-harassment for EEAS statutory staff. In this context, the EEAS developed Guidance on Domestic Violence in Delegations focusing on victims (dependents and staff members) in EU Delegations where diplomatic privileges and immunities prevent local authorities from intervening in cases of domestic violence. The EEAS expects to have this in place in 2025.",
@@ -729,7 +753,7 @@
           "score": 1.33320951461792
         },
         {
-          "source": "gender-equality-index-2025-sharper-data-for-a-changing-world.pdf",
+          "source": "gender-equality-index-2025-sharper-data-for-a-changing-world (1).pdf",
           "page": 106,
           "score": 1.2603747844696045
         },
@@ -759,7 +783,7 @@
       "id": "q11",
       "question": "What's the 'only yes means yes' rule and what does it say about people just staying quiet during a sexual encounter?",
       "expected_answer": "The affirmative consent model ('only yes means yes') recognizes that the absence of a verbal 'no' is not an implicit 'yes'. It stipulates that passivity, silence, lack of protest, or lack of resistance cannot be deemed to mean consent.",
-      "answer": "The 'only yes means yes' rule, also known as the affirmative consent model, focuses on an affirmative and freely given expression of consent to determine whether a crime constitutes rape. The excerpt states: \"this approach recognises that the absence of a verbal ‘no’ is not an implicit ‘yes’, meaning that passivity, silence, lack of protest or lack of resistance cannot be deemed to mean consent.\" This means that simply staying quiet during a sexual encounter does not imply consent.",
+      "answer": "The excerpt states: \"Only 13 Member States apply the affirmative consent model, also known as the ‘only yes means yes’ model, which focuses on an affirmative and freely given expression of consent to determine whether a crime constitutes rape. In other words, this approach recognises that the absence of a verbal ‘no’ is not an implicit ‘yes’, meaning that passivity, silence, lack of protest or lack of resistance cannot be deemed to mean consent.\"",
       "category": "",
       "difficulty": "medium",
       "sub_type": "language_variation",
@@ -767,58 +791,58 @@
       "retrieval_content_hit": true,
       "retrieval_source_hit": true,
       "judge_verdict": "PASS",
-      "judge_reason": "The generated answer accurately captures the key facts from the expected answer, explaining the 'only yes means yes' rule and its implications regarding silence and consent.",
+      "judge_reason": "The generated answer accurately captures the key facts from the expected answer, including the definition and implications of the 'only yes means yes' rule.",
       "failure_type": null,
       "contexts": [
         "That is why the EU continued its efforts to get the UN Sustainable Development Goal 5 ‘Achieve gender equality and empower all women and girls’ back on track, by enhancing gender mainstreaming in its international partnerships, allocating adequate resources, and strengthening gender-transformative approaches. 2\t Only 13 Member States apply the affirmative consent model, also known as the ‘only yes means yes’ model, which focuses on an affirmative and freely given expression of consent to determine whether a crime constitutes rape. In other words, this approach recognises that the absence of a verbal ‘no’ is not an implicit ‘yes’, meaning that passivity, silence, lack of protest or lack of resistance cannot be deemed to mean consent.",
         "3 concept of positive consent (‘only yes means yes’ instead of ‘no means no’) is still not recognised by all Member States2. Gender stereotypes about the role of women in society still hold true for too many people, including gender-normative attitudes towards care and economic power. Furthermore, as we saw in 2023, women and girls remain particularly vulnerable to the consequences of war and conflict, and have also faced increased restrictions on freedom of ex­ pression and a growing backlash against women’s rights in various parts of the world.",
         "and in decision-making positions, including political representation. Violence against women, including femicide, remains common but there is no single approach across Member States. For example, the 3 concept of positive consent (‘only yes means yes’ instead of ‘no means no’) is still not recognised by all Member States2. Gender stereotypes about the role of women in society still hold true for t",
+        "The EU can only legislate on family law if there are cross-border implications. The recently adopted Commission Recommendation on integrated child protection systems225 recommends that Member States clearly set out rules on reporting cases of violence against children. If the violence involves the holder of parental responsibility, or if there could be any other conflict of interest between the child victim and the holder of parental responsibility, Member States should take account of the child’s best interests and ensure that any act requiring consent is not conditional upon the consent of the holder of parental responsibility.",
         "41 Figure 2.7: Responses on experiencing sexual violence by any partner or non-partner, by time of victimisation (%)\n89 %\n2 %\n9 % Yes, before the last 12 months Yes, in the past 12 months No Based on the experiences of all respondents (N = 42,002) since the age of 15 and in the past 12 months before the survey interview. Given the variation in legislation concerning sexual violence in the EU  Member States, some forms of sexual violence – as described in the survey – may not be criminalised equally in all Member States. In the survey, the items concerning sexual violence start with a question on forced sexual intercourse, which is criminalised variously in all EU Member States, and then proceed to cover attempted forced intercourse and other unwanted sexual activity.",
-        "8 In June 2021, Slovenia’s National Assembly adopted an Act Amending the Criminal Code. The proposed amendments supplement the criminal offences of rape and sexual violence under Articles 170 and 171 of the Criminal Code by applying the affirmative consent model (i.e. ‘yes means yes’) to the basic forms of both acts. Therefore, these acts with the use of force or threats have become qualified forms of these two criminal offences. The criminalisation of rape under the affirmative consent model also includes sexual practices involving penetration with objects. In September 2021, the Finnish government submitted a bill to Parliament to establish the post of a rapporteur on violence against women.",
-        "EU legislation prohibits sexual harassment in the context of work (including self-employment) (Directive 2006/54/EC on the implementation of the principle of equal opportunities and equal treatment of men and women in matters of employment and occupation (recast) and Directive 2010/41/EU on the application of the principle of equal treatment between men and women engaged in an activity in a self-employed capacity), vocational training and the supply of and access to goods and services (Council Directive 2004/113/EC). The Istanbul Convention requires parties to the convention to ensure that sexual harassment is a punishable offence, without distinguishing whether sexual harassment takes place at work or in another situation.",
-        "While sexual violence against women is widely considered unacceptable in the EU, myths around sexual violence are still prevalent. About 17 % of EU respondents hold the view that women often exaggerate claims of sexual abuse or rape, and 16 % believe that if under the influence of alcohol or drugs women are partially responsible for experiencing sexual violence. One in ten (9 %) agree that women often say ‘no’ to a sexual proposal but mean ‘yes’ (i.e. playing ‘hard to get’). Men and women tend to hold different views on the acceptability of violence against Studies on public perceptions of violence have consistently identified gender differences in participants’ responses. Men tend to express greater tolerance towards violence against women than women (European Commission et al., 2015).",
-        "12 acts of a sexual nature that take place without the consent of one of the people involved, stating that ‘consent must be given voluntarily as the result of the person’s free will assessed in the context of the surrounding circumstances’. The VAW Directive acknowledges that violence against women and domestic violence can be exacerbated when intersecting with discrimination based on a combination of sex and any other ground(s) of discrimination as referred to in Article 21 of the EU Charter of Fundamental Rights."
+        "e on which 10 signatories, including at least eight member States of the Council of Europe, have expressed their consent to be bound by the Convention in accordance with the provisions of paragraph 2. 23\n4 In respect of any State referred to in paragraph 1 or the European Union, which subsequently expresses its consent to be bound by it, the Convention shall enter into force on the first day of the",
+        "This serves to emphasise that violence against women cannot be condoned under any circumstances. In comparison, the criminal codes of most EU Member States contain definitions of sexual violence that afford protection not on the mere basis of a lack of consent to sexual acts but only if certain additional requirements are met. Such requirements include specific means of coercion or a particular state of dependency or defencelessness on the part of the victim, such as after the loss of consciousness. It is suggested that EU Member States review criminal law definitions providing protection against sexual violence to ensure that all forms of intentional non-consensual acts of a sexual nature are covered by criminal law definitions, in line with Article 36 of the Istanbul Convention.",
+        "51 stereotyped gender roles, mutual respect, non-violent conflict resolution in inter-personal relationships, gender-based violence against women and the right to personal integrity in formal and informal education settings in EU Member States, as required by Article 14, paragraph 1 and 2? Article 35 of the VAW Directive requires Member States to make available education material on consent that promotes the understanding that consent in sexual relationships must be given voluntarily as a result of a person’s free will, mutual respect, and the right to sexual integrity and bodily autonomy. They must adapt this material to the stage of development of the target audience. Article 34 also addresses prevention measures in the area of education."
       ],
       "retrieved_sources": [
         {
           "source": "2024 Report on Gender Equality in the EU_coming soon.pdf",
           "page": 5,
-          "score": 3.3161661624908447
+          "score": 5.176658630371094
         },
         {
           "source": "2024 Report on Gender Equality in the EU_coming soon.pdf",
           "page": 5,
-          "score": -0.8054731488227844
+          "score": 0.4665754437446594
         },
         {
           "source": "2024 Report on Gender Equality in the EU_coming soon.pdf",
           "page": 4,
-          "score": -2.1774373054504395
+          "score": 0.42124971747398376
+        },
+        {
+          "source": "48802978de.pdf",
+          "page": 88,
+          "score": -1.8542412519454956
         },
         {
           "source": "fra-2014-vaw-survey-main-results-apr14_en.pdf",
           "page": 43,
-          "score": -2.5093822479248047
+          "score": -2.2912797927856445
         },
         {
-          "source": "annual_report_GE_2022_printable_EN.pdf",
-          "page": 10,
-          "score": -3.4371438026428223
+          "source": "CETS_210.docx.pdf",
+          "page": 22,
+          "score": -2.5872364044189453
         },
         {
-          "source": "eu-gender-based-violence-survey-evidence-for-policy-and-practice_4.pdf",
-          "page": 88,
-          "score": -4.043552398681641
+          "source": "fra-2014-vaw-survey-main-results-apr14_en.pdf",
+          "page": 53,
+          "score": -2.8392579555511475
         },
         {
-          "source": "gender-equality-index-2024-tackling-violence-against-women-tackling-gender-inequalities.pdf",
-          "page": 50,
-          "score": -4.123869895935059
-        },
-        {
-          "source": "eu-gender-based-violence-survey-evidence-for-policy-and-practice_4.pdf",
-          "page": 14,
-          "score": -4.1559319496154785
+          "source": "48802978de.pdf",
+          "page": 53,
+          "score": -3.4561657905578613
         }
       ]
     },
@@ -826,7 +850,7 @@
       "id": "q12",
       "question": "In the context of the Digital Services Act, contrast the fine limitations for infringing 'relevant provisions' (Article 74(1)) versus providing 'misleading information' (Article 74(2)).",
       "expected_answer": "Fines for infringing relevant provisions or commitments cannot exceed 6% of the total worldwide annual turnover. Fines for supplying incorrect, incomplete, or misleading information cannot exceed 1% of total annual income or worldwide turnover.",
-      "answer": "To contrast the fine limitations for infringing 'relevant provisions' (Article 74(1)) versus providing 'misleading information' (Article 74(2)), we can analyze the information provided in the excerpts.\n\n1. **Infringing 'relevant provisions' (Article 74(1))**: The limitation period for the imposition of penalties is five years, as stated in the excerpt: \"The powers conferred on the Commission by Articles 74 and 76 shall be subject to a limitation period of five years.\"\n\n2. **Providing 'misleading information' (Article 74(2))**: The excerpts do not provide specific information regarding the limitation period for penalties related to providing misleading information under Article 74(2). Therefore, we cannot directly compare it to the five-year limitation for relevant provisions.\n\nBased on the available information, we can conclude that while the limitation period for infringing relevant provisions is clearly defined as five years, the specifics regarding the limitation for providing misleading information are not available in the corpus. \n\nThus, the comparison is incomplete due to the lack of information on Article 74(2).",
+      "answer": "The excerpts do not provide specific information about the fine limitations for infringing \"relevant provisions\" (Article 74(1)) versus providing \"misleading information\" (Article 74(2)). \n\nHowever, we can infer that Article 77 of Regulation (EU) 2022/2065 deals with limitation periods for imposing penalties. According to this article, the limitation period is five years, and it starts running on the day the infringement is committed.\n\nSince there's no specific information about fine limitations in Articles 74(1) or 74(2), we cannot directly compare them. \n\nHowever, Article 77 does mention that any action taken by the Commission or the Digital Services Coordinator for investigation or proceedings interrupts the limitation period. This implies that the limitation period can be suspended or extended under certain circumstances.\n\nThis question is too broad to answer precisely. Could you be more specific about what you are looking for in terms of fine limitations?",
       "category": "",
       "difficulty": "hard",
       "sub_type": "same_document",
@@ -834,17 +858,17 @@
       "retrieval_content_hit": false,
       "retrieval_source_hit": false,
       "judge_verdict": "FAIL",
-      "judge_reason": "The generated answer does not address the fine limitations for each article as required; it focuses on limitation periods instead of the percentage caps on fines.",
+      "judge_reason": "The generated answer fails to address the key facts from the expected answer, instead providing irrelevant information and attempting to shift the responsibility to the questioner rather than directly answering the comparison between fine limitations for infringing 'relevant provisions' versus providing 'misleading information'.",
       "failure_type": "retrieval_miss",
       "contexts": [
         "Article 77 Limitation period for the imposition of penalties\n1. The powers conferred on the Commission by Articles 74 and 76 shall be subject to a limitation period of five years. 2. Time shall begin to run on the day on which the infringement is committed. However, in the case of continuing or repeated infringements, time shall begin to run on the day on which the infringement ceases. 3. Any action taken by the Commission or by the Digital Services Coordinator for the purpose of the investigation or proceedings in respect of an infringement shall interrupt the limitation period for the imposition of fines or periodic penalty payments.",
         "The Digital Services Coordinator shall only extend the period where, having regard to the rights and interests of all parties affected by that restriction and all relevant circumstances, including any information that the provider of intermediary services, the addressee or addressees and any other third party that demonstrated a legitimate interest may provide to it, it considers that both of the following conditions have been met:\n(a) the provider of intermediary services has failed to take the necessary measures to terminate the infringement; (b) the temporary restriction does not unduly restrict access to lawful information by recipients of the service, having regard to the number of recipients affected and whether any adequate and readily accessible alternatives exist.",
         "Actions which interrupt the limitation period shall include, in particular, the following:\n(a) requests for information by the Commission or by a Digital Services Coordinator; (b) inspection; (c) the opening of a proceeding by the Commission pursuant to Article 66(1). 4. Each interruption shall start time running afresh. However, the limitation period for the imposition of fines or periodic penalty payments shall expire at the latest on the day on which a period equal to twice the limitation period has elapsed without the Commission having imposed a fine or a periodic penalty payment. That period shall be extended by the time during which the limitation period has been suspended pursuant to paragraph 5. 5.",
         "Second, Regulation (EU) 2022/2065 of the European Parliament and of the Council of\n19 October 2022 on a Single Market For Digital Services and amending Directive 2000/31/EC (Digital Services Act) (DSA)159 imposes several obligations on providers of intermediary services, including online platforms, with the aim to prevent illegal and harmful activities online and the spread of disinformation, as well as to ensure user safety, protect fundamental rights of users in the EU, and create a fair and open digital environment.",
-        "022/2065 of the European Parliament and of the Council of 19 October 2022 on a Single Market For Digital Services and amending Directive 2000/31/EC (Digital Services Act) (OJ L 277, 27.10.2022, p. 1). obligations of monitoring or active fact-finding and with the specific requirements of that Regulation regarding orders to remove illegal online content.\n(53) Measures which aim to promptly remove mat",
         "In this context, the Commission organised the first ever Digital Services Act stakeholder event in June 2023 to engage with platform representatives, policymakers, and industry experts28. One of the panels considered whether the EU is\n26\t Regulation (EU) 2022/1925 of the European Parliament and of the Council of 14 September 2022 on contestable and fair markets in the digital sector and amending Directives (EU) 2019/1937 and (EU) 2020/1828 (Digital Markets Act), OJ L 265, 12.10.2022, p. 1-66.",
-        "Council of 19 October 2022 on a Single Market For Digital Services and amending Directive 2000/31/EC (Digital Services Act) OJ L 277, 27.10.2022, p. 1, ELI: http://data.europa.eu/eli/reg/2022/2065/oj. 58 services that have a number of average monthly active recipients of the service in the Union equal to or higher than 45 million are subject to additional obligations. The providers of these service",
-        "ms (VLOPs) and very large online search engines\n\n14 Art. 39, VAW Directive.\n15 See The EU strengthens the protection and support of victims of crime - Consilium.\n16 Art. 34(1)(d) Digital Services Act. 4 (VLOSEs) have to assess and mitigate. In this context for example, the Commission is investigating whether the provider of X properly assessed and mitigated risks to the dissemination of illegal con"
+        "For example, the concept of gendered disinformation (e.g. characterising female journal­ ists, advocates or political candidates as not being qualified, lacking the requisite knowledge, intelligence or experience because of their gender) falls within the scope of the DSA. With its risk-based approach, the DSA covers any false or manipulated information intended to cause harm to women or people of diverse genders and sexuality. In this context, the Commission organised the first ever Digital Services Act stakeholder event in June 2023 to engage with platform representatives, policymakers, and industry experts28.",
+        "on a single market for digital services and amending Directive 2000/31/EC (Digital Services Act) (OJ L 277, 27.10.2022, p. 1), https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:32022R2065.\n66 European Parliament and Council of the European Union (2024), Directive (EU) 2024/1385 of the European Parliament and of the Council of 14 May 2024 on combating violence against women and domestic vio",
+        "es on measures to ensure a high level of privacy, safety and security for minors online, pursuant to Article 28(4) of Regulation (EU) 2022/2065\n177 See: Codes of conduct under the Digital Services Act 63 In 2023 the EP adopted a resolution with recommendations concerning harassment and sexual harassment in the workplace178. EU-OSHA published an article in 2023 on domestic violence and the workplace"
       ],
       "retrieved_sources": [
         {
@@ -860,7 +884,7 @@
         {
           "source": "CELEX_32022R2065_EN_TXT.pdf",
           "page": 96,
-          "score": 1.5879333019256592
+          "score": 1.5879329442977905
         },
         {
           "source": "48802978de.pdf",
@@ -868,24 +892,24 @@
           "score": -0.7612811923027039
         },
         {
-          "source": "OJ_L_202401385_EN_TXT.pdf",
-          "page": 9,
-          "score": -1.1302134990692139
-        },
-        {
           "source": "2024 Report on Gender Equality in the EU_coming soon.pdf",
           "page": 12,
           "score": -1.2685332298278809
         },
         {
-          "source": "48802978de.pdf",
-          "page": 59,
-          "score": -1.541780948638916
+          "source": "2024 Report on Gender Equality in the EU_coming soon.pdf",
+          "page": 12,
+          "score": -2.248602867126465
         },
         {
-          "source": "gender-equality-strategy-2026-2030.pdf",
-          "page": 5,
-          "score": -1.6681526899337769
+          "source": "gender-equality-index-2024-tackling-violence-against-women-tackling-gender-inequalities.pdf",
+          "page": 67,
+          "score": -2.6542649269104004
+        },
+        {
+          "source": "48802978de.pdf",
+          "page": 64,
+          "score": -3.121849298477173
         }
       ]
     },
@@ -893,16 +917,16 @@
       "id": "q13",
       "question": "What percentage of stalking victims in the EU-GBV survey reported having to change their 'telephone number, email address or social networking account' as a consequence?",
       "expected_answer": "According to the survey, one in three stalking victims (34.7%) had to change their telephone number, email address, or social networking account.",
-      "answer": "One in three victims of stalking, which is 34.7%, reported having to change their 'telephone number, email address or social networking account' as a consequence. The excerpt states: \"one in three (34.7 %) had to change their telephone number, email address or social networking account.\"",
+      "answer": "According to the excerpts:\n\n* [eu-gender-based-violence-survey-evidence-for-policy-and-practice_4.pdf p.100] states: \"one in three (34.7 %) have had to change their telephone number, email address or social networking account.\"\n* [fra-2014-vaw-survey-main-results-apr14_en.pdf p.83] states: \"• One in five victims of stalking (23 %) has had to change her phone number or email address as a result of the most serious incident of stalking.\"\n* [fra-2014-vaw-survey-main-results-apr14_en.pdf p.95] states: \"Twenty-three per cent of victims of stalking indicate that they had to change their email address or phone number in response to the most serious case of stalking.\"\n\nThe excerpts do not provide a single percentage for all stalking victims, but rather two different percentages (23% and 34.7%) from different sources.",
       "category": "",
       "difficulty": "medium",
       "sub_type": "edge_of_chunk",
       "na": false,
       "retrieval_content_hit": true,
       "retrieval_source_hit": false,
-      "judge_verdict": "PASS",
-      "judge_reason": "The generated answer accurately reflects the key fact from the expected answer regarding the percentage of stalking victims who changed their contact information.",
-      "failure_type": null,
+      "judge_verdict": "FAIL",
+      "judge_reason": "The generated answer is incomplete because it does not accurately capture the key fact that one in three stalking victims had to change their telephone number, email address or social networking account, as stated in the expected answer, due to conflicting information from different sources.",
+      "failure_type": "generation_error",
       "contexts": [
         "The data show that stalking experiences are often not reported to the police. In the EU-27, only 13.9 % of women who experienced stalking during their lifetimes reported it to the police. As for the consequences of stalking on victims’ lives, the EU-GBV survey data show that one in five victims of stalking (21.6 %) by an intimate partner had to change their place of residence due to stalking, while one in three (34.7 %) had to change their telephone number, email address or social networking account, demonstrating the burden that stalking places on the victims.",
         "te partner have had to change KEY FINDINGS: their place of residence due to stalking, while one in three (34.7 %) have had to change their telephone number, email address or social networking account. 99 In the EU-GBV survey, the questions concerning stalking asked women whether they had experienced repeated actions by the same person that caused fear, alarm or distress. In addition to the seven ac",
@@ -942,7 +966,7 @@
         {
           "source": "fra-2014-vaw-survey-main-results-apr14_en.pdf",
           "page": 92,
-          "score": 3.9654595851898193
+          "score": 3.965458393096924
         },
         {
           "source": "KS-01-24-013-EN-N.pdf",
@@ -952,7 +976,7 @@
         {
           "source": "KS-01-24-013-EN-N.pdf",
           "page": 26,
-          "score": -0.06955118477344513
+          "score": -0.06955073028802872
         }
       ]
     },
@@ -960,20 +984,20 @@
       "id": "q14",
       "question": "Does the new gender-neutral job evaluation toolkit include 'exposure to harassment' under its 'Effort' factor or its 'Working Conditions' factor?",
       "expected_answer": "It falls under the 'Working Conditions' factor (specifically the Environment subfactor). Psychosocial risks like exposure to harassment should not be confused with the 'Psychosocial and emotional effort' subfactor, which reflects the energy required to intervene in such situations while maintaining emotional regulation.",
-      "answer": "Yes. The excerpt states: \"These include, for example, exposure to harassment\" under the 'Working Conditions' factor.",
+      "answer": "The excerpt from [factor-and-subfactor-plan.pdf p.20] states: \"psychological or emotional) subfactor relate to the working conditions under which the job is performed. These include, for example, exposure to harassment.\"\n\nThis implies that 'exposure to harassment' is included under the 'Working Conditions' factor.\n\nThe excerpt does not mention 'Effort' as a separate category where 'exposure to harassment' would be placed.",
       "category": "",
       "difficulty": "hard",
       "sub_type": "paraphrased",
       "na": false,
       "retrieval_content_hit": false,
       "retrieval_source_hit": false,
-      "judge_verdict": "FAIL",
-      "judge_reason": "The generated answer incorrectly states that the toolkit includes \"exposure to harassment\" without clarifying that it specifically falls under the 'Working Conditions' factor and does not address the distinction between this and the 'Effort' factor.",
+      "judge_verdict": "PASS",
+      "judge_reason": "The generated answer accurately identifies that 'exposure to harassment' falls under the 'Working Conditions' factor, specifically citing relevant information from the provided document.",
       "failure_type": "retrieval_miss",
       "contexts": [
         "56 Step 1. Build a shared understanding of the factor plan Start by reading through and using the exercises provided in Tool 0 to understand the role of gender biases in the job evaluation. Then focus on the factor and subfactor plan provided with this toolkit. The plan, which will be central to the job evaluation process, comprises four key factors: skills, responsibility, effort and working conditions. These factors align with the requirements of the Pay Transparency Directive. Each of the factors has subfactors connected to it – for example, ‘interpersonal and communication skills’ is a subfactor of the ‘skills’ factor group. Most subfactors have five levels, which use gender-neutral descriptions to differentiate the complexity and intensity of a job’s requirements.",
         "121 Using the standard job description template, all descriptions were rewritten to align with the objective skills, responsibility, effort and working conditions identified during the job evaluation, as per this toolkit’s detailed guidance. 5.2.2.3. \u0007How Saveur Européenne used the results and followed up on the gender-neutral job evaluation and classification Closely following Tool 7, Saveur Européenne established the following monitoring system to ensure the long-term sustainability of its gender-neutral approach to job evaluation and classification. •\t Annual review schedule. The job evaluation committee committed to reviewing the job evaluation and classification outcomes annually, using the self-assessment checklist from the toolkit. A first annual review was scheduled.",
-        "Union experts and the Institute for the Equality of Women and Men developed a practical checklist to guide the creation and review of gender-neutral job evaluation systems, covering key criteria such as skills, responsibility, effort and working conditions (Pardon et al., 2010). The checklist has been used to train union activists and strengthen bargaining at the organisational and sectoral levels (Pardon et al., 2010). It has also been referenced during negotiations to support demands for gender-neutral evaluations.",
+        "11\n2. \u0007What is a gender-neutral job evaluation and classification system? A gender-neutral job evaluation is a systematic process for determining the relative value of jobs, based on objective criteria (also called ‘factors’) such as skills, responsibility, effort and working conditions, rather than assessing the person doing the job (ILO, 2013). By focusing on the requirements of the job instead of individual characteristics, it provides a transparent and consistent basis for comparing jobs within an organisation without discrimination based on sex. The outcome of this process is a job classification system that groups jobs of equal value into the same pay grade.",
         "The Commission will continue to support Member States in the effective and timely implementation of this Directive. In cooperation with EIGE, it will publish a toolkit on gender-neutral job evaluation and classification in 2026. The toolkit will include tailored tools to help small and medium-sized companies to carry out these processes in-house, without the need for external consultancy. Moreover, the Commission will provide additional funding to support the implementation of the Directive and will organise a workshop for social partners on how they can support its implementation.",
         "Support is available for all employers to implement a gender-neutral job evaluation and classification system. The practical step-by-step toolkit provides tips, templates, examples and automated Excel tools to help organisations apply objective criteria, calculate job value scores and define pay grades, thereby building fairer, more transparent and more productive workplaces.",
         "This case has led to the Glasgow City Council adopting a new job evaluation programme, grounded in the principles of non-discrimination and thorough training of job evaluators. Source: Summarised by the authors based on McCarthy (2022), Sandelands (2025), Glasgow City Council (undated) and interviews conducted by the research team as part of the preparatory work for the toolkit on gender-neutral job evaluation and classification. Supporting employers with data-driven pay systems fit for today’s work Pay transparency measures, such as publishing pay ranges, defining clear progression criteria and reporting gender pay gap figures, make organisations more accountable (OECD, 2023).",
@@ -993,8 +1017,8 @@
         },
         {
           "source": "eu-wide-guidelines-on-gender-neutral-job-evaluation-and-classification-step-by-step-toolkit.pdf",
-          "page": 78,
-          "score": 1.46385657787323
+          "page": 11,
+          "score": 1.3791894912719727
         },
         {
           "source": "gender-equality-strategy-2026-2030.pdf",
@@ -1027,7 +1051,7 @@
       "id": "q15",
       "question": "What's the deal with my job involving 'manual dexterity' like typing or injections—is that considered a skill or just physical exertion in the EU toolkit?",
       "expected_answer": "It is a skill. The toolkit classifies 'manual dexterity' under 'Physical Skills' (subfactor 1.5). It warns against confusing the skill required for precision with 'physical effort,' which measures the fatigue or strain on the body caused by the task.",
-      "answer": "Yes, manual dexterity, such as that required for typing or giving injections, is considered a skill in the EU toolkit. The excerpts state: \"Do not overlook or undervalue manual dexterity and fine motor skills because they seem ‘natural’ or are often associated with women’s work.\" Additionally, it is noted that \"physical skills are sometimes overlooked in job evaluations despite their critical role in jobs such as nursing (e.g. giving injections), secretarial work (e.g. typing) and assembly.\" This indicates that these skills are recognized as essential qualifications rather than merely physical exertion.",
+      "answer": "The excerpt states:\n\n\"Recognise fine motor skills and manual dexterity as essential, learned job qualifications, not just innate personal traits, especially in women-dominated professions.\" [eu-wide-guidelines-on-gender-neutral-job-evaluation-and-classification-step-by-step-toolkit.pdf p.91]\n\nThis suggests that manual dexterity is considered a skill, specifically an \"essential, learned job qualification\".",
       "category": "",
       "difficulty": "medium",
       "sub_type": "language_variation",
@@ -1035,58 +1059,58 @@
       "retrieval_content_hit": false,
       "retrieval_source_hit": true,
       "judge_verdict": "PASS",
-      "judge_reason": "The generated answer correctly identifies manual dexterity as a skill and references the EU toolkit's classification, addressing the distinction between skill and physical exertion.",
+      "judge_reason": "The generated answer accurately quotes the EU toolkit and interprets it correctly to conclude that manual dexterity is indeed considered a skill, specifically a learned one.",
       "failure_type": "retrieval_miss",
       "contexts": [
-        "•\t Do not confuse the skill necessary to use your hands or body precisely (dexterity) with how physically tiring it is to keep doing it for a long time. •\t Recognise fine motor skills and manual dexterity as essential, learned job qualifications, not just innate personal traits, especially in women-dominated professions. •\t Make sure you distinguish between the physical skill required and the fatigue or strain caused by performing tasks repeatedly or over long periods (measured separately under physical effort). Example of physical skills Physical skills are sometimes overlooked in job evaluations despite their critical role in jobs such as nursing (e.g. giving injections), secretarial work (e.g. typing) and assembly (e.g. assembling small electronic components).",
-        "detailed assembly work or specialised equipment operation) Expert-level physical skills involving precise dexterity, coordination, endurance or speed (performing highly refined movements requiring extensive training and experience, e.g. detailed craftsmanship, delicate calibrations or surgical-level precision) Not applicable (my job requires no specific physical skills beyond basic movements such as typing or walking) What types of precision movements or coordination does your job require? (Check all that apply.) Fine motor skills (e.g. detailed handwriting, administering injections, suturing, assembling small components, delicate food preparation, textile handwork) Manual dexterity (e.g. manipulating objects with hands, assembling components, handling tools) Hand–eye coordination (e.g.",
         "giving injections), secretarial work (e.g. typing) and assembly (e.g. assembling small electronic components). Professions such as physiotherapy, music, dance, jewellery design and traditional crafts (e.g. shoe repair or working with delicate materials) also demand fine motor skills. Non-automated industrial work (e.g. seafood processing, canning, textiles) and agricultural tasks such as fruit and vegetable picking require similar physical skills. This requirement involves precision and hand–eye coordination. For example, an agricultural worker responsible for planting crops and manually picking delicate fruits such as strawberries requires considerable manual dexterity and fine motor skills to avoid damaging the produce.",
-        "ments.\n— Dealing with restricted movement, awkward positions and sitting in one position.\n— Completing complex sequences involving hand–eye coordination, manual dexterity, typing or graphic arts, etc. 4 The EU legal and policy landscape: what employers need to know Gender-neutral job evaluation and classification puts into practice the principle of equal pay for equal work or work of equal value be",
-        "— Make sure you distinguish between the physical skill required and the fatigue or strain caused by performing tasks repeatedly or over long periods (measured separately under physical effort). — Do not overlook or undervalue manual: dexterity and fine motor skills because — Do not overlook or undervalue manual: they seem ‘natural’ or are often — Do not overlook or undervalue manual: associated with women’s work. — Do not overlook or undervalue manual: — Do not ignore the complexity and — Do not overlook or undervalue manual: precision required in tasks that might — Do not overlook or undervalue manual: appear simple, but in reality demand — Do not overlook or undervalue manual: significant physical control.",
+        "•\t Do not confuse the skill necessary to use your hands or body precisely (dexterity) with how physically tiring it is to keep doing it for a long time. •\t Recognise fine motor skills and manual dexterity as essential, learned job qualifications, not just innate personal traits, especially in women-dominated professions. •\t Make sure you distinguish between the physical skill required and the fatigue or strain caused by performing tasks repeatedly or over long periods (measured separately under physical effort). Example of physical skills Physical skills are sometimes overlooked in job evaluations despite their critical role in jobs such as nursing (e.g. giving injections), secretarial work (e.g. typing) and assembly (e.g. assembling small electronic components).",
         "10 Example of physical skills Physical skills are sometimes overlooked in job evaluations despite their critical role in jobs such as nursing (e.g. giving injections), secretarial work (e.g. typing) and assembly (e.g. assembling small electronic components). Professions such as physiotherapy, music, dance, jewellery design and traditional crafts (e.g. shoe repair or working with delicate materials) also demand fine motor skills. Non-automated industrial work (e.g. seafood processing, canning, textiles) and agricultural tasks such as fruit and vegetable picking require similar physical skills. This requirement involves precision and hand– eye coordination.",
+        "detailed assembly work or specialised equipment operation) Expert-level physical skills involving precise dexterity, coordination, endurance or speed (performing highly refined movements requiring extensive training and experience, e.g. detailed craftsmanship, delicate calibrations or surgical-level precision) Not applicable (my job requires no specific physical skills beyond basic movements such as typing or walking) What types of precision movements or coordination does your job require? (Check all that apply.) Fine motor skills (e.g. detailed handwriting, administering injections, suturing, assembling small components, delicate food preparation, textile handwork) Manual dexterity (e.g. manipulating objects with hands, assembling components, handling tools) Hand–eye coordination (e.g.",
+        "3 physical skills and efforts often required in women-dominated jobs (e.g. manual dexterity when giving injections, physical effort involved in lifting patients), among other examples. Their undervaluation persists because these demands and skills are often viewed as personal traits rather than professional competences. As a result, they are often overlooked or undervalued in job evaluation and pay systems – even in jobs dominated by men – which contributes to lower pay levels and the gender pay gap. Figure 2 provides more examples of job characteristics that are frequently overlooked or undervalued. Figure 2.",
+        "ments.\n— Dealing with restricted movement, awkward positions and sitting in one position.\n— Completing complex sequences involving hand–eye coordination, manual dexterity, typing or graphic arts, etc. 4 The EU legal and policy landscape: what employers need to know Gender-neutral job evaluation and classification puts into practice the principle of equal pay for equal work or work of equal value be",
         ", endurance or speed. This includes high Description: levels of hand–eye and sensory coordination, in addition to precise hand or finger dexterity, Description: which are fundamental parts of the job. 10 Example of physical skills Physical skills are sometimes overlooked in job evaluations despite their critical role in jobs such as nursing (e.g. giving injections), secretarial work (e.g. typing) a",
-        "3 physical skills and efforts often required in women-dominated jobs (e.g. manual dexterity when giving injections, physical effort involved in lifting patients), among other examples. Their undervaluation persists because these demands and skills are often viewed as personal traits rather than professional competences. As a result, they are often overlooked or undervalued in job evaluation and pay systems – even in jobs dominated by men – which contributes to lower pay levels and the gender pay gap. Figure 2 provides more examples of job characteristics that are frequently overlooked or undervalued. Figure 2."
+        "— Make sure you distinguish between the physical skill required and the fatigue or strain caused by performing tasks repeatedly or over long periods (measured separately under physical effort). — Do not overlook or undervalue manual: dexterity and fine motor skills because — Do not overlook or undervalue manual: they seem ‘natural’ or are often — Do not overlook or undervalue manual: associated with women’s work. — Do not overlook or undervalue manual: — Do not ignore the complexity and — Do not overlook or undervalue manual: precision required in tasks that might — Do not overlook or undervalue manual: appear simple, but in reality demand — Do not overlook or undervalue manual: significant physical control."
       ],
       "retrieved_sources": [
         {
           "source": "eu-wide-guidelines-on-gender-neutral-job-evaluation-and-classification-step-by-step-toolkit.pdf",
           "page": 91,
-          "score": 0.030172385275363922
-        },
-        {
-          "source": "eu-wide-guidelines-on-gender-neutral-job-evaluation-and-classification-step-by-step-toolkit.pdf",
-          "page": 128,
-          "score": -0.22893288731575012
+          "score": 0.06561264395713806
         },
         {
           "source": "eu-wide-guidelines-on-gender-neutral-job-evaluation-and-classification-step-by-step-toolkit.pdf",
           "page": 91,
-          "score": -0.9967768788337708
+          "score": -1.1110689640045166
+        },
+        {
+          "source": "factor-and-subfactor-plan.pdf",
+          "page": 10,
+          "score": -1.4432978630065918
+        },
+        {
+          "source": "eu-wide-guidelines-on-gender-neutral-job-evaluation-and-classification-step-by-step-toolkit.pdf",
+          "page": 128,
+          "score": -1.4497402906417847
         },
         {
           "source": "mh0125064enn_002.pdf",
           "page": 3,
-          "score": -1.4841715097427368
+          "score": -1.4592559337615967
         },
         {
-          "source": "factor-and-subfactor-plan.pdf",
-          "page": 10,
-          "score": -2.316068172454834
-        },
-        {
-          "source": "factor-and-subfactor-plan.pdf",
-          "page": 10,
-          "score": -2.5257294178009033
+          "source": "mh0125064enn_002.pdf",
+          "page": 3,
+          "score": -2.0020251274108887
         },
         {
           "source": "factor-and-subfactor-plan.pdf",
           "page": 9,
-          "score": -2.5660648345947266
+          "score": -2.5219578742980957
         },
         {
-          "source": "mh0125064enn_002.pdf",
-          "page": 3,
-          "score": -2.740417957305908
+          "source": "factor-and-subfactor-plan.pdf",
+          "page": 10,
+          "score": -2.757774829864502
         }
       ]
     },
@@ -1094,7 +1118,7 @@
       "id": "q16",
       "question": "What were the specific women's safety reporting requirements mandated by the 1997 Treaty of Amsterdam as described in the 2024 Gender Equality report?",
       "expected_answer": "I don't have information about this. The provided sources cover current strategies (2020-2025) and directives from 2024, but they do not detail reporting requirements from the 1997 Treaty of Amsterdam.",
-      "answer": "This specific information is not available in the corpus.",
+      "answer": "This specific information is not available in the corpus.\n\nHowever, I can tell you that the 1997 Treaty of Amsterdam strengthened the principle of gender equality and introduced gender mainstreaming, requiring that gender perspectives be integrated across all EU activities. But it does not provide details on specific women's safety reporting requirements mandated by this treaty.",
       "category": "",
       "difficulty": "medium",
       "sub_type": "on_topic_unanswerable",
@@ -1107,12 +1131,12 @@
       "contexts": [
         "The EU’s engagement with gender equality began with the Treaty of Rome (1957), which established the European Economic Community and laid the groundwork for policies promoting fairness in economic participation. Early Council directives addressed pay, labour market participation, health and safety, maternity and parental leave, and work–life balance, although they did not explicitly enshrine the principle of gender equality. The Treaty of Amsterdam (1997) strengthened this principle by introducing gender mainstreaming, requiring that gender perspectives be integrated across all EU activities and extending the understanding of equality beyond economic issues.",
         "The 2024 Gender Equality Index dedicated its thematic focus to violence against women, presenting recent policy and legal developments in the EU and its Member States. The comprehensive overview of the current state of violence against women in the EU, including legal and policy developments, survey findings and societal attitudes, is described in the report and with country-specific information110. EIGE has analysed the availability and comparability of administrative data on violence against women across the EU. It has proposed common definitions for statistical purposes and indicators on intimate partner violence, rape and femicide for the police and justice sectors. It has also developed country specific recommendations and guidelines to offset comparable data collection challenges111.",
-        "These include, as for gender equality, the Con­ vention on the Elimination of All Forms of Discrimination against Women, the International Labour Organisation’s\n1951 Equal Remuneration Convention (No. 100) and its\n194\tThe Non-Financial reporting Directive only required undertakings to describe the diversity policy applied in relation to its administrative, management and supervisory body, the objectives of that diversity policy, and how it was implemented. 195\tProposal for a Directive of the European Parliament and the Council on Corporate Sustainability Due Diligence and amending Directive (EU)\n2019/1937, COM(2022) 71 final. 196\tEIGE, ‘Gender-responsive public procurement in the EU, 2022.",
-        "Figure 2. Four main components of the EU directive on combating violence against women and domestic violence (2024) Improved protection and access to justice Strengthened support for victims Reinforced prevention and coordination Stronger criminal responses to VAW à Minimum rules on specific forms of VAW: female genital mutilation, forced marriage and selected forms of cyber violence against women à Effective, proportionate and dissuasive criminal penalties à Specifies the list of aggravating circumstances à Obligatory individual assessment to identify victims’ protection and support needs à Requirement to establish guidelines for law enforcement and prosecutorial authorities à Easier access to compensation from offenders à Provision of specialised support services for victims, regardless of formal complaint à Establishment of accessible rape crisis or sexual violence referral centres à Targeted support for victims with intersectional needs and groups at risk à Awareness-raising activities to promote behavioural changes à National action plans on VAW and DV and national coordination bodies à Enhanced collection and dissemination of statistics on VAW and DV NB: DV, domestic violence; VAW, violence against women.",
         "In addition, all legal instruments of the Pact have a cross-cutting requirement for Member States to provide training for officials for them to carry out their duties. In December 2023, the FRA collected information on measures to address and prevent genderbased violence in six initial reception centres. The findings were part of the FRA Fundamental Rights Report 2024255, which provided an overview of measures on: (i) training; (ii) information provision; (iii) vulnerability assessments; (iv) the availability of women-only spaces; (v) referral systems; and (vi) the separation of single women from unrelated single men and of unaccompanied boys from unaccompanied girls. At the time of the data collection, the situation was diverse and presented several challenges.",
         "The explanatory report to the convention also calls for measures to be implemented to prevent sexual harassment in the media sector (Council of Europe, 2011b). To this end, European and international agencies have issued a range of recommendations and guidelines to better guide media professionals towards more ethical reporting on cases related to violence against women (UN Women and UNESCO, 2019; Council of Europe, 2020a, 2020b; Gligorijević, Pavlović, and Knežević, 2021; UN Women and UNICEF, 2022b). Through the Beijing Platform for Action, all Member States have committed to promoting greater gender equality in the media (EIGE, 2013, 2025). This commitment includes four main components: (17)\thttps://comms-hub.org/insights/.",
         "They must also be traceable and auditable, so that possible breaches of gender equality obligations can be investigated and addressed by national competent authorities and courts. The Corporate Sustainability Reporting Directive (CSRD) entered into force on 5 January 2023191 and revises and strengthens the reporting requirements on environ­ mental, social and governance matters introduced by the Non-Financial Reporting Directive192 and Directive 2013/34/ EU193. The CSRD introduces sustainability reporting stand­ ards to be adopted as Commission’s delegated acts. This will ensure more uniform sustainability reporting across the Union.",
-        "Despite the impact of the #MeToo movement on women’s ability to speak up, almost a third of women victims of violence had not disclosed the incident to anyone (31 %). An intersectional analysis also reveals the specific vulnerabilities of certain groups of women, with, for example, women with disabilities being at higher risk of violence from any perpetrator than women without disabilities. •\t Since 2019, the EU has made it its mission to prevent and eliminate violence against women, which is reflected in its gender equality strategy (2020–2025), its accession to the Istanbul Convention in June 2023 and the adoption of the first directive on combating violence against women and domestic violence (Directive (EU) 2024/1385) in May 2024."
+        "Despite the impact of the #MeToo movement on women’s ability to speak up, almost a third of women victims of violence had not disclosed the incident to anyone (31 %). An intersectional analysis also reveals the specific vulnerabilities of certain groups of women, with, for example, women with disabilities being at higher risk of violence from any perpetrator than women without disabilities. •\t Since 2019, the EU has made it its mission to prevent and eliminate violence against women, which is reflected in its gender equality strategy (2020–2025), its accession to the Istanbul Convention in June 2023 and the adoption of the first directive on combating violence against women and domestic violence (Directive (EU) 2024/1385) in May 2024.",
+        "ERA Forum developed a Zero-tolerance code on GBV and sexual harassment in research institutions in 2024. Signals the expanding scope of women's safety law into workplace and academic settings. ILO — C190 ratification status by country workplace · academia · ratification · research institutions · harassment code Beijing+30 UN Women Beijing+30 Action Agenda 2025 — for ALL women and girls UN Women — published March 2025 Marks the 30th anniversary of the Beijing Platform. Sets the agenda for the next decade of women's rights work globally, including on digital violence, climate resilience and the care economy. Directly shapes EU external and internal gender policy post-2025.",
+        "This report provides an overview of the current state of violence against women in the EU, which is a thematic focus of the Gender Equality Index 2024. The first chapter examines recent legal and policy developments across the EU and its Member States, along with the availability of specialised support services for women victims of violence. The second chapter presents findings from the EU gender-based violence survey (EU GBV survey, 2021 wave) (2), offering a comprehensive view of the composite measure of violence developed as part of the domain of violence of the Gender Equality Index (EIGE, 2015, 2017b, 2017c). It includes an analysis of the extent of disclosed violence against women in the EU, including its prevalence, its severity and its under-reported nature."
       ],
       "retrieved_sources": [
         {
@@ -1126,16 +1150,6 @@
           "score": -0.034551844000816345
         },
         {
-          "source": "annual_report_GE_2023_web_EN.pdf",
-          "page": 57,
-          "score": -1.1940739154815674
-        },
-        {
-          "source": "gender-equality-index-2024-tackling-violence-against-women-tackling-gender-inequalities.pdf",
-          "page": 16,
-          "score": -1.2623729705810547
-        },
-        {
           "source": "48802978de.pdf",
           "page": 114,
           "score": -1.4664101600646973
@@ -1143,7 +1157,7 @@
         {
           "source": "gender-equality-index-2024-tackling-violence-against-women-tackling-gender-inequalities.pdf",
           "page": 46,
-          "score": -1.6388356685638428
+          "score": -1.6388354301452637
         },
         {
           "source": "annual_report_GE_2023_web_EN.pdf",
@@ -1153,7 +1167,17 @@
         {
           "source": "gender-equality-index-2024-tackling-violence-against-women-tackling-gender-inequalities.pdf",
           "page": 11,
-          "score": -1.6966063976287842
+          "score": -1.696608304977417
+        },
+        {
+          "source": "women_safety_EU_RAG_resources (1).pdf",
+          "page": 7,
+          "score": -1.8401238918304443
+        },
+        {
+          "source": "gender-equality-index-2024-tackling-violence-against-women-tackling-gender-inequalities.pdf",
+          "page": 13,
+          "score": -1.8415131568908691
         }
       ]
     },
@@ -1161,7 +1185,7 @@
       "id": "q17",
       "question": "How do safety regulations for women differ in the United Kingdom following the 2024 General Election?",
       "expected_answer": "I don't have information about this. The corpus data for the United Kingdom generally ends at 2023 or 2024 regarding scientific academies and decision-making, and the UK is no longer an EU Member State covered by current EU-wide safety regulations.",
-      "answer": "This specific information is not available in the corpus.",
+      "answer": "This specific information is not available in the corpus.\n\nHowever, I can tell you that there are some mentions of data collection in the UK:\n\n* [wmid_methodology_31032026.pdf p.10] states: \"Data for the United Kingdom were collected up to 2024Q4.\"\n* [datasets] mentions the distribution of women and men in the opening session of each parliamentary term, but it does not provide information on how safety regulations differ following a general election.\n\nIf you have any further questions or would like me to clarify anything else, please let me know.",
       "category": "",
       "difficulty": "easy",
       "sub_type": "out_of_scope",
@@ -1172,30 +1196,30 @@
       "judge_reason": null,
       "failure_type": null,
       "contexts": [
-        "For the 2024 elections it committed to put a specific focus on women, among other groups and to promote specific actions to achieve gender balance in decision-making and in politics110. Following the Commission’s November 2021 proposal to amend the Regulation on the statute and funding of Eu­ ropean political parties111, the Council reached its general approach in March 2022. The European Parliament adopted",
-        "16 Roadmap Principle 7: Active, equal and safe participation in public and political life Existing power structures hold women back from full, equal and meaningful participation and leadership in politics and public life. Only one-third of national parliamentarians and senior ministers in the EU are women. Moreover, the 2024 European elections saw a decline in the share of women elected to the European Parliament, falling below 40%40. Women in politics are also often the target of attacks about their qualifications, experience, and skills, with disinformation used to undermine their credibility, question their legitimacy, and discourage both public support and their own political participation41. One-third of women in politics suffering from cyberviolence quit social media42.",
         "The rules provide that the safety and well-being of victims should be prioritised, including by offering access to sheltered accommodation. Healthcare should be made accessible, including sexual and reproductive health services. The new rules came into force in June 2024. EU countries have three years to implement them. Article EN Directorate General for Communication European Parliament Contact: webmaster@europarl.eu\n3 I 5",
+        "– cities and regions leading the way (2024), as well as UN Women’s global initiative on Safe Cities and Safe Public Spaces for women and girls (2025).\n50 WHO 2024 - Violence against women statistics. 20 conflicts, where women face increased levels of gender-based violence. Women also face higher risks from climate-related disasters, food insecurity, and resource scarcity, while gender inequality a",
+        "ERA Forum developed a Zero-tolerance code on GBV and sexual harassment in research institutions in 2024. Signals the expanding scope of women's safety law into workplace and academic settings. ILO — C190 ratification status by country workplace · academia · ratification · research institutions · harassment code Beijing+30 UN Women Beijing+30 Action Agenda 2025 — for ALL women and girls UN Women — published March 2025 Marks the 30th anniversary of the Beijing Platform. Sets the agenda for the next decade of women's rights work globally, including on digital violence, climate resilience and the care economy. Directly shapes EU external and internal gender policy post-2025.",
         "o Only partial data were available for the municipalities in one region of Germany (Niedersachsen). not collected in 2024. In some cases, the only data available refer to the latest election results, thus might not reflect the actual composition of municipal councils and share of women among mayors at the time of data collection. In addition, within the same country data may refer to different dates (e.g. for the United Kingdom, often data for England refers to latest available election results, whilst for Scotland, Wales and Northern Ireland data refer to the situation as of date of collection). In some countries, local elections do not take place at the same time in all areas (e.g. Germany and Austria).",
         "According to the GPSR, these risks should be taken into account in standardisation activities to avoid differences in safety levels and a resulting gender safety\n236\tSee for more information on the topic: European Parliament’s Policy Department for Citizen’s Rights and Constitutional Affairs, The impact of the gender data gap on consumer protection, 2023\n237\tRegulation (EU) 2023/988 of the European Parliament and of the Council of 10 May 2023 on general product safety, amending Regulation (EU) No\n1035/2012 of the European Parliament and of the Council and Directive (EU)_2020/1828 of the European Parliament and the Council, ad repealing Directive 2001/95/EC of the European Parliament and of the Council and Council Directive 87/357/EEC, OJ L 135, 25.5.2023, p. 1-51.",
         "In April 2023, the colegislators adopted the General Product Safety Regu­ lation (GPSR) to strengthen product safety rules237. The Regulation, which entered into force on 12 June 2023 and will apply from 13 December onwards, reinforces the safety rules for products sold both offline and online and acknowledges that products could present different risks for different genders.",
         "Data for the United Kingdom were collected up to 2024Q4. Data are collected on a quarterly basis, typically as follows:\n• Q1: February/March\n• Q2: May\n• Q3: July/August\n• Q4: October/November In 2022-2023, data for the six EU candidate countries and one potential candidate (i.e., IPA beneficiaries) were collected annually (October/November). The 2025Q4 data for IPA beneficiaries were collected in December. not collected in 2024.\n\ndatasets: Data revision, The official website of the European Parliament publishes the distribution of women and men in the opening session of each parliamentary term (https://www.europarl.europa.eu/election-results-2019/en/mep-gender-balance/2019-2024/).",
-        "In 2024, the elections of the European Parliament will take place. The equal presence of women in legislatures, their leadership and their perspective is essential for democ­ racy because it reflects a more accurate representation of society. The current European parliament is more genderbalanced than the previous one, with a positive trend from\n15 % in 1979 to 39 % in 2019. However, Europe can and must do better. In order to reach a genuine gender balance, it will be crucial to promote the participation of women as candidates in the upcoming elections. This requires multidimensional efforts to overcome the current obstacles, which prevent women from entering or staying in politics."
+        "EIGE's 2025 Index flags climate as an accelerating factor for gender inequality. An emerging but critical dimension for any future-oriented RAG. OHCHR — CEDAW General Recommendation 37 climate · disaster · displacement · emerging · intersecting crises Workplace ILO C190 transposition tracker + ERA Zero-Tolerance Code of Conduct (2024) ILO / European Research Area Forum — 2024 Monitors EU member state ratification of ILO C190 (currently 12/27 states). ERA Forum developed a Zero-tolerance code on GBV and sexual harassment in research institutions in 2024. Signals the expanding scope of women's safety law into workplace and academic settings."
       ],
       "retrieved_sources": [
-        {
-          "source": "annual_report_GE_2023_web_EN.pdf",
-          "page": 35,
-          "score": 0.7076553106307983
-        },
-        {
-          "source": "gender-equality-strategy-2026-2030.pdf",
-          "page": 18,
-          "score": -0.28488174080848694
-        },
         {
           "source": "20210923STO13419_en.pdf",
           "page": 3,
           "score": -1.1900538206100464
+        },
+        {
+          "source": "gender-equality-strategy-2026-2030.pdf",
+          "page": 21,
+          "score": -1.426127552986145
+        },
+        {
+          "source": "women_safety_EU_RAG_resources (1).pdf",
+          "page": 7,
+          "score": -1.5054073333740234
         },
         {
           "source": "wmid_methodology_31032026.pdf",
@@ -1205,7 +1229,7 @@
         {
           "source": "2024 Report on Gender Equality in the EU_coming soon.pdf",
           "page": 62,
-          "score": -1.9308762550354004
+          "score": -1.930877447128296
         },
         {
           "source": "2024 Report on Gender Equality in the EU_coming soon.pdf",
@@ -1218,9 +1242,9 @@
           "score": -2.0172793865203857
         },
         {
-          "source": "annual_report_GE_2023_web_EN.pdf",
-          "page": 77,
-          "score": -2.024035930633545
+          "source": "women_safety_EU_RAG_resources (1).pdf",
+          "page": 7,
+          "score": -2.0753159523010254
         }
       ]
     },
@@ -1239,55 +1263,55 @@
       "judge_reason": null,
       "failure_type": null,
       "contexts": [
+        "224\tAt the 2023 EU Sport Forum, the Be Equal prize was awarded to Kaja Klub Zlatorog from Slovenia. See also: Meet the winners of the #BeInclusive EU Sport Awards 2022 | Sport (europa.eu)\n225\tEU Sport Forum | Sport (europa.eu)\n226\tEU Sport Forum 2023: a success story | Sport (europa.eu)\n227\tConference on ‘Gender equality in sport’ (europa.eu)\n228\tConclusions of the Council and of the Representatives of the Governments of the Member States meeting within the Council on women and equality in the field of sport, OJ C, C/2023.1362, 1.12.2023.",
         "This award, funded under Horizon Europe, aims to recognise and celebrate the outstanding results achieved by European academic and re­ search organisations through the implementation of Gender Equality Plans. It is also intended to create a community of champions who can then inspire other academic and research organisations to become gender equality champi­ ons themselves. Each of the four winning academic institu­ tions received EUR 100 000 and the second edition will be awarded in Q2 2024. In 2024, the European Commission intends to publish the latest tri-annual edition of its flagship statistical report monitoring the state of gender equality in R&I across Europe and beyond, the She Figures report.",
-        "o Abruzzo: 2025 data refer to 2024 (no up-to-date data available). • Poland (Opolskie): 2023 data refer to 2022, and 2025 data refer to 2024 election results (no up-to-date data available). • Romania: o Alba: 2021-2023 data refer to 2020 election results. 2025 data refer to 2024 election results (up-to-date data not available). o Iasi: 2025 data refer to 2024 (no up-to-date data available). • Slovakia (Zilinsky): 2023-2025 data refer to 2022 election results (no up-to-date data available). • United Kingdom (Northern Ireland): 2017-2019 data refer to 2016 as the devolved government resigned in January 2017 and not re-formed until January 2020. • Albania (Lezhë & Tiranë): 2025 data refer to 2023 (up-to-date data not available). • Türkiye: o Diyarbakir: 2019-2021 data refer to 2018.",
-        "• Italy:\no Molise: 2024-2025 data refer to 2023 election results (no up-to-date data available). o Abruzzo: 2025 data refer to 2024 (no up-to-date data available). • Poland (Opolskie): 2023 data refer to 2022, and 2025 data refer to 2024 election results (no up-to-date data available). • Romania:\no Alba: 2021-2023 data refer to 2020 election results. 2025 data refer to 2024 election results (up-to-date data not available). o Iasi: 2025 data refer to 2024 (no up-to-date data available). • Slovakia (Zilinsky): 2023-2025 data refer to 2022 election results (no up-to-date data available). • United Kingdom (Northern Ireland): 2017-2019 data refer to 2016 as the devolved government resigned in January 2017 and not re-formed until January 2020.",
-        "Figure 20. Correlation of the Gender Equality Index 2024 with Flash Eurobarometer 544 results, based on the question ‘To what extent do you agree with the following statements? If women share their opinion on social media, they should accept that they elicit sexist, demeaning and/or abusive replies’\n56 Figure 21. Correlation of the Gender Equality Index 2024 with Flash Eurobarometer 544 results, based on the question ‘To what extent do you agree or disagree with the following statements? If women share intimate pictures of themselves with someone, they are partially responsible if the image is shared online without their consent’\n57 Figure 22.",
-        "Gender Equality Index 2024 with Flash Eurobarometer 544 results, based on the question ‘What do you think about each of the following situations? A man controlling his wife’s/partner’s finances’\n55\n7 Figure 20.\t Correlation of the Gender Equality Index 2024 with Flash Eurobarometer 544 results, based on the question ‘To what extent do you agree with the following statements? If women share their o",
-        "58 gender imbalance in sport and related matters are brought clearly to the fore223. The Be Equal award was given dur­ ing the 2023 EU Sports Forum to projects that recognise the added value of gender equality in sport, provide safe sporting environments for girls, and empower women to develop resilience and self-confidence224. Also during the\n2023 EU Sports Forum225, stakeholders and experts shared their views on challenges and opportunities in sport in highlevel group discussions, panels and interactive sessions226. Gender equality in sport was also on the agenda of the Gender Equality Conference organised by the Spanish Presidency on 14 and 15 November in Madrid and supported by the European Commission227.",
-        "•\n2018 data for assembly members not available in two regions in Albania. •\n2024: Data for the six EU candidate countries and one potential candidate (i.e., IPA beneficiaries) were not collected. • Germany (Saarland): 2025 data refer to 2024 (no up-to-date data available). • Spain: o Catalunya: 2017 data refer to 2016 as the regional government and parliament were suspended from October 2017-June 2018. o Euskadi/Pais Vasco: 2025 data refer to 2024 (no up-to-date data available). • Italy: o Molise: 2024-2025 data refer to 2023 election results (no up-to-date data available). o Abruzzo: 2025 data refer to 2024 (no up-to-date data available). • Poland (Opolskie): 2023 data refer to 2022, and 2025 data refer to 2024 election results (no up-to-date data available).",
-        "224\tAt the 2023 EU Sport Forum, the Be Equal prize was awarded to Kaja Klub Zlatorog from Slovenia. See also: Meet the winners of the #BeInclusive EU Sport Awards 2022 | Sport (europa.eu)\n225\tEU Sport Forum | Sport (europa.eu)\n226\tEU Sport Forum 2023: a success story | Sport (europa.eu)\n227\tConference on ‘Gender equality in sport’ (europa.eu)\n228\tConclusions of the Council and of the Representatives of the Governments of the Member States meeting within the Council on women and equality in the field of sport, OJ C, C/2023.1362, 1.12.2023."
+        "Multilingual and accessible. Available across EU countries. safeyouapp.com mobile · evidence · multilingual · free · legal support AI Chatbot Sophia — AI chatbot for domestic violence survivors EU Innovation Award 2023 & EIB Social Innovation Tournament 2023 winner World's first chatbot assisting survivors to gather potential evidence and be directed to the right service. Demonstrates the tech-safety frontier for survivor support. More via EEAS Global Hub AI tool · evidence · innovation · survivor support\n6. WHAT WOMEN CAN DO — RIGHTS, ACTION & RESOURCES\n\n5. HELPLINES & EMERGENCY CONTACTS: EU Number 116 016 — EU-wide harmonised helpline for victims of VAW European Commission — free of charge · operative in most EU member states The common EU number connects to national helplines.",
+        "The Belgian Presidency will host an award ceremony on Inter­ national Women’s Day 2024 (8 March) in the framework of a conference on the wellbeing of seafarers132. The network of Diversity Ambassadors in Transport133, which took on more than 80 members in 2023, its first year of existence, aims promote diversity, equality and inclusion within the EU transport sector, through raising awareness and sharing information on and developing and implement­ ing initiatives to promote diversity in the EU transport sector, both from the perspective of transport workers and trans­ port users.",
+        "The Women in Transport Plat­ form also cooperated with the rail industry in the context of the European Year of Rail to launch a ‘Women in Rail Award’, with an awards ceremony on 8 March 2022102. In November 2022, the Commission has launched a new network of Diversity Ambassadors in Transport, which aims to raise awareness on measures, initiatives or actions that promote equality, diversity and inclusiveness in the trans­ port workforce and for transport users103. Finally, under the European Maritime, Fisheries and Aq­ uaculture Fund 2021-2027, the Commission launched in May 2022 a new call dedicated to Women in the Blue Economy104. This aims to increase women’s participation in the blue economy, improve data collection, advance gen­ der equality, and promote women’s leadership.",
+        "In addition, a new EU Award for Gender Equality Champions has been launched in July\n2022 to recognise academic and research organisations that have achieved outstanding results in implementing gender equality plans. Furthermore, the Commission continued to provide tar­ geted funding for gender studies and intersectional research under the Horizon Europe 2021-2022 work programme, which will be continued in future work pro­ grammes. From the 2021-2022 work programme, four projects have been started on the topic of ‘Tackling gen­ der, racial and other biases in AI’207 and five projects on the topic of ‘Feminisms for a new age of Democracy’208, and three more projects have been selected under the topic on ‘Gender and social, economic and cultural empowerment’.",
+        "In October 2024, the EP launched the ‘United Against Harassment’ campaign to raise awareness, educate and empower all MEPs and staff members to recognise, prevent and address any form of harassment. The campaign created intranet pages listing all available resources, updated information brochures and a poster campaign. The EP provides regular gender equality training and workshops for MEPs and staff, raising awareness on gender stereotypes and unconscious bias, promoting thus inclusive behaviour in the workplace. Every year the EP organises inclusion events on International Women’s Day and issues a prize for good practices in equality and diversity in the EP administration twice per legislature, namely the Simone Veil Award for Equality and Diversity.",
+        "46 The European Innovation Council aims to invite 40% women-led companies to pitch their projects. In 2021, it continued to award the annual EU Prize for Women Innovators, receiving the strongest interest to date. It also launched the new Women TechEU initiative to support women-led deep tech start-ups. Finally, it launched the Women Leadership Programme to improve skills and promote networking. This programme aim to coach and mentor women entrepreneurs and researchers. On 3June 2020, the Austrian Council of Ministers adopted a resolution to increase the proportion of women on the supervisory board of state-affiliated companies. The proportion should increase from 35% to 40% over the course of the current legislative period, which ends in 2024."
       ],
       "retrieved_sources": [
         {
           "source": "2024 Report on Gender Equality in the EU_coming soon.pdf",
+          "page": 60,
+          "score": -0.8125978708267212
+        },
+        {
+          "source": "2024 Report on Gender Equality in the EU_coming soon.pdf",
           "page": 61,
-          "score": -1.783567190170288
+          "score": -1.0059996843338013
         },
         {
-          "source": "wmid_methodology_31032026.pdf",
-          "page": 17,
-          "score": -2.536496639251709
-        },
-        {
-          "source": "wmid_methodology_31032026.pdf",
-          "page": 17,
-          "score": -2.544912338256836
-        },
-        {
-          "source": "gender-equality-index-2024-tackling-violence-against-women-tackling-gender-inequalities.pdf",
-          "page": 9,
-          "score": -2.63222599029541
-        },
-        {
-          "source": "gender-equality-index-2024-tackling-violence-against-women-tackling-gender-inequalities.pdf",
-          "page": 8,
-          "score": -2.711655855178833
+          "source": "women_safety_EU_RAG_resources (1).pdf",
+          "page": 5,
+          "score": -1.3523201942443848
         },
         {
           "source": "2024 Report on Gender Equality in the EU_coming soon.pdf",
-          "page": 60,
-          "score": -3.6726770401000977
+          "page": 38,
+          "score": -2.149129867553711
         },
         {
-          "source": "wmid_methodology_31032026.pdf",
-          "page": 17,
-          "score": -3.86502742767334
+          "source": "annual_report_GE_2023_web_EN.pdf",
+          "page": 34,
+          "score": -4.594481945037842
         },
         {
-          "source": "2024 Report on Gender Equality in the EU_coming soon.pdf",
+          "source": "annual_report_GE_2023_web_EN.pdf",
           "page": 60,
-          "score": -3.92576265335083
+          "score": -6.019239902496338
+        },
+        {
+          "source": "48802978de.pdf",
+          "page": 50,
+          "score": -6.129410266876221
+        },
+        {
+          "source": "annual_report_GE_2022_printable_EN.pdf",
+          "page": 48,
+          "score": -6.350732326507568
         }
       ]
     },
@@ -1295,7 +1319,7 @@
       "id": "q19",
       "question": "What are the rules about the top-up?",
       "expected_answer": "Could you please clarify? This could refer to the complementary income support for young female farmers under the CAP, or the top-up provided to parents for childcare-related costs under the 'Culture Moves Europe' mobility scheme.",
-      "answer": "This question is outside the scope of this corpus. I can only answer questions about women's safety and gender equality in the EU.",
+      "answer": "This specific information is not available in the corpus.",
       "category": "",
       "difficulty": "easy",
       "sub_type": "ambiguous",
@@ -1306,55 +1330,55 @@
       "judge_reason": null,
       "failure_type": null,
       "contexts": [
-        "The ECB has a dedicated section on its intranet. Where appropriate, formal measures such as disciplinary sanctions are imposed following disciplinary procedures. On top of continuing to deploy regular awareness-raising and training programmes, the EEAS is proposing to review recruitment procedures for managers and leadership assessment systems and implement gender-responsive leadership across the organisation. This follows the recommendations from the Istanbul Task Force in the EEAS and aims to increase accountability. 2. Please indicate concrete action taken to ensure the implementation of the relevant EU legal framework by EU member states (including infringement proceedings).",
-        "The results of the investigation may lead the relevant authority to initiate disciplinary proceedings and adopt a sanction. . The internal guidelines, the legal framework for the information and protection of whistleblowers, and the Decision on the terms and conditions for internal investigations in relation to the prevention of fraud, corruption and any illegal activity detrimental to the interests of the European Union also implement the provisions of the Staff Regulations. These lay down the obligation to disclose facts known in the course of or in connection with the performance of duties which give rise to a presumption of illegal activity detrimental to the interests of the Union or a serious failure to comply with obligations.",
-        "These texts should be provided in one of the official languages of the Council of Europe (English or French). B. Implementation of the EU’s legal framework\n\n1. Please describe what action has been taken to ensure the provision of guidance to officials, and other persons working for and with EU institutions, bodies and agencies on how to implement the above legal framework? As regards the EU’s public administration, the Commission has put in place clear and userfriendly tools and procedures to inform statutory staff of their rights and obligations and to assist them as necessary.",
-        "210\tThe legislative framework for the 2021-2027 Cohesion policy programmes is established by the Common provisions Regulation and programme specific regulations, published on 30 June 2021. Available at: https://ec.europa.eu/regional_policy/en/information/legislation/regulations/. 211\tRegulation (EU) 2021/241 of the European Parliament and of the Council of 12 February 2021 establishing the Recovery and Resilience Facility. The Commission, while negotiating the new partnership agreements and programmes, will assess the Member States commitment to the horizontal principles and specific targeted actions as well as the new tracking mechanism for gender related expenditure introduced by the Common Provisions Regulation.",
-        "1. Legal and policy frameworks to tackle violence against women at the EU and national levels Legal frameworks and public policies are an essential part of the arsenal to end violence against women. In recent years, key players across Europe have worked to get closer to creating a just and safe Europe for all women. To help tackle this challenge, several new legal frameworks have been introduced at the EU and national levels. 1.1.",
+        "Key instruments include the Pay Transparency Directive (Directive (EU) 2023/970; European Parliament, 2023), which strengthens equal pay enforcement; the Adequate Minimum Wage Directive (European Parliament, 2022a), which supports decent living standards; and the 2023 Council recommendation on adequate minimum income (Council of the European Union, 2023), which integrates income support with access to essential services. Overall, economic independence remains both a cornerstone of personal agency and a critical policy concern in the EU. Addressing gendered inequalities in pay, pensions and financial access is essential not only for closing economic gaps between women and men but also for fostering equitable participation, security and well-being across society.",
+        "118\n\n• Commission Decision (EU) 2024/3083 of 4 December 2024 establishing the Code of Good Administrative Behaviour for Staff of the European Commission in their relations with the public\n• Regulation No 883/2013 of 11 September 2013 concerning investigations conducted by the European Anti-Fraud Office (OLAF) and repealing Regulation (EC) No 1073/1999 of the European Parliament and of the Council and Council Regulation (Euratom) No\n1074/1999\n• Regulation (EU) 2018/1725 of the European Parliament and of the Council of 23 October 2018 on the protection of natural persons with regard to the processing of personal data by the Union institutions, bodies, offices and agencies and on the free movement of such data, and repealing Regulation (EC) No 45/2001 and Decision No\n1247/2002/EC The Court of Justice:\n• CJEU Code of Conduct of 1 March 2024\n• CJEU Communication No 18/06 on respect for personal dignity\n• Decision of the CJEU of 12 July 2011 on the terms and conditions for internal investigations in relation to the fight against fraud, corruption and any illegal activity detrimental to the interests of the European Union\n• Decision of the Administrative Committee of 19 September 2011 on general implementing provisions for administrative investigations in CJEU\n• CJEU Strategy on Diversity and Inclusion\n• CJEU Action plan on Health and Well-being at work\n• CJEU Internal measures for Health and Security at work The European Central Bank:\n• Conditions of Employment for Staff of the European Central Bank266\n• ECB Staff Rules267\n• ECB Conditions of Short-Term Employment268\n• ECB Rules for Short-term Employment269 The European Court of Auditors:\n• Decision No 50-2022 on the European Court of Auditors’ policy for ensuring a respectful and harassment-free workplace\n• ECA D&I policy\n• ECA D&I action plan\n• ECA report on the Spotlight initiative to end violence against women and girls – Ambitious but so far with limited impact 11/09/2023 The European Economic and Social Committee:\n• Rules of Procedure and Code of Conduct for members of the EESC (eesc-2023-0026501-01-regl-tra-en.docx)270\n\n266 Conditions of Employment\n267 Staff Rules\n268 Conditions of Short-Term Employment\n269 Rules for Short-Term Employment\n\n270 https://www.eesc.europa.eu/sites/default/files/2025-05/eesc-2023-00265-01-01-regl-tra-en.docx",
+        "3. This Regulation shall not affect the application of Directive 2000/31/EC. 4. This Regulation is without prejudice to the rules laid down by other Union legal acts regulating other aspects of the provision of intermediary services in the internal market or specifying and complementing this Regulation, in particular, the following:\n(a) Directive 2010/13/EU; (b) Union law on copyright and related rights; (c) Regulation (EU) 2021/784; (d) Regulation (EU) 2019/1148; (e) Regulation (EU) 2019/1150; (f) Union law on consumer protection and product safety, including Regulations (EU) 2017/2394 and (EU) 2019/1020 and Directives 2001/95/EC and 2013/11/EU; (g) Union law on the protection of personal data, in particular Regulation (EU) 2016/679 and Directive 2002/58/EC; EN L 277/41",
+        "Similarly, for reasons of clarity, this Regulation should be without prejudice to Union law on consumer protection, in particular Regulations (EU) 2017/2394 (13) and (EU) 2019/1020 (14) of the European Parliament and of the Council, Directives\n2001/95/EC (15),\n2005/29/EC (16),\n2011/83/EU (17) and\n2013/11/EU (18) of the European Parliament and of the Council, and Council Directive 93/13/EEC (19), and on the protection of personal data, in particular Regulation (EU) 2016/679 of the European Parliament and of the Council (20).",
+        "216 Regulation 2024/1348 of the European Parliament and of the Council establishing a common procedure for international protection in the Union and repealing Directive 2013/32/EU (OJ L, 2024/1348, ELI: http://data.europa.eu/eli/reg/2024/1348/oj). 217 Council Directive 2003/86/EC of 22 September 2003 on the right to family reunification (OJ L 251,\n3.10.2003, p. 12, ELI: http://data.europa.eu/eli/dir/2003/86/oj).",
         "I (Legislative acts) REGULATIONS REGULATION (EU) 2022/2065 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 19 October 2022 on a Single Market For Digital Services and amending Directive 2000/31/EC (Digital Services Act) (Text with EEA relevance) THE EUROPEAN PARLIAMENT AND THE COUNCIL OF THE EUROPEAN UNION, Having regard to the Treaty on the Functioning of the European Union, and in particular Article 114 thereof, Having regard to the proposal from the European Commission, After transmission of the draft legislative act to the national parliaments, Having regard to the opinion of the European Economic and Social Committee (1), Having regard to the opinion of the Committee of the Regions (2), Acting in accordance with the ordinary legislative procedure (3), Whereas:\n(1) Information society services and especially intermediary services have become an important part of the Union’s economy and the daily life of Union citizens.",
-        "2.2011, p. 2).\n(18) Regulation (EU) No 606/2013 of the European Parliament and of the Council of 12 June 2013 on mutual recognition of protection measures in civil matters (OJ L 181, 29.6.2013, p. 4). Article 21 Guidelines for law enforcement and prosecutorial authorities Member States may issue guidelines for cases concerning violence against women or domestic violence for the competent authoritie",
-        "Its content is without prejudice to national legislation, to the interpretation of the Court of Justice of the European Union and the General Court or to guidance provided by the European Commission. Organisations are encouraged to consult their national authorities, social partners and equality bodies for information on their country’s applicable legal and institutional frameworks. (1)\t For more information, see European Commission (2013)."
+        "ity requires beneficiaries to re­ spect elements of European social and labour law as a precondition for receiving funds. It will be enforced by com­ pliance checks, carried out by labour authorities. 30 ADDRESSING THE GENDER PAY AND PENSIONS GAP Despite long-time improvements to women’s exper­ tise and participation in professional life, pay dif­ ferences remain stagnant. Progress on narrowing the",
+        "8 Regulation 2024/1348 of the European Parliament and of the Council establishing a common procedure for international protection in the Union and repealing Directive 2013/32/EU (OJ L, 2024/1348, ELI: http://data.europa.eu/eli/reg/2024/1348/oj). 9 Directive 2024/1347 EU on standards for the qualification of third-country nationals or stateless persons as beneficiaries of international protection, for a uniform status for refugees or for persons eligible for subsidiary protection and for the content of the protection granted ( OJ L, 2024/1347, 22.5.2024, ELI: http://data.europa.eu/eli/reg/2024/1347/oj ). 10 Council Directive 2003/86/EC of 22 September 2003 on the right to family reunification (OJ L 251,\n3.10.2003, p. 12, ELI: http://data.europa.eu/eli/dir/2003/86/oj)."
       ],
       "retrieved_sources": [
         {
-          "source": "48802978de.pdf",
-          "page": 99,
-          "score": 1.355441927909851
+          "source": "gender-equality-index-methodological-report.pdf",
+          "page": 20,
+          "score": -0.02098362147808075
         },
         {
           "source": "48802978de.pdf",
-          "page": 74,
-          "score": 1.147584080696106
+          "page": 120,
+          "score": -0.17378228902816772
+        },
+        {
+          "source": "CELEX_32022R2065_EN_TXT.pdf",
+          "page": 41,
+          "score": -0.5748142004013062
+        },
+        {
+          "source": "CELEX_32022R2065_EN_TXT.pdf",
+          "page": 4,
+          "score": -0.7883938550949097
         },
         {
           "source": "48802978de.pdf",
-          "page": 84,
-          "score": 1.1092357635498047
-        },
-        {
-          "source": "annual_report_GE_2022_printable_EN.pdf",
-          "page": 55,
-          "score": 0.14141276478767395
-        },
-        {
-          "source": "gender-equality-index-2024-tackling-violence-against-women-tackling-gender-inequalities.pdf",
-          "page": 14,
-          "score": 0.09756219387054443
+          "page": 83,
+          "score": -0.9686200618743896
         },
         {
           "source": "CELEX_32022R2065_EN_TXT.pdf",
           "page": 1,
-          "score": -0.6221293807029724
+          "score": -1.1520577669143677
         },
         {
-          "source": "OJ_L_202401385_EN_TXT.pdf",
-          "page": 23,
-          "score": -0.8004113435745239
+          "source": "annual_report_GE_2022_printable_EN.pdf",
+          "page": 31,
+          "score": -1.271008849143982
         },
         {
-          "source": "eu-wide-guidelines-on-gender-neutral-job-evaluation-and-classification-step-by-step-toolkit.pdf",
-          "page": 3,
-          "score": -0.8661938905715942
+          "source": "48802978de.pdf",
+          "page": 6,
+          "score": -1.324535608291626
         }
       ]
     },
@@ -1362,7 +1386,7 @@
       "id": "q20",
       "question": "Tell me about the requirements for safety.",
       "expected_answer": "Could you please clarify? The corpus covers digital safety obligations for VLOPs in the DSA, physical safety requirements for victims in shelters under the VAW Directive, and health and safety working conditions in the job evaluation toolkit.",
-      "answer": "This question is too broad to answer precisely. Could you be more specific?",
+      "answer": "The excerpts mention several aspects related to safety:\n\n1. **Standards ensuring interoperability and safety**: According to [2024 Report on Gender Equality in the EU_coming soon.pdf p.62], \"Standards ensure interoperability and safety, reduce costs and facilitate companies’ integration into the value chain and trade.\"\n2. **Harmonised standards for product safety**: The same excerpt states that harmonised standards are developed by European standards organisations (CEN, CENELEC, or ETSI) upon request of the European Commission, and their use is voluntary.\n3. **AI Act's risk-based approach to ensure AI system safety**: [2024 Report on Gender Equality in the EU_coming soon.pdf p.57] mentions that the AI Act takes a risk-based approach, introducing new mandatory requirements for high-risk AI systems that can have a significant impact on people’s health, safety and fundamental rights.\n4. **Protection measures for victims of domestic violence**: [fra-2014-vaw-survey-main-results-apr14_en.pdf p.13] mentions the EU Victims’ Directive, which establishes minimum standards on the rights, protection, and support of victims of crime, including those affected by domestic violence.\n\nThese excerpts suggest that safety is a key aspect in various areas, including product safety, AI system development, and protection measures for vulnerable individuals.",
       "category": "",
       "difficulty": "easy",
       "sub_type": "ambiguous",
@@ -1374,54 +1398,54 @@
       "failure_type": null,
       "contexts": [
         "238\tConsumer product safety - European Commission (europa.eu)\n239\tEuropean Commission, Study on the inclusiveness of anthropometrics in European harmonised standards, 2024 (europa.eu)\n240\t Standards are technical specifications setting out requirements for products, production processes, services or test methods. They are developed by industry and market actors following some basic principles such as consensus, openness, transparency and non-discrimination. Standards ensure interoperability and safety, reduce costs and facilitate companies’ integration into the value chain and trade. See also: European standards (europa.eu).",
-        "Moreover, the Commission will organise a Policy Practice Joint Event on misogyny and incel ideology among young people under the EU Knowledge Hub on the prevention of radicalisation. Key actions by the Commission:  Present a Commission Recommendation on safety in politics (2026);  Update the mapping of legal and policy measures to promote the participation and leadership of women in politics, public administration and parliaments (2027);  Carry out a study on online networks, spheres and narratives targeting young men and boys (2028).",
-        "However, the rules relating to compensable injury, conditions of access to compensation, amount of compensation and procedural requirements remain the sole responsibility of the national authorities. E. Article 31 - Custody, visitation rights and safety Please provide information on any action taken by the EU, its institutions, bodies and agencies, to ensure that, in decisions taken at the level of EU Member States:\n\n1. incidents of violence against women are taken into account in the determination of custody and visitation rights of children (Article 31, paragraph 1) as a superseding concern; Substantive family law, such as custody and visitation rights, are matters decided under national law and thus come under the exclusive competence of the Member States.",
-        "The Parliament also urged all Member States to ensure universal access to safe and legal abortion, and guarantee that abortion on request is legal in early pregnancy, and beyond if the mother’s health is in danger. The EU strategic framework on health and safety at work202 2021-2027, adopted in June 2021, highlights the importance of recognising diversity, including gender dif­ ferences and inequalities, and fighting discrimination in the workforce, which is vital in ensuring the safety and health of both women and men workers, including when assess­ ing risks at work. In the COVID-19 pandemic context, the risks of ill-adapted tools and equipment (e.g. women in the healthcare sector having to wear personal protective equip­ ment designed for men) were highlighted as an example.",
-        "The rules provide that the safety and well-being of victims should be prioritised, including by offering access to sheltered accommodation. Healthcare should be made accessible, including sexual and reproductive health services. The new rules came into force in June 2024. EU countries have three years to implement them. Article EN Directorate General for Communication European Parliament Contact: webmaster@europarl.eu\n3 I 5",
+        "In addition, the orders should be issued in compliance with Regulation (EU) 2016/679 and the prohibition of general obligations to monitor information or to actively seek facts or circumstances indicating illegal activity laid down in this Regulation. The conditions and requirements laid down in this Regulation which apply to orders to act against illegal content are without prejudice to other Union acts providing for similar systems for acting against specific types of illegal content, such as Regulation (EU) 2021/784, Regulation (EU) 2019/1020, or Regulation (EU) 2017/2394 that confers specific powers to order the provision of information to Member State consumer law EN L 277/9",
+        "Standards ensure interoperability and safety, reduce costs and facilitate companies’ integration into the value chain and trade. See also: European standards (europa.eu). A harmonised standard is a European standard developed by a recognised European standards organisation: CEN (Comité Européen de Normalisation), CENELEC (Comité Européen de Normalisation Électrotechnique), or ETSI (European Telecommunications Standards Institute) upon request of the European Commission. The use of these standards is voluntary. Manufacturers, other economic operators, and conformity assessment bodies can use harmonised standards to demonstrate that products, services, or processes comply with relevant EU legislation.",
+        "nt, such as Regulation (EU) 2021/784, Regulation (EU) 2019/1020, or Regulation (EU) 2017/2394 that confers specific powers to order the provision of information to Member State consumer law EN L 277/9 enforcement authorities, whilst the conditions and requirements that apply to orders to provide information are without prejudice to other Union acts providing for similar relevant rules for specific",
+        "Providers of very large online platforms and of very large online search engines should ensure that the compliance function is involved, properly and in a timely manner, in all issues which relate to this Regulation including in the risk assessment and mitigation strategy and specific measures, as well as assessing compliance, where applicable, with commitments made by those providers under the codes of conduct and crisis protocols they subscribe to. (32) Directive (EU) 2016/943 of the European Parliament and of the Council of 8 June 2016 on the protection of undisclosed know-how and business information (trade secrets) against their unlawful acquisition, use and disclosure (OJ L 157, 15.6.2016, p. 1). EN L 277/27",
         "To address these new challenges, the European Commission proposed the AI Act, which was agreed by the EU co-legislators on 8 December 2023 and expected to be adopted in April 2024. The objective of the Act is to promote trustworthy and human-centric AI and ensure that AI systems used in the EU are safe and respect European values and fundamental rights, including the right not to be discriminated against as enshrined in EU equality legislation. The AI Act takes a risk-based approach, introducing new mandatory requirements for high-risk AI systems that can have a significant impact on people’s health, safety and fundamental rights.",
-        "6 Ethical considerations The EU-GBV survey was implemented under stringent ethical guidelines given the highly sensitive nature of the topic and potential risks to both respondents and research personnel. The survey design prioritised interviewee safety through comprehensive confidentiality measures, including strict adherence to the requirements of the General Data Protection Regulation (2016/679) (3), separation of respondents’ answers from contact information, immediate removal of personal data after fieldwork was completed and careful data processing procedures to minimise indirect identification risks.",
-        "This will build on the work on gender-sensitive clinical trials within the Accelerate Clinical Trials in the EU initiative, considering that EU pharmaceutical legislation, including the Medicines Directive, ensures that only medicinal products meeting quality, safety and efficacy requirements are authorised for all patients. Further, the proposed revision of the Clinical Trials Regulation under the EU Biotech Act requires consideration to ensure trials reflect population diversity and improve treatments for vulnerable groups. In addition, women who become pregnant or begin breastfeeding will not be automatically excluded from trial participation."
+        "In May 2011, the European Commission adopted a package of legislative proposals to enhance the rights of victims of crime, which includes the EU Victims’ Directive27 establishing minimum standards on the rights, protection and support of victims of crime (replacing the Framework Decision on the standing of victims in criminal proceedings28). Specifically, the package also included a Regulation on mutual recognition of protection measures in civil matters, which is in place and should be of benefit to victims of domestic violence and other vulnerable people at risk of violence as they move between Member States29 (in turn, this is complemented by the European Protection Order).",
+        "157 Public administration European agencies European Agencies (EN name) Decentralised Agencies Agency for the Cooperation of Energy Regulators (ACER) Board of Regulators European Labour Authority (ELA) Management Board Office of the Body of European Regulators for Electronic Communications (BEREC Office) Board of Regulators Community Plant Variety Office (CPVO) Administative Council European Agency for Safety and Health at Work (EU-OSHA) Governing Board European Border and Coast Guard Agency (Frontex) Management Board European Agency for the operational management of large-scale IT systems in the area of freedom, security and justice Management Board European Union Agency for Asylum (EUAA) Management Board European Aviation Safety Agency (EASA) Management Board European Banking Authority (EBA) Board of Supervisors European Centre for Disease Prevention and Control (ECDC) Management Board European Centre for the Development of Vocational Training (Cedefop) Governing Board European Chemicals Agency (ECHA) Management Board European Environment Agency (EEA) Management Board European Fisheries Control Agency (EFCA) Administrative Board European Food Safety Authority (EFSA) Management Board European Foundation for the Improvement of Living and Working Conditions (EUROFOUND) Governing Board European Union Agency for the Space Programme (EUSPA) Administrative Board European Institute for Gender Equality (EIGE) Management Board European Insurance and Occupational Pensions Authority (EIOPA) Board of Supervisors European Maritime Safety Agency (EMSA) Administrative Board European Medicines Agency (EMA) Management Board European Monitoring Centre for Drugs and Drug Addiction (EMCDDA) Management Board European Union Agency for Cybersecurity (ENISA) Management Board European Union Agency for Law Enforcement Training (CEPOL) Management Board European Union Agency for Law Enforcement Cooperation (Europol) Management Board European Union Agency for Railways (ERA) Management Board European Securities and Markets Authority (ESMA) Board of Supervisors European Training Foundation (ETF) Governing Board European Union Agency for Fundamental Rights (FRA) Management Board European Union Intellectual Property Office (EUIPO) Management Board Single Resolution Board (SRB) Board European Union Agency for Criminal Justice Cooperation (Eurojust) College of Eurojust Translation Centre for the Bodies of the European Union (CdT) Management Board\n\nOffice of the Body of European Regulators for Electronic: Communications (BEREC Office) European Agency for the operational management of large-scale: IT systems in the area of freedom, security and justice European Foundation for the Improvement of Living and: Working Conditions (EUROFOUND) European Monitoring Centre for Drugs and Drug Addiction: (EMCDDA) European Union Agency for Criminal Justice Cooperation: (Eurojust)"
       ],
       "retrieved_sources": [
         {
           "source": "2024 Report on Gender Equality in the EU_coming soon.pdf",
           "page": 62,
-          "score": 2.091155529022217
+          "score": 1.5829403400421143
         },
         {
-          "source": "gender-equality-strategy-2026-2030.pdf",
-          "page": 19,
-          "score": 1.2785664796829224
+          "source": "CELEX_32022R2065_EN_TXT.pdf",
+          "page": 9,
+          "score": 0.46671855449676514
         },
         {
-          "source": "48802978de.pdf",
-          "page": 88,
-          "score": 1.1560993194580078
+          "source": "2024 Report on Gender Equality in the EU_coming soon.pdf",
+          "page": 62,
+          "score": 0.21079443395137787
         },
         {
-          "source": "annual_report_GE_2022_printable_EN.pdf",
-          "page": 52,
-          "score": 0.5200589299201965
+          "source": "CELEX_32022R2065_EN_TXT.pdf",
+          "page": 9,
+          "score": 0.20142680406570435
         },
         {
-          "source": "20210923STO13419_en.pdf",
-          "page": 3,
-          "score": 0.34582656621932983
+          "source": "CELEX_32022R2065_EN_TXT.pdf",
+          "page": 27,
+          "score": -0.6949518918991089
         },
         {
           "source": "2024 Report on Gender Equality in the EU_coming soon.pdf",
           "page": 57,
-          "score": 0.33850470185279846
+          "score": -0.8445804119110107
         },
         {
-          "source": "eu-gbv-annexes_en.pdf",
-          "page": 8,
-          "score": 0.1442919224500656
+          "source": "fra-2014-vaw-survey-main-results-apr14_en.pdf",
+          "page": 13,
+          "score": -1.0222556591033936
         },
         {
-          "source": "gender-equality-strategy-2026-2030.pdf",
-          "page": 9,
-          "score": 0.01040579378604889
+          "source": "wmid_methodology_31032026.pdf",
+          "page": 158,
+          "score": -1.1259465217590332
         }
       ]
     }

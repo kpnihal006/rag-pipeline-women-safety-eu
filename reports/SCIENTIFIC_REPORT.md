@@ -630,6 +630,41 @@ against a $5.00 budget (3.3% consumed). A representative full five-agent run
 with the Visualizer enabled cost **$0.00536** for 22,820 tokens across 4 agents,
 9 LLM calls, and 11 tool invocations in 67.6 seconds wall time.
 
+### 5.2 Local stack versus hosted stack
+
+The same 20-question benchmark was run end to end on both stacks. Retrieval and
+generation were re-measured after migrating every component to locally-executed
+models, with the judge held constant in kind (each stack judged by its own
+backend's model).
+
+| Metric | Hosted (gpt-4o-mini + text-embedding-3-small) | **Local (llama3.1:8b + nomic-embed-text)** |
+|---|---|---|
+| Retrieval content hit | 53.3% (8/15) | **53.3% (8/15)** |
+| Generation pass rate | 53.3% (8/15) | **46.7% (7/15)** |
+| Cost per full run | $0.0054 | **$0.00** |
+
+Two results matter here.
+
+**Retrieval is identical.** Swapping a 1536-dimension hosted embedding model for
+a 768-dimension local one changed the retrieval hit rate by zero questions. On
+this corpus and benchmark, the embedding model is not what limits retrieval —
+consistent with §5.3, where three different sentence-transformer models also
+separate by less than one question. Paying for embeddings buys nothing here.
+
+**Generation loses one question.** The local 8B model scores 46.7% against
+46.7%–53.3% hosted, a single-question difference that is well inside sampling
+noise at n=15 and should not be read as a reliable gap. The category breakdown
+is more informative than the total: the local model scores 100% on
+`multi_part`, `language_variation`, `paraphrased` and `temporal`, and 0% on
+`exact_term`, `contradictory` and `multi_hop`. Its weakness is precision on
+specific identifiers and multi-step reasoning, not fluency or grounding.
+
+A labelling inconsistency worth recording: question q01 is classified
+`retrieval_miss` while the judge simultaneously rates its answer correct. The
+failure-type classifier keys off a lexical content check that disagrees with the
+judge, so the per-question failure labels are less reliable than the aggregate
+pass rate. This is the same measurement fragility discussed in §6.2.
+
 ### 5.2 Where retrieval recall is lost
 
 §4.3 attributed poor retrieval to table and date extraction. **That was wrong.**
@@ -658,6 +693,13 @@ Retriever ablation on the same questions:
 | Hybrid + cross-encoder (production) | 61.1% |
 
 The full pipeline scores below its own simplest component.
+
+![LLM-as-judge pass rate by category](figures/fig6_eval_categories.png)
+
+*Every category resolves to exactly 0% or 100%, because each holds one or two
+questions. The figure is included precisely because it makes the sample-size
+limitation visible: these are per-category counts, not rates that can be
+compared. Read the direction, never the magnitude.*
 
 ### 5.3 Design-decision factorial
 
