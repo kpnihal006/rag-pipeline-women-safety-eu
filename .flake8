@@ -1,0 +1,36 @@
+[flake8]
+max-line-length = 100
+
+# Codebase conventions, deliberately allowed:
+#   E221 — aligned assignment blocks (used throughout for readable config tables)
+#   E402 — module-level imports after the sys.path.insert that makes `app.` and
+#          `scripts.` importable when a file is run directly as a script
+#   W503 — line break before binary operator (conflicts with black-style wrapping)
+#   E203 — whitespace before ':' (same)
+extend-ignore = E221, E402, W503, E203
+
+exclude =
+    .git,
+    .venv,
+    venv,
+    __pycache__,
+    data,
+    reports,
+    traces,
+    NLP,
+    ilovepdf_split-range,
+    submission
+
+per-file-ignores =
+    # Tests favour long, descriptive assertions and fixture shadowing.
+    tests/*: E501, F811, F401, F841
+    # Detection regexes must stay on one line to remain readable as patterns.
+    app/security.py: E501
+    # Gradio UI: inline HTML/CSS strings that do not wrap meaningfully.
+    app/app.py: E501, E741, E231, E401, E302, E305, F401
+    # Teams bot: command-parsing tables and re-exported helpers.
+    app/teams_bot.py: E501, E231, E306, E302, F401
+    # Long-form diagnostic output strings.
+    scripts/retrieval_check.py: E501
+    scripts/ragas_eval.py: E501
+    scripts/demo_dry_run.py: F401, F841

@@ -1,0 +1,210 @@
+{
+  "n_questions": 15,
+  "n_pages": 1723,
+  "results": [
+    {
+      "embedder": "MiniLM-L6",
+      "dim": 384,
+      "chunk_size": 400,
+      "overlap": 200,
+      "structure": false,
+      "retriever": "dense",
+      "k": 8,
+      "n_chunks": 18314,
+      "recall": 0.4,
+      "mrr": 0.2778,
+      "precision": 0.1917,
+      "by_set": {
+        "questions": 0.4
+      },
+      "build_s": 97.0
+    },
+    {
+      "embedder": "MiniLM-L6",
+      "dim": 384,
+      "chunk_size": 400,
+      "overlap": 200,
+      "structure": false,
+      "retriever": "bm25",
+      "k": 8,
+      "n_chunks": 18314,
+      "recall": 0.4,
+      "mrr": 0.3333,
+      "precision": 0.175,
+      "by_set": {
+        "questions": 0.4
+      },
+      "build_s": 97.0
+    },
+    {
+      "embedder": "MiniLM-L6",
+      "dim": 384,
+      "chunk_size": 400,
+      "overlap": 200,
+      "structure": false,
+      "retriever": "hybrid",
+      "k": 8,
+      "n_chunks": 18314,
+      "recall": 0.4,
+      "mrr": 0.3111,
+      "precision": 0.2083,
+      "by_set": {
+        "questions": 0.4
+      },
+      "build_s": 97.0
+    },
+    {
+      "embedder": "MiniLM-L6",
+      "dim": 384,
+      "chunk_size": 400,
+      "overlap": 200,
+      "structure": true,
+      "retriever": "dense",
+      "k": 8,
+      "n_chunks": 18314,
+      "recall": 0.4,
+      "mrr": 0.2889,
+      "precision": 0.1917,
+      "by_set": {
+        "questions": 0.4
+      },
+      "build_s": 94.8
+    },
+    {
+      "embedder": "MiniLM-L6",
+      "dim": 384,
+      "chunk_size": 400,
+      "overlap": 200,
+      "structure": true,
+      "retriever": "bm25",
+      "k": 8,
+      "n_chunks": 18314,
+      "recall": 0.4,
+      "mrr": 0.3333,
+      "precision": 0.175,
+      "by_set": {
+        "questions": 0.4
+      },
+      "build_s": 94.8
+    },
+    {
+      "embedder": "MiniLM-L6",
+      "dim": 384,
+      "chunk_size": 400,
+      "overlap": 200,
+      "structure": true,
+      "retriever": "hybrid",
+      "k": 8,
+      "n_chunks": 18314,
+      "recall": 0.4,
+      "mrr": 0.3111,
+      "precision": 0.2,
+      "by_set": {
+        "questions": 0.4
+      },
+      "build_s": 94.8
+    },
+    {
+      "embedder": "MiniLM-L6",
+      "dim": 384,
+      "chunk_size": 800,
+      "overlap": 200,
+      "structure": false,
+      "retriever": "dense",
+      "k": 8,
+      "n_chunks": 8690,
+      "recall": 0.4,
+      "mrr": 0.3222,
+      "precision": 0.1333,
+      "by_set": {
+        "questions": 0.4
+      },
+      "build_s": 65.5
+    },
+    {
+      "embedder": "MiniLM-L6",
+      "dim": 384,
+      "chunk_size": 800,
+      "overlap": 200,
+      "structure": false,
+      "retriever": "bm25",
+      "k": 8,
+      "n_chunks": 8690,
+      "recall": 0.4667,
+      "mrr": 0.3889,
+      "precision": 0.15,
+      "by_set": {
+        "questions": 0.467
+      },
+      "build_s": 65.5
+    },
+    {
+      "embedder": "MiniLM-L6",
+      "dim": 384,
+      "chunk_size": 800,
+      "overlap": 200,
+      "structure": false,
+      "retriever": "hybrid",
+      "k": 8,
+      "n_chunks": 8690,
+      "recall": 0.4,
+      "mrr": 0.3667,
+      "precision": 0.1667,
+      "by_set": {
+        "questions": 0.4
+      },
+      "build_s": 65.5
+    },
+    {
+      "embedder": "MiniLM-L6",
+      "dim": 384,
+      "chunk_size": 800,
+      "overlap": 200,
+      "structure": true,
+      "retriever": "dense",
+      "k": 8,
+      "n_chunks": 8690,
+      "recall": 0.4,
+      "mrr": 0.3333,
+      "precision": 0.125,
+      "by_set": {
+        "questions": 0.4
+      },
+      "build_s": 65.5
+    },
+    {
+      "embedder": "MiniLM-L6",
+      "dim": 384,
+      "chunk_size": 800,
+      "overlap": 200,
+      "structure": true,
+      "retriever": "bm25",
+      "k": 8,
+      "n_chunks": 8690,
+      "recall": 0.4667,
+      "mrr": 0.3889,
+      "precision": 0.15,
+      "by_set": {
+        "questions": 0.467
+      },
+      "build_s": 65.5
+    },
+    {
+      "embedder": "MiniLM-L6",
+      "dim": 384,
+      "chunk_size": 800,
+      "overlap": 200,
+      "structure": true,
+      "retriever": "hybrid",
+      "k": 8,
+      "n_chunks": 8690,
+      "recall": 0.4,
+      "mrr": 0.3667,
+      "precision": 0.1667,
+      "by_set": {
+        "questions": 0.4
+      },
+      "build_s": 65.5
+    }
+  ]
+}

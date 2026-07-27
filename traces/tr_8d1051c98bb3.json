@@ -1,0 +1,101 @@
+{
+  "trace_id": "tr_8d1051c98bb3",
+  "label": "corpus_only: What does the Istanbul Convention require of police respondi",
+  "started_at": "2026-07-27T18:21:11.418975+00:00",
+  "duration_ms": 10592.53,
+  "total_tokens": 0,
+  "total_cost_usd": 0.0,
+  "metadata": {
+    "query": "What does the Istanbul Convention require of police responding to violence against women?",
+    "route": "corpus_only"
+  },
+  "spans": [
+    {
+      "span_id": "sp_ea684b2cb3",
+      "trace_id": "tr_8d1051c98bb3",
+      "parent_id": null,
+      "kind": "retrieval",
+      "name": "hybrid_retrieve",
+      "status": "ok",
+      "error": null,
+      "duration_ms": 2480.65,
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "total_tokens": 0,
+      "cost_usd": 0.0,
+      "attributes": {
+        "query": "What does the Istanbul Convention require of police responding to violence against women?",
+        "n_results": 8,
+        "retrieved": [
+          {
+            "source": "eu-gender-based-violence-survey-evidence-for-policy-and-practice_4.pdf",
+            "page": 17,
+            "score": 6.9152,
+            "preview": "Article 33 of the Istanbul Convention requires parties to the convention to criminalise intentional conduct that seriously impairs a person’s psychological integrity through coercion or threats. The provisions of the VAW Directive are align…[+523 chars]"
+          },
+          {
+            "source": "fra-2014-vaw-survey-main-results-apr14_en.pdf",
+            "page": 70,
+            "score": 6.8887,
+            "preview": "In addition, victims of sexual violence are even less content than victims of physical violence as regards their treatment by the police. These results show that action is needed to independently review and revise the police’s current respo…[+510 chars]"
+          },
+          {
+            "source": "eu-gender-based-violence-survey-evidence-for-policy-and-practice_4.pdf",
+            "page": 19,
+            "score": 6.7442,
+            "preview": "17 Women should have access to alternative options to report crime and receive support from trained professionals who deliver coordinated, holistic care. Facilitate reporting of physical and sexual violence The Istanbul Convention, the VRD …[+451 chars]"
+          },
+          {
+            "source": "gender-equality-index-2024-tackling-violence-against-women-tackling-gender-inequalities.pdf",
+            "page": 46,
+            "score": 6.7103,
+            "preview": "Article 17 of the Istanbul Convention recommends the involvement of the private sector and the media in the prevention of violence against women and domestic violence (Council of Europe,\n2011a). It also encourages the media to define and ad…[+323 chars]"
+          },
+          {
+            "source": "eu-gender-based-violence-survey-evidence-for-policy-and-practice_4.pdf",
+            "page": 119,
+            "score": 6.6208,
+            "preview": "117 CONCLUSION The pervasive nature of violence against women and intimate partner violence across the EU is a pressing concern that demands renewed attention and action. The EU-GBV survey findings underscore the need for a comprehensive an…[+354 chars]"
+          },
+          {
+            "source": "fra-2014-vaw-survey-main-results-apr14_en.pdf",
+            "page": 95,
+            "score": 6.4679,
+            "preview": "93 Stalking Victims of stalking should receive adequate protection from the state, building on the type of protection developed in response to cases of domestic violence. • In line with Article 50 of the Istanbul Convention, which obliges p…[+471 chars]"
+          },
+          {
+            "source": "KS-01-24-013-EN-N.pdf",
+            "page": 7,
+            "score": 6.3983,
+            "preview": "The Istanbul Convention defines violence against women as ‘a violation of human rights and a form of discrimination against women and shall mean all acts of genderbased violence that result in, or are likely to result in, physical, sexual, …[+510 chars]"
+          },
+          {
+            "source": "20210923STO13419_en.pdf",
+            "page": 4,
+            "score": 6.3824,
+            "preview": "MEPs also called for EU countries to help victims achieve financial independence, enabling them to leave abusive and violent relationships. EU accession to the Istanbul Convention The Istanbul Convention on preventing and combatting violenc…[+527 chars]"
+          }
+        ],
+        "top_score": 6.9152,
+        "mean_score": 6.641
+      },
+      "events": []
+    },
+    {
+      "span_id": "sp_b0e027f270",
+      "trace_id": "tr_8d1051c98bb3",
+      "parent_id": null,
+      "kind": "llm",
+      "name": "generate_answer",
+      "status": "ok",
+      "error": null,
+      "duration_ms": 1340.03,
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "total_tokens": 0,
+      "cost_usd": 0.0,
+      "attributes": {},
+      "events": []
+    }
+  ]
+}

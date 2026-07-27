@@ -1,0 +1,293 @@
+[
+  {
+    "question": "What is the exact deadline for EU Member States to transpose Directive (EU) 2024/1385, and what specific year marks the conclusion of the Commission's evaluation of its impact?",
+    "expected_answer": "Member States must transpose the Directive by 14 June 2027. The Commission is required to carry out an evaluation of the Directive’s impact by 14 June 2032.",
+    "source": "Untitled-1-100.pdf, Untitled-101-200.pdf",
+    "page": "5, 95",
+    "difficulty": "hard",
+    "priority": true,
+    "sub_type": "temporal",
+    "expected_chunks": [
+      {
+        "source": "48802978de.pdf",
+        "page": 5
+      },
+      {
+        "source": "48802978de.pdf",
+        "page": 95
+      }
+    ]
+  },
+  {
+    "question": "Under Article 5 of the Digital Services Act (Regulation EU 2022/2065), what is the 'Condition (d)' required for a provider of caching services to qualify for a liability exemption?",
+    "expected_answer": "Condition (d) requires that the provider does not interfere with the lawful use of technology, widely recognised and used by industry, to obtain data on the use of the information.",
+    "source": "CELEX_32022R2065_EN_TXT.pdf",
+    "page": 45,
+    "difficulty": "hard",
+    "priority": false,
+    "sub_type": "exact_term",
+    "expected_chunks": [
+      {
+        "source": "CELEX_32022R2065_EN_TXT.pdf",
+        "page": 45
+      }
+    ]
+  },
+  {
+    "question": "If an online platform facilitates the 'non-consensual sharing of intimate or manipulated material,' how does the 2024 VAW Directive (Article 14) utilize the Digital Services Act to mitigate harm?",
+    "expected_answer": "The Directive works in synergy with the DSA to ensure Member States have measures to promptly remove or disable access to such material. Specifically, it empowers judicial authorities to order providers of intermediary services to act against cyber violence on their platforms.",
+    "source": "gender-equality-index-2024-tackling-violence-against-women-tackling-gender-inequalities.pdf, annual_report_GE_2023_web_EN.pdf",
+    "page": "15, 6",
+    "difficulty": "hard",
+    "priority": true,
+    "sub_type": "multi_hop",
+    "expected_chunks": [
+      {
+        "source": "gender-equality-index-2024-tackling-violence-against-women-tackling-gender-inequalities.pdf",
+        "page": 15
+      },
+      {
+        "source": "annual_report_GE_2023_web_EN.pdf",
+        "page": 6
+      }
+    ]
+  },
+  {
+    "question": "Which three specific grounds allow the Commission to reopen proceedings under Article 71(2) of the Digital Services Act after commitments have been made binding?",
+    "expected_answer": "Proceedings may be reopened where: (a) there has been a material change in any of the facts on which the decision was based; (b) the provider acts contrary to its commitments; or (c) the decision was based on incomplete, incorrect, or misleading information provided by the platform or a relevant person.",
+    "source": "CELEX_32022R2065_EN_TXT.pdf",
+    "page": 93,
+    "difficulty": "hard",
+    "priority": true,
+    "sub_type": "multi_part",
+    "expected_chunks": [
+      {
+        "source": "CELEX_32022R2065_EN_TXT.pdf",
+        "page": 93
+      }
+    ]
+  },
+  {
+    "question": "In the tracking of EU gender equality expenditure, what specifically distinguishes 'Score 1' from 'Score 2' interventions according to the Commission's methodology?",
+    "expected_answer": "'Score 2' interventions are those whose principal objective is to improve gender equality, while 'Score 1' interventions have gender equality as an important and deliberate objective, but not as the main reason for the intervention.",
+    "source": "2024 Report on Gender Equality in the EU_coming soon.pdf",
+    "page": 62,
+    "difficulty": "medium",
+    "priority": false,
+    "sub_type": "exact_term",
+    "expected_chunks": [
+      {
+        "source": "2024 Report on Gender Equality in the EU_coming soon.pdf",
+        "page": 62
+      }
+    ]
+  },
+  {
+    "question": "What is the 'exception clause' in the Digital Services Act where a provider of hosting services is NOT required to provide a statement of reasons for content removal?",
+    "expected_answer": "The obligation to provide a statement of reasons does not apply where the information is deceptive high-volume commercial content disseminated through intentional manipulation (such as the use of bots or fake accounts).",
+    "source": "CELEX_32022R2065_EN_TXT.pdf",
+    "page": "14, 51",
+    "difficulty": "hard",
+    "priority": true,
+    "sub_type": "negation",
+    "expected_chunks": [
+      {
+        "source": "CELEX_32022R2065_EN_TXT.pdf",
+        "page": 14
+      },
+      {
+        "source": "CELEX_32022R2065_EN_TXT.pdf",
+        "page": 51
+      }
+    ]
+  },
+  {
+    "question": "In the 2024 EU budget reporting, what specific reason was provided for the decrease in total expenditure supporting gender equality compared to 2023, and how did the proportion of funding change?",
+    "expected_answer": "The total expenditure was lower mainly due to the phasing out of Recovery and Resilience Facility (RRF) commitments. However, the proportion of funding directed towards gender equality actually increased to 19.5%.",
+    "source": "48802978de.pdf",
+    "page": 15,
+    "difficulty": "hard",
+    "priority": false,
+    "sub_type": "temporal",
+    "expected_chunks": [
+      {
+        "source": "48802978de.pdf",
+        "page": 15
+      }
+    ]
+  },
+  {
+    "question": "Compare the median CARE survey duration (2nd wave) for respondents in Sweden and Malta.",
+    "expected_answer": "The median duration for Sweden was 12 minutes and 21 seconds, while for Malta it was 14 minutes and 13 seconds.",
+    "source": "care-survey-second-wave.pdf",
+    "page": 28,
+    "difficulty": "hard",
+    "priority": false,
+    "sub_type": "table_list",
+    "expected_chunks": [
+      {
+        "source": "care-survey-second-wave.pdf",
+        "page": 28
+      }
+    ]
+  },
+  {
+    "question": "Identify the four specific anthropometric dimensions evaluated in the early 2024 study on the inclusiveness of machinery standards mentioned in the 2024 Report on Gender Equality.",
+    "expected_answer": "The dimensions are: i) anthropometric coverage, ii) statistical inclusiveness, iii) data transparency, and iv) data representativeness.",
+    "source": "2024 Report on Gender Equality in the EU_coming soon.pdf",
+    "page": 62,
+    "difficulty": "hard",
+    "priority": false,
+    "sub_type": "multi_part",
+    "expected_chunks": [
+      {
+        "source": "2024 Report on Gender Equality in the EU_coming soon.pdf",
+        "page": 62
+      }
+    ]
+  },
+  {
+    "question": "Is mandatory mediation allowed by the EU in domestic violence cases? Resolve this using the Istanbul Convention and the practices of the EESC as described in the sources.",
+    "expected_answer": "No, the Istanbul Convention (Article 48) explicitly prohibits mandatory alternative dispute resolution processes, including mediation. While the EESC allows voluntary mediation for workplace conflicts, this is without prejudice to other legal follow-up and does not override the convention's prohibition on mandatory mediation for GBV.",
+    "source": "CETS_210.docx.pdf, 48802978de.pdf",
+    "page": "13, 74",
+    "difficulty": "hard",
+    "priority": false,
+    "sub_type": "contradictory",
+    "expected_chunks": [
+      {
+        "source": "CETS_210.docx.pdf",
+        "page": 13
+      },
+      {
+        "source": "48802978de.pdf",
+        "page": 74
+      }
+    ]
+  },
+  {
+    "question": "What's the 'only yes means yes' rule and what does it say about people just staying quiet during a sexual encounter?",
+    "expected_answer": "The affirmative consent model ('only yes means yes') recognizes that the absence of a verbal 'no' is not an implicit 'yes'. It stipulates that passivity, silence, lack of protest, or lack of resistance cannot be deemed to mean consent.",
+    "source": "2024 Report on Gender Equality in the EU_coming soon.pdf",
+    "page": 4,
+    "difficulty": "medium",
+    "priority": true,
+    "sub_type": "language_variation",
+    "expected_chunks": [
+      {
+        "source": "2024 Report on Gender Equality in the EU_coming soon.pdf",
+        "page": 4
+      }
+    ]
+  },
+  {
+    "question": "In the context of the Digital Services Act, contrast the fine limitations for infringing 'relevant provisions' (Article 74(1)) versus providing 'misleading information' (Article 74(2)).",
+    "expected_answer": "Fines for infringing relevant provisions or commitments cannot exceed 6% of the total worldwide annual turnover. Fines for supplying incorrect, incomplete, or misleading information cannot exceed 1% of total annual income or worldwide turnover.",
+    "source": "CELEX_32022R2065_EN_TXT.pdf",
+    "page": 94,
+    "difficulty": "hard",
+    "priority": false,
+    "sub_type": "same_document",
+    "expected_chunks": [
+      {
+        "source": "CELEX_32022R2065_EN_TXT.pdf",
+        "page": 94
+      }
+    ]
+  },
+  {
+    "question": "What percentage of stalking victims in the EU-GBV survey reported having to change their 'telephone number, email address or social networking account' as a consequence?",
+    "expected_answer": "According to the survey, one in three stalking victims (34.7%) had to change their telephone number, email address, or social networking account.",
+    "source": "eu-gender-based-violence-survey-evidence-for-policy-and-practice_4.pdf",
+    "page": 21,
+    "difficulty": "medium",
+    "priority": false,
+    "sub_type": "edge_of_chunk",
+    "expected_chunks": [
+      {
+        "source": "eu-gender-based-violence-survey-evidence-for-policy-and-practice_4.pdf",
+        "page": 21
+      }
+    ]
+  },
+  {
+    "question": "Does the new gender-neutral job evaluation toolkit include 'exposure to harassment' under its 'Effort' factor or its 'Working Conditions' factor?",
+    "expected_answer": "It falls under the 'Working Conditions' factor (specifically the Environment subfactor). Psychosocial risks like exposure to harassment should not be confused with the 'Psychosocial and emotional effort' subfactor, which reflects the energy required to intervene in such situations while maintaining emotional regulation.",
+    "source": "eu-wide-guidelines-on-gender-neutral-job-evaluation-and-classification-step-by-step-toolkit.pdf",
+    "page": 100,
+    "difficulty": "hard",
+    "priority": false,
+    "sub_type": "paraphrased",
+    "expected_chunks": [
+      {
+        "source": "eu-wide-guidelines-on-gender-neutral-job-evaluation-and-classification-step-by-step-toolkit.pdf",
+        "page": 100
+      }
+    ]
+  },
+  {
+    "question": "What's the deal with my job involving 'manual dexterity' like typing or injections—is that considered a skill or just physical exertion in the EU toolkit?",
+    "expected_answer": "It is a skill. The toolkit classifies 'manual dexterity' under 'Physical Skills' (subfactor 1.5). It warns against confusing the skill required for precision with 'physical effort,' which measures the fatigue or strain on the body caused by the task.",
+    "source": "eu-wide-guidelines-on-gender-neutral-job-evaluation-and-classification-step-by-step-toolkit.pdf",
+    "page": 91,
+    "difficulty": "medium",
+    "priority": false,
+    "sub_type": "language_variation",
+    "expected_chunks": [
+      {
+        "source": "eu-wide-guidelines-on-gender-neutral-job-evaluation-and-classification-step-by-step-toolkit.pdf",
+        "page": 91
+      }
+    ]
+  },
+  {
+    "question": "What were the specific women's safety reporting requirements mandated by the 1997 Treaty of Amsterdam as described in the 2024 Gender Equality report?",
+    "expected_answer": "I don't have information about this. The provided sources cover current strategies (2020-2025) and directives from 2024, but they do not detail reporting requirements from the 1997 Treaty of Amsterdam.",
+    "source": "Assignment instructions",
+    "page": "multiple",
+    "difficulty": "medium",
+    "priority": false,
+    "sub_type": "on_topic_unanswerable",
+    "expected_chunks": null
+  },
+  {
+    "question": "How do safety regulations for women differ in the United Kingdom following the 2024 General Election?",
+    "expected_answer": "I don't have information about this. The corpus data for the United Kingdom generally ends at 2023 or 2024 regarding scientific academies and decision-making, and the UK is no longer an EU Member State covered by current EU-wide safety regulations.",
+    "source": "Assignment instructions",
+    "page": "multiple",
+    "difficulty": "easy",
+    "priority": false,
+    "sub_type": "out_of_scope",
+    "expected_chunks": null
+  },
+  {
+    "question": "Who won the 2024 Ballon d'Or?",
+    "expected_answer": "I don't have information about this. This query is out of scope.",
+    "source": "Assignment instructions",
+    "page": "multiple",
+    "difficulty": "easy",
+    "priority": false,
+    "sub_type": "out_of_scope",
+    "expected_chunks": null
+  },
+  {
+    "question": "What are the rules about the top-up?",
+    "expected_answer": "Could you please clarify? This could refer to the complementary income support for young female farmers under the CAP, or the top-up provided to parents for childcare-related costs under the 'Culture Moves Europe' mobility scheme.",
+    "source": "Assignment instructions",
+    "page": "multiple",
+    "difficulty": "easy",
+    "priority": false,
+    "sub_type": "ambiguous",
+    "expected_chunks": null
+  },
+  {
+    "question": "Tell me about the requirements for safety.",
+    "expected_answer": "Could you please clarify? The corpus covers digital safety obligations for VLOPs in the DSA, physical safety requirements for victims in shelters under the VAW Directive, and health and safety working conditions in the job evaluation toolkit.",
+    "source": "Assignment instructions",
+    "page": "multiple",
+    "difficulty": "easy",
+    "priority": false,
+    "sub_type": "ambiguous",
+    "expected_chunks": null
+  }
+]
