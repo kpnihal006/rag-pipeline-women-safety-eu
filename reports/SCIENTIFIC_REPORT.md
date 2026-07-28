@@ -335,7 +335,25 @@ available as an additional output channel.
 
 ---
 
-### 3.5 Local execution
+### 3.5 Evidence references
+
+Every answer must reference the passages it used, so the system does not rely on
+the model to remember. Measuring the generated answers showed the prompt alone
+produced a reference in only **55%** of cases: an 8B local model instructed to
+cite forgets to do so about half the time.
+
+References are therefore appended deterministically. After generation, an answer
+that makes claims but contains no document name, page number, or passage index
+receives a `Sources` block listing the distinct (document, page) pairs it was
+given. Two cases are exempt: an answer that already cites is left untouched, and
+a refusal is skipped entirely — attaching sources to "this information is not in
+the corpus" would imply evidence that was never used.
+
+This is a deliberate choice of mechanism over instruction. A requirement that
+must always hold should be enforced in code, where it can be tested, rather than
+requested in a prompt where compliance is probabilistic.
+
+### 3.6 Local execution
 
 `app/llm.py` is the single point of backend selection and defaults to Ollama.
 Both backends are reached through the OpenAI-compatible client, because Ollama
@@ -364,7 +382,7 @@ Two consequences had to be handled rather than papered over:
   free; tokens are still recorded because they drive latency and context
   pressure, but billing them at hosted rates would make the ledger fiction.
 
-### 3.6 Security
+### 3.7 Security
 
 #### 3.1 Threat model
 

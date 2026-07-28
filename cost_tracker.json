@@ -10974,6 +10974,28 @@
       "total_tokens": 1812,
       "cost_usd": 0.0,
       "backend": "ollama"
+    },
+    {
+      "timestamp": "2026-07-28T09:25:17.863252+00:00",
+      "user": "moxievil",
+      "type": "embedding",
+      "model": "nomic-embed-text",
+      "prompt_tokens": 11,
+      "completion_tokens": 0,
+      "total_tokens": 11,
+      "cost_usd": 0.0,
+      "backend": "ollama"
+    },
+    {
+      "timestamp": "2026-07-28T09:26:48.481647+00:00",
+      "user": "moxievil",
+      "type": "chat",
+      "model": "llama3.1:8b",
+      "prompt_tokens": 1157,
+      "completion_tokens": 216,
+      "total_tokens": 1373,
+      "cost_usd": 0.0,
+      "backend": "ollama"
     }
   ],
   "budget_usd": 5.0,

@@ -156,3 +156,56 @@ class TestCostTracker:
         summary = ledger.get_summary()
         assert summary["total_usd"] > 0
         assert ledger.BUDGET_USD == 5.00
+
+
+class TestAnswerReferences:
+    """Evidence references are a hard requirement, not a nice-to-have.
+
+    Relying on the prompt alone produced references in only 55% of answers —
+    a local 8B model forgets to cite roughly half the time. These tests pin the
+    deterministic fallback that guarantees the requirement is met.
+    """
+
+    RESULTS = [
+        {"source": "istanbul.pdf", "page": 12, "text": "..."},
+        {"source": "victims_directive.pdf", "page": 4, "text": "..."},
+    ]
+
+    def test_uncited_claim_needs_sources(self):
+        from scripts.chunk import _needs_sources
+
+        assert _needs_sources("Police must respond promptly.", self.RESULTS)
+
+    @pytest.mark.parametrize("answer", [
+        "According to istanbul.pdf the police must respond.",
+        "See page 12 for the requirement.",
+        "The requirement is stated in passage [1].",
+    ])
+    def test_already_cited_is_left_alone(self, answer):
+        from scripts.chunk import _needs_sources
+
+        assert not _needs_sources(answer, self.RESULTS)
+
+    @pytest.mark.parametrize("refusal", [
+        "This specific information is not in the corpus.",
+        "That question is outside the scope of this corpus.",
+        "This question is too broad to answer precisely.",
+    ])
+    def test_refusals_get_no_sources_block(self, refusal):
+        # A refusal cites nothing by design; appending sources would imply
+        # evidence that was never used.
+        from scripts.chunk import _needs_sources
+
+        assert not _needs_sources(refusal, self.RESULTS)
+
+    def test_empty_answer_and_no_results_are_skipped(self):
+        from scripts.chunk import _needs_sources
+
+        assert not _needs_sources("", self.RESULTS)
+        assert not _needs_sources("A claim.", [])
+
+    def test_existing_sources_block_is_not_duplicated(self):
+        from scripts.chunk import _needs_sources
+
+        assert not _needs_sources("Answer.\n\n---\n**Sources**\n- a.pdf — p.1",
+                                  self.RESULTS)

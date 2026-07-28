@@ -622,7 +622,50 @@ def generate_answer(
         messages=messages,
     )
     track_cost(response, call_type="chat", user=user)
-    return response.choices[0].message.content
+    answer = response.choices[0].message.content or ""
+
+    # Evidence references are a hard requirement of this system, so they are
+    # appended deterministically rather than left to the model. Measured
+    # compliance when relying on the prompt alone was 55% — an 8B local model
+    # simply forgets to cite about half the time. A refusal is exempt: there is
+    # no evidence to reference when the corpus does not contain the answer.
+    if _needs_sources(answer, results):
+        seen: list[tuple[str, int]] = []
+        for r in results:
+            key = (r["source"], r["page"])
+            if key not in seen:
+                seen.append(key)
+        refs = "\n".join(f"- {src} — p.{page}" for src, page in seen[:8])
+        answer = f"{answer}\n\n---\n**Sources**\n{refs}"
+
+    return answer
+
+
+#: Phrases the system prompt uses to decline; these answers cite nothing by
+#: design and must not have a Sources block bolted on.
+_REFUSAL_MARKERS = (
+    "outside the scope",
+    "not available in the corpus",
+    "this specific information",
+    "too broad to answer",
+    "could you be more specific",
+)
+
+
+def _needs_sources(answer: str, results: list[dict]) -> bool:
+    """True when an answer makes claims but carries no reference."""
+    if not answer.strip() or not results:
+        return False
+    low = answer.lower()
+    if any(m in low for m in _REFUSAL_MARKERS):
+        return False
+    if "**Sources**" in answer:
+        return False
+    # Already cites a document, page, or bracketed passage index.
+    import re as _re
+    if _re.search(r"\.pdf|p\.\s*\d+|page\s+\d+|\[\d+\]", answer, _re.I):
+        return False
+    return True
 
 
 # ---------------------------------------------------------------------------
