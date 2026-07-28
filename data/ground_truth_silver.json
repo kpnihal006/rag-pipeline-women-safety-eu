@@ -1,0 +1,2162 @@
+[
+  {
+    "id": "s001",
+    "question": "What kind of support must a country provide to a child who may have witnessed domestic violence?",
+    "expected_answer": "Support to children shall be specialised and appropriate to the age, developmental needs and individual situation of the child...",
+    "sub_type": "paraphrased",
+    "difficulty": "silver",
+    "gold_chunk_index": 3003,
+    "gold_chunk_id": "OJ_L_202401385_EN_TXT.pdf::p29::c2",
+    "expected_chunks": [
+      {
+        "source": "OJ_L_202401385_EN_TXT.pdf",
+        "page": 29
+      }
+    ],
+    "source": "OJ_L_202401385_EN_TXT.pdf",
+    "page": 29,
+    "has_identifiers": true
+  },
+  {
+    "id": "s002",
+    "question": "What is one of the goals related to online abuse mentioned in this document?",
+    "expected_answer": "Ensure full enforcement of the Digital Services Act (2023) for online platforms to remove deepfakes and tackle online abuse.",
+    "sub_type": "factual",
+    "difficulty": "silver",
+    "gold_chunk_index": 2468,
+    "gold_chunk_id": "JUST_template_comingsoon_standard_0.pdf::p1::c1",
+    "expected_chunks": [
+      {
+        "source": "JUST_template_comingsoon_standard_0.pdf",
+        "page": 1
+      }
+    ],
+    "source": "JUST_template_comingsoon_standard_0.pdf",
+    "page": 1,
+    "has_identifiers": false
+  },
+  {
+    "id": "s003",
+    "question": "What percentage of EU women and men associate men's parental leave with a lack of career ambition?",
+    "expected_answer": "Nearly one in five women and men in the EU still associate men’s parental leave with a lack of career ambition.",
+    "sub_type": "factual",
+    "difficulty": "silver",
+    "gold_chunk_index": 8883,
+    "gold_chunk_id": "gender-equality-index-2025-sharper-data-for-a-changing-world (1).pdf::p117::c3",
+    "expected_chunks": [
+      {
+        "source": "gender-equality-index-2025-sharper-data-for-a-changing-world (1).pdf",
+        "page": 117
+      }
+    ],
+    "source": "gender-equality-index-2025-sharper-data-for-a-changing-world (1).pdf",
+    "page": 117,
+    "has_identifiers": false
+  },
+  {
+    "id": "s004",
+    "question": "What is not covered by the measures that parties must take?",
+    "expected_answer": "gender-sensitive reception procedures and support services for asylum-seekers as well as gender guidelines and gender-sensitive asylum procedures, including refugee status determination and application for international protection.",
+    "sub_type": "negation",
+    "difficulty": "silver",
+    "gold_chunk_index": 2417,
+    "gold_chunk_id": "CETS_210.docx.pdf::p17::c2",
+    "expected_chunks": [
+      {
+        "source": "CETS_210.docx.pdf",
+        "page": 17
+      }
+    ],
+    "source": "CETS_210.docx.pdf",
+    "page": 17,
+    "has_identifiers": true
+  },
+  {
+    "id": "s005",
+    "question": "What is the employment rate for women in Hungary?",
+    "expected_answer": "51.5%",
+    "sub_type": "numeric",
+    "difficulty": "silver",
+    "gold_chunk_index": 9790,
+    "gold_chunk_id": "gender-equality-index-2025-sharper-data-for-a-changing-world.pdf::p158::c2",
+    "expected_chunks": [
+      {
+        "source": "gender-equality-index-2025-sharper-data-for-a-changing-world.pdf",
+        "page": 158
+      }
+    ],
+    "source": "gender-equality-index-2025-sharper-data-for-a-changing-world.pdf",
+    "page": 158,
+    "has_identifiers": false
+  },
+  {
+    "id": "s006",
+    "question": "What types of international agreements are mentioned as relevant to gender equality?",
+    "expected_answer": "The Convention on the Elimination of All Forms of Discrimination against Women and the International Labour Organisation’s 1951 Equal Remuneration Convention (No. 100) are mentioned.",
+    "sub_type": "paraphrased",
+    "difficulty": "silver",
+    "gold_chunk_index": 3883,
+    "gold_chunk_id": "annual_report_GE_2023_web_EN.pdf::p57::c2",
+    "expected_chunks": [
+      {
+        "source": "annual_report_GE_2023_web_EN.pdf",
+        "page": 57
+      }
+    ],
+    "source": "annual_report_GE_2023_web_EN.pdf",
+    "page": 57,
+    "has_identifiers": true
+  },
+  {
+    "id": "s007",
+    "question": "What is a limitation of using regular expressions in text?",
+    "expected_answer": "An AI would not be able to answer properly due to lacking personal preferences.",
+    "sub_type": "factual",
+    "difficulty": "silver",
+    "gold_chunk_index": 4197,
+    "gold_chunk_id": "care-survey-second-wave.pdf::p35::c3",
+    "expected_chunks": [
+      {
+        "source": "care-survey-second-wave.pdf",
+        "page": 35
+      }
+    ],
+    "source": "care-survey-second-wave.pdf",
+    "page": 35,
+    "has_identifiers": true
+  },
+  {
+    "id": "s008",
+    "question": "What is a potential drawback of certain approaches to job evaluation?",
+    "expected_answer": "Both approaches risk attaching greater value to jobs that are typically held by men and undervaluing jobs commonly done by women.",
+    "sub_type": "paraphrased",
+    "difficulty": "silver",
+    "gold_chunk_index": 5326,
+    "gold_chunk_id": "eu-wide-guidelines-on-gender-neutral-job-evaluation-and-classification-step-by-step-toolkit.pdf::p12::c5",
+    "expected_chunks": [
+      {
+        "source": "eu-wide-guidelines-on-gender-neutral-job-evaluation-and-classification-step-by-step-toolkit.pdf",
+        "page": 12
+      }
+    ],
+    "source": "eu-wide-guidelines-on-gender-neutral-job-evaluation-and-classification-step-by-step-toolkit.pdf",
+    "page": 12,
+    "has_identifiers": false
+  },
+  {
+    "id": "s009",
+    "question": "What is the maximum fine for asking or giving a dowry?",
+    "expected_answer": "a fine of up to ₹5,000",
+    "sub_type": "numeric",
+    "difficulty": "silver",
+    "gold_chunk_index": 12745,
+    "gold_chunk_id": "ui-2026-04-17::p1::dyn0",
+    "expected_chunks": [
+      {
+        "source": "ui-2026-04-17",
+        "page": 1
+      }
+    ],
+    "source": "ui-2026-04-17",
+    "page": 1,
+    "has_identifiers": false
+  },
+  {
+    "id": "s010",
+    "question": "What is lacking in current national measures regarding women's safety?",
+    "expected_answer": "National measures are insufficient.",
+    "sub_type": "factual",
+    "difficulty": "silver",
+    "gold_chunk_index": 2244,
+    "gold_chunk_id": "CELEX_52020DC0258_EN_TXT.pdf::p11::c2",
+    "expected_chunks": [
+      {
+        "source": "CELEX_52020DC0258_EN_TXT.pdf",
+        "page": 11
+      }
+    ],
+    "source": "CELEX_52020DC0258_EN_TXT.pdf",
+    "page": 11,
+    "has_identifiers": true
+  },
+  {
+    "id": "s011",
+    "question": "What is easy-to-read information?",
+    "expected_answer": "Easy-to-read is information that is written in a simple way so that people with intellectual disabilities and all people can understand it.",
+    "sub_type": "factual",
+    "difficulty": "silver",
+    "gold_chunk_index": 10908,
+    "gold_chunk_id": "stopping_violence_against_women_easy_to_read_en.pdf::p1-2::stitch",
+    "expected_chunks": [
+      {
+        "source": "stopping_violence_against_women_easy_to_read_en.pdf",
+        "page": 1
+      }
+    ],
+    "source": "stopping_violence_against_women_easy_to_read_en.pdf",
+    "page": 1,
+    "has_identifiers": false
+  },
+  {
+    "id": "s012",
+    "question": "What is the date when the European Commission proposed a directive on combating violence against women and domestic violence?",
+    "expected_answer": "8 March 2022",
+    "sub_type": "identifier",
+    "difficulty": "silver",
+    "gold_chunk_index": 8267,
+    "gold_chunk_id": "gender-equality-index-2024-tackling-violence-against-women-tackling-gender-inequalities.pdf::p66::c2",
+    "expected_chunks": [
+      {
+        "source": "gender-equality-index-2024-tackling-violence-against-women-tackling-gender-inequalities.pdf",
+        "page": 66
+      }
+    ],
+    "source": "gender-equality-index-2024-tackling-violence-against-women-tackling-gender-inequalities.pdf",
+    "page": 66,
+    "has_identifiers": true
+  },
+  {
+    "id": "s013",
+    "question": "What is the purpose of updating the Index?",
+    "expected_answer": "These changes ensure the Index remains aligned with the issues shaping equality today.",
+    "sub_type": "factual",
+    "difficulty": "silver",
+    "gold_chunk_index": 4531,
+    "gold_chunk_id": "eige_index_brochure.pdf::p3::c2",
+    "expected_chunks": [
+      {
+        "source": "eige_index_brochure.pdf",
+        "page": 3
+      }
+    ],
+    "source": "eige_index_brochure.pdf",
+    "page": 3,
+    "has_identifiers": false
+  },
+  {
+    "id": "s014",
+    "question": "What is the purpose of imposing periodic penalty payments on certain online platforms or search engines?",
+    "expected_answer": "in order to compel them to supply correct and complete information in response to a decision requiring information, or submit to an inspection.",
+    "sub_type": "paraphrased",
+    "difficulty": "silver",
+    "gold_chunk_index": 2141,
+    "gold_chunk_id": "CELEX_32022R2065_EN_TXT.pdf::p95::c6",
+    "expected_chunks": [
+      {
+        "source": "CELEX_32022R2065_EN_TXT.pdf",
+        "page": 95
+      }
+    ],
+    "source": "CELEX_32022R2065_EN_TXT.pdf",
+    "page": 95,
+    "has_identifiers": true
+  },
+  {
+    "id": "s015",
+    "question": "What methods of data collection were used in the survey?",
+    "expected_answer": "The data collection used methods considered most appropriate in the national context, including face-to-face interviews, telephone interviews and data collection through web-based questionnaires.",
+    "sub_type": "factual",
+    "difficulty": "silver",
+    "gold_chunk_index": 4560,
+    "gold_chunk_id": "eu-gbv-annexes_en.pdf::p6::c1",
+    "expected_chunks": [
+      {
+        "source": "eu-gbv-annexes_en.pdf",
+        "page": 6
+      }
+    ],
+    "source": "eu-gbv-annexes_en.pdf",
+    "page": 6,
+    "has_identifiers": true
+  },
+  {
+    "id": "s016",
+    "question": "What makes analytical methods of evaluating jobs stronger than non-analytical methods?",
+    "expected_answer": "They provide a stronger defence in the case of an equal pay claim.",
+    "sub_type": "factual",
+    "difficulty": "silver",
+    "gold_chunk_index": 10388,
+    "gold_chunk_id": "mh0125064enn_002.pdf::p5::c2",
+    "expected_chunks": [
+      {
+        "source": "mh0125064enn_002.pdf",
+        "page": 5
+      }
+    ],
+    "source": "mh0125064enn_002.pdf",
+    "page": 5,
+    "has_identifiers": false
+  },
+  {
+    "id": "s017",
+    "question": "What percentage of young women were affected by cyber harassment, as found by the World Wide Web Foundation in 2020?",
+    "expected_answer": "The World Wide Web Foundation found in 2020 that 52% of young women were affected by cyber harassment...",
+    "sub_type": "identifier",
+    "difficulty": "silver",
+    "gold_chunk_index": 3111,
+    "gold_chunk_id": "annual_report_GE_2022_printable_EN.pdf::p11::c3",
+    "expected_chunks": [
+      {
+        "source": "annual_report_GE_2022_printable_EN.pdf",
+        "page": 11
+      }
+    ],
+    "source": "annual_report_GE_2022_printable_EN.pdf",
+    "page": 11,
+    "has_identifiers": true
+  },
+  {
+    "id": "s018",
+    "question": "What is one area where national policies addressing gender segregation tend to target?",
+    "expected_answer": "sectors with stronger technical content, basically STEM and ICT activities",
+    "sub_type": "identifier",
+    "difficulty": "silver",
+    "gold_chunk_index": 228,
+    "gold_chunk_id": "2024 Report on Gender Equality in the EU_coming soon.pdf::p35::c4",
+    "expected_chunks": [
+      {
+        "source": "2024 Report on Gender Equality in the EU_coming soon.pdf",
+        "page": 35
+      }
+    ],
+    "source": "2024 Report on Gender Equality in the EU_coming soon.pdf",
+    "page": 35,
+    "has_identifiers": false
+  },
+  {
+    "id": "s019",
+    "question": "Which countries did not provide a response to the data collection?",
+    "expected_answer": "No data is available for Germany, Luxembourg, Hungary, Netherlands, Poland, Portugal, and Slovakia.",
+    "sub_type": "factual",
+    "difficulty": "silver",
+    "gold_chunk_index": 12298,
+    "gold_chunk_id": "wmid_methodology_31032026.pdf::p89::c10",
+    "expected_chunks": [
+      {
+        "source": "wmid_methodology_31032026.pdf",
+        "page": 89
+      }
+    ],
+    "source": "wmid_methodology_31032026.pdf",
+    "page": 89,
+    "has_identifiers": true
+  },
+  {
+    "id": "s020",
+    "question": "What does achieving gender equality not mean?",
+    "expected_answer": "Achieving gender equality means more than just closing gaps;",
+    "sub_type": "negation",
+    "difficulty": "silver",
+    "gold_chunk_index": 10003,
+    "gold_chunk_id": "gender-equality-index-methodological-report.pdf::p30::c0",
+    "expected_chunks": [
+      {
+        "source": "gender-equality-index-methodological-report.pdf",
+        "page": 30
+      }
+    ],
+    "source": "gender-equality-index-methodological-report.pdf",
+    "page": 30,
+    "has_identifiers": false
+  },
+  {
+    "id": "s021",
+    "question": "What measures should employers take to prevent workplace harassment?",
+    "expected_answer": "Tout Membre doit prendre des mesures appropriées pour prévenir la violence et le harcèlement dans le monde du travail.",
+    "sub_type": "paraphrased",
+    "difficulty": "silver",
+    "gold_chunk_index": 10952,
+    "gold_chunk_id": "wcms_711570.pdf::p10-11::stitch",
+    "expected_chunks": [
+      {
+        "source": "wcms_711570.pdf",
+        "page": 10
+      }
+    ],
+    "source": "wcms_711570.pdf",
+    "page": 10,
+    "has_identifiers": true
+  },
+  {
+    "id": "s022",
+    "question": "In what year did the EU accede to the Istanbul Convention?",
+    "expected_answer": "the EU acceded in 2023.",
+    "sub_type": "identifier",
+    "difficulty": "silver",
+    "gold_chunk_index": 10245,
+    "gold_chunk_id": "gender-equality-strategy-2026-2030.pdf::p7::c2",
+    "expected_chunks": [
+      {
+        "source": "gender-equality-strategy-2026-2030.pdf",
+        "page": 7
+      }
+    ],
+    "source": "gender-equality-strategy-2026-2030.pdf",
+    "page": 7,
+    "has_identifiers": false
+  },
+  {
+    "id": "s023",
+    "question": "How many laws were mentioned as being passed by the Government of India?",
+    "expected_answer": "Two laws were mentioned: Immoral Traffic (Prevention) Act was passed in 1956 and Dowry Prohibition Act was passed in 1961.",
+    "sub_type": "numeric",
+    "difficulty": "silver",
+    "gold_chunk_index": 12760,
+    "gold_chunk_id": "Women_Safety.pdf::p4::c2",
+    "expected_chunks": [
+      {
+        "source": "Women_Safety.pdf",
+        "page": 4
+      }
+    ],
+    "source": "Women_Safety.pdf",
+    "page": 4,
+    "has_identifiers": true
+  },
+  {
+    "id": "s024",
+    "question": "What does the VAW Directive say about extending an emergency barring order?",
+    "expected_answer": "The VAW Directive does not specifically indicate whether the duration can be extended until a protection order can be issued.",
+    "sub_type": "factual",
+    "difficulty": "silver",
+    "gold_chunk_index": 1283,
+    "gold_chunk_id": "48802978de.pdf::p102::c1",
+    "expected_chunks": [
+      {
+        "source": "48802978de.pdf",
+        "page": 102
+      }
+    ],
+    "source": "48802978de.pdf",
+    "page": 102,
+    "has_identifiers": false
+  },
+  {
+    "id": "s025",
+    "question": "What is mentioned as aggravating circumstances in Article 11 of the directive?",
+    "expected_answer": "The directive acknowledges repetitive domestic violence, or the fact that it was committed against a vulnerable person given a situation of dependence, as aggravating circumstances (Article 11).",
+    "sub_type": "identifier",
+    "difficulty": "silver",
+    "gold_chunk_index": 4690,
+    "gold_chunk_id": "eu-gender-based-violence-survey-evidence-for-policy-and-practice_4.pdf::p15::c1",
+    "expected_chunks": [
+      {
+        "source": "eu-gender-based-violence-survey-evidence-for-policy-and-practice_4.pdf",
+        "page": 15
+      }
+    ],
+    "source": "eu-gender-based-violence-survey-evidence-for-policy-and-practice_4.pdf",
+    "page": 15,
+    "has_identifiers": true
+  },
+  {
+    "id": "s026",
+    "question": "How many women were surveyed for the EU gender-based violence survey?",
+    "expected_answer": "The results are based on data collected from 114023 women (18–74 years of age) across the EU.",
+    "sub_type": "factual",
+    "difficulty": "silver",
+    "gold_chunk_index": 2636,
+    "gold_chunk_id": "KS-01-24-013-EN-N.pdf::p13::c1",
+    "expected_chunks": [
+      {
+        "source": "KS-01-24-013-EN-N.pdf",
+        "page": 13
+      }
+    ],
+    "source": "KS-01-24-013-EN-N.pdf",
+    "page": 13,
+    "has_identifiers": true
+  },
+  {
+    "id": "s027",
+    "question": "What is required from governments to make the Beijing+30 Action Agenda a reality?",
+    "expected_answer": "Support all governments to commit to one or two actions aligned with national priorities and develop roadmaps for Country Actions.",
+    "sub_type": "factual",
+    "difficulty": "silver",
+    "gold_chunk_index": 4047,
+    "gold_chunk_id": "beijing30-action-agenda-for-all-women-and-girls-en.pdf::p4::c0",
+    "expected_chunks": [
+      {
+        "source": "beijing30-action-agenda-for-all-women-and-girls-en.pdf",
+        "page": 4
+      }
+    ],
+    "source": "beijing30-action-agenda-for-all-women-and-girls-en.pdf",
+    "page": 4,
+    "has_identifiers": true
+  },
+  {
+    "id": "s028",
+    "question": "How many women living in Europe are estimated to have been subjected to female genital mutilation?",
+    "expected_answer": "About 600,000 women.",
+    "sub_type": "factual",
+    "difficulty": "silver",
+    "gold_chunk_index": 16,
+    "gold_chunk_id": "20210923STO13419_en.pdf::p5::c0",
+    "expected_chunks": [
+      {
+        "source": "20210923STO13419_en.pdf",
+        "page": 5
+      }
+    ],
+    "source": "20210923STO13419_en.pdf",
+    "page": 5,
+    "has_identifiers": true
+  },
+  {
+    "id": "s029",
+    "question": "What aspect of gender equality did a majority of respondents not consider to have improved?",
+    "expected_answer": "The overall situation of gender equality in the world.",
+    "sub_type": "negation",
+    "difficulty": "silver",
+    "gold_chunk_index": 2519,
+    "gold_chunk_id": "JUST_template_comingsoon_standard_2.pdf::p7::c2",
+    "expected_chunks": [
+      {
+        "source": "JUST_template_comingsoon_standard_2.pdf",
+        "page": 7
+      }
+    ],
+    "source": "JUST_template_comingsoon_standard_2.pdf",
+    "page": 7,
+    "has_identifiers": false
+  },
+  {
+    "id": "s030",
+    "question": "What feature does the report provide to help users analyze its data?",
+    "expected_answer": "The online data explorer tool allows anybody to use and produce information from the survey dataset in ways that are most useful to them.",
+    "sub_type": "paraphrased",
+    "difficulty": "silver",
+    "gold_chunk_index": 7794,
+    "gold_chunk_id": "fra-2014-vaw-survey-main-results-apr14_en.pdf::p169::c4",
+    "expected_chunks": [
+      {
+        "source": "fra-2014-vaw-survey-main-results-apr14_en.pdf",
+        "page": 169
+      }
+    ],
+    "source": "fra-2014-vaw-survey-main-results-apr14_en.pdf",
+    "page": 169,
+    "has_identifiers": false
+  },
+  {
+    "id": "s031",
+    "question": "What is the purpose of a provision related to compensation for victims of domestic violence?",
+    "expected_answer": "Member States shall ensure, where appropriate, that victims are able to obtain a decision on compensation in the course of criminal proceedings.",
+    "sub_type": "paraphrased",
+    "difficulty": "silver",
+    "gold_chunk_index": 2981,
+    "gold_chunk_id": "OJ_L_202401385_EN_TXT.pdf::p25-26::stitch",
+    "expected_chunks": [
+      {
+        "source": "OJ_L_202401385_EN_TXT.pdf",
+        "page": 25
+      }
+    ],
+    "source": "OJ_L_202401385_EN_TXT.pdf",
+    "page": 25,
+    "has_identifiers": true
+  },
+  {
+    "id": "s032",
+    "question": "What is not included as an area of recent progress by the EU?",
+    "expected_answer": "Mainstreaming gender equality",
+    "sub_type": "negation",
+    "difficulty": "silver",
+    "gold_chunk_index": 2473,
+    "gold_chunk_id": "JUST_template_comingsoon_standard_0.pdf::p2::c1",
+    "expected_chunks": [
+      {
+        "source": "JUST_template_comingsoon_standard_0.pdf",
+        "page": 2
+      }
+    ],
+    "source": "JUST_template_comingsoon_standard_0.pdf",
+    "page": 2,
+    "has_identifiers": false
+  },
+  {
+    "id": "s033",
+    "question": "What percentage of board members in the largest listed EU companies are currently female?",
+    "expected_answer": "In October 2024, women accounted for 40 % of board members of the largest listed companies in these Member States... Overall, in the EU, 35 % of members of boards in the largest quoted companies are women.",
+    "sub_type": "paraphrased",
+    "difficulty": "silver",
+    "gold_chunk_index": 8742,
+    "gold_chunk_id": "gender-equality-index-2025-sharper-data-for-a-changing-world (1).pdf::p88::c0",
+    "expected_chunks": [
+      {
+        "source": "gender-equality-index-2025-sharper-data-for-a-changing-world (1).pdf",
+        "page": 88
+      }
+    ],
+    "source": "gender-equality-index-2025-sharper-data-for-a-changing-world (1).pdf",
+    "page": 88,
+    "has_identifiers": true
+  },
+  {
+    "id": "s034",
+    "question": "What percentage of a fine's payment is taken into account when assessing the perpetrator's ability to pay?",
+    "expected_answer": "due account shall be taken of the ability of the perpetrator to assume his or her financial obligations towards the victim.",
+    "sub_type": "numeric",
+    "difficulty": "silver",
+    "gold_chunk_index": 2397,
+    "gold_chunk_id": "CETS_210.docx.pdf::p13-14::stitch",
+    "expected_chunks": [
+      {
+        "source": "CETS_210.docx.pdf",
+        "page": 13
+      }
+    ],
+    "source": "CETS_210.docx.pdf",
+    "page": 13,
+    "has_identifiers": true
+  },
+  {
+    "id": "s035",
+    "question": "What is a consequence of certain societal attitudes towards gender roles?",
+    "expected_answer": "They impact individual financial autonomy, leading to gender imbalances in power and control over resources and women’s greater financial insecurity over a lifetime.",
+    "sub_type": "paraphrased",
+    "difficulty": "silver",
+    "gold_chunk_index": 9371,
+    "gold_chunk_id": "gender-equality-index-2025-sharper-data-for-a-changing-world.pdf::p62::c1",
+    "expected_chunks": [
+      {
+        "source": "gender-equality-index-2025-sharper-data-for-a-changing-world.pdf",
+        "page": 62
+      }
+    ],
+    "source": "gender-equality-index-2025-sharper-data-for-a-changing-world.pdf",
+    "page": 62,
+    "has_identifiers": false
+  },
+  {
+    "id": "s036",
+    "question": "What is not included in the EU's investment in monitoring the situation of women and girls in Afghanistan?",
+    "expected_answer": "The EU continues to invest in and monitor the situation of women and girls in Afghanistan...",
+    "sub_type": "negation",
+    "difficulty": "silver",
+    "gold_chunk_index": 3996,
+    "gold_chunk_id": "annual_report_GE_2023_web_EN.pdf::p72::c4",
+    "expected_chunks": [
+      {
+        "source": "annual_report_GE_2023_web_EN.pdf",
+        "page": 72
+      }
+    ],
+    "source": "annual_report_GE_2023_web_EN.pdf",
+    "page": 72,
+    "has_identifiers": true
+  },
+  {
+    "id": "s037",
+    "question": "How does the frequency of male participation compare to female participation in volunteering, charity work, and politics?",
+    "expected_answer": "Men generally tend to participate more regularly than women.",
+    "sub_type": "paraphrased",
+    "difficulty": "silver",
+    "gold_chunk_index": 10790,
+    "gold_chunk_id": "sharing-care-closign-gender-gaps-care-survey-2024.pdf::p77::c0",
+    "expected_chunks": [
+      {
+        "source": "sharing-care-closign-gender-gaps-care-survey-2024.pdf",
+        "page": 77
+      }
+    ],
+    "source": "sharing-care-closign-gender-gaps-care-survey-2024.pdf",
+    "page": 77,
+    "has_identifiers": false
+  },
+  {
+    "id": "s038",
+    "question": "What is the range of weekly hours for a person who uses more than 5 but up to 7 hours per day of care services?",
+    "expected_answer": "36–49 weekly hours (e.g. more than 5 up to 7 hours per day)",
+    "sub_type": "numeric",
+    "difficulty": "silver",
+    "gold_chunk_index": 4313,
+    "gold_chunk_id": "care-survey-second-wave.pdf::p80::c0",
+    "expected_chunks": [
+      {
+        "source": "care-survey-second-wave.pdf",
+        "page": 80
+      }
+    ],
+    "source": "care-survey-second-wave.pdf",
+    "page": 80,
+    "has_identifiers": false
+  },
+  {
+    "id": "s039",
+    "question": "What is the minimum difference in average pay level between women and men required for a joint pay assessment?",
+    "expected_answer": "A difference of at least 5%.",
+    "sub_type": "factual",
+    "difficulty": "silver",
+    "gold_chunk_index": 6458,
+    "gold_chunk_id": "eu-wide-guidelines-on-gender-neutral-job-evaluation-and-classification-step-by-step-toolkit.pdf::p145::c1",
+    "expected_chunks": [
+      {
+        "source": "eu-wide-guidelines-on-gender-neutral-job-evaluation-and-classification-step-by-step-toolkit.pdf",
+        "page": 145
+      }
+    ],
+    "source": "eu-wide-guidelines-on-gender-neutral-job-evaluation-and-classification-step-by-step-toolkit.pdf",
+    "page": 145,
+    "has_identifiers": true
+  },
+  {
+    "id": "s040",
+    "question": "What is a consequence of courts offering compulsory counseling under the PWDVA?",
+    "expected_answer": "courts frequently ended up offering them compulsory counseling, which entails undesired results and narrow options",
+    "sub_type": "factual",
+    "difficulty": "silver",
+    "gold_chunk_index": 12747,
+    "gold_chunk_id": "ui-2026-04-17::p1::dyn2",
+    "expected_chunks": [
+      {
+        "source": "ui-2026-04-17",
+        "page": 1
+      }
+    ],
+    "source": "ui-2026-04-17",
+    "page": 1,
+    "has_identifiers": false
+  },
+  {
+    "id": "s041",
+    "question": "What is the purpose of a 'Group of Friends of Victims of Terrorism' launched in June 2019?",
+    "expected_answer": "The aim of bringing additional focus and activity at the United Nations to this topic.",
+    "sub_type": "factual",
+    "difficulty": "silver",
+    "gold_chunk_index": 2323,
+    "gold_chunk_id": "CELEX_52020DC0258_EN_TXT.pdf::p23::c3",
+    "expected_chunks": [
+      {
+        "source": "CELEX_52020DC0258_EN_TXT.pdf",
+        "page": 23
+      }
+    ],
+    "source": "CELEX_52020DC0258_EN_TXT.pdf",
+    "page": 23,
+    "has_identifiers": true
+  },
+  {
+    "id": "s042",
+    "question": "What is the number to call for help in emergency situations?",
+    "expected_answer": "You can call 112 for help.",
+    "sub_type": "identifier",
+    "difficulty": "silver",
+    "gold_chunk_index": 10917,
+    "gold_chunk_id": "stopping_violence_against_women_easy_to_read_en.pdf::p6::c0",
+    "expected_chunks": [
+      {
+        "source": "stopping_violence_against_women_easy_to_read_en.pdf",
+        "page": 6
+      }
+    ],
+    "source": "stopping_violence_against_women_easy_to_read_en.pdf",
+    "page": 6,
+    "has_identifiers": false
+  },
+  {
+    "id": "s043",
+    "question": "What is the name of the directive approved by the European Parliament and Council in May 2024?",
+    "expected_answer": "the directive of the European Parliament and of the Council on combating violence against women and domestic violence (Directive (EU) 2024/1385)",
+    "sub_type": "identifier",
+    "difficulty": "silver",
+    "gold_chunk_index": 7999,
+    "gold_chunk_id": "gender-equality-index-2024-tackling-violence-against-women-tackling-gender-inequalities.pdf::p15::c1",
+    "expected_chunks": [
+      {
+        "source": "gender-equality-index-2024-tackling-violence-against-women-tackling-gender-inequalities.pdf",
+        "page": 15
+      }
+    ],
+    "source": "gender-equality-index-2024-tackling-violence-against-women-tackling-gender-inequalities.pdf",
+    "page": 15,
+    "has_identifiers": true
+  },
+  {
+    "id": "s044",
+    "question": "What year is the Index being updated?",
+    "expected_answer": "There is no specific date mentioned in the passage.",
+    "sub_type": "identifier",
+    "difficulty": "silver",
+    "gold_chunk_index": 4541,
+    "gold_chunk_id": "eige_index_brochure.pdf::p6-7::stitch",
+    "expected_chunks": [
+      {
+        "source": "eige_index_brochure.pdf",
+        "page": 6
+      }
+    ],
+    "source": "eige_index_brochure.pdf",
+    "page": 6,
+    "has_identifiers": false
+  },
+  {
+    "id": "s045",
+    "question": "What is the article number that specifies requirements for providers of intermediary services without an establishment in the EU?",
+    "expected_answer": "Article 13",
+    "sub_type": "identifier",
+    "difficulty": "silver",
+    "gold_chunk_index": 1822,
+    "gold_chunk_id": "CELEX_32022R2065_EN_TXT.pdf::p48::c4",
+    "expected_chunks": [
+      {
+        "source": "CELEX_32022R2065_EN_TXT.pdf",
+        "page": 48
+      }
+    ],
+    "source": "CELEX_32022R2065_EN_TXT.pdf",
+    "page": 48,
+    "has_identifiers": true
+  },
+  {
+    "id": "s046",
+    "question": "What support did interviewers have during the research?",
+    "expected_answer": "Interviewers were permitted to opt out if they needed breaks from the emotionally demanding work.",
+    "sub_type": "factual",
+    "difficulty": "silver",
+    "gold_chunk_index": 4571,
+    "gold_chunk_id": "eu-gbv-annexes_en.pdf::p8::c3",
+    "expected_chunks": [
+      {
+        "source": "eu-gbv-annexes_en.pdf",
+        "page": 8
+      }
+    ],
+    "source": "eu-gbv-annexes_en.pdf",
+    "page": 8,
+    "has_identifiers": false
+  },
+  {
+    "id": "s047",
+    "question": "What is a tool provided to help employers ensure fairness in job classification?",
+    "expected_answer": "The toolkit updates the EU guidelines on gender-neutral job evaluation and classification...",
+    "sub_type": "paraphrased",
+    "difficulty": "silver",
+    "gold_chunk_index": 10361,
+    "gold_chunk_id": "mh0125064enn_002.pdf::p1::c6",
+    "expected_chunks": [
+      {
+        "source": "mh0125064enn_002.pdf",
+        "page": 1
+      }
+    ],
+    "source": "mh0125064enn_002.pdf",
+    "page": 1,
+    "has_identifiers": true
+  },
+  {
+    "id": "s048",
+    "question": "What is being done by the EU to address an imbalance in medical research participation?",
+    "expected_answer": "The project includes a dedicated pilot study to further the knowledge of lung cancer programmes and the participation in lung cancer screening programmes amongst women, as up to now, they have been underrepresented in most clinical trials.",
+    "sub_type": "paraphrased",
+    "difficulty": "silver",
+    "gold_chunk_index": 377,
+    "gold_chunk_id": "2024 Report on Gender Equality in the EU_coming soon.pdf::p58-59::stitch",
+    "expected_chunks": [
+      {
+        "source": "2024 Report on Gender Equality in the EU_coming soon.pdf",
+        "page": 58
+      }
+    ],
+    "source": "2024 Report on Gender Equality in the EU_coming soon.pdf",
+    "page": 58,
+    "has_identifiers": true
+  },
+  {
+    "id": "s049",
+    "question": "What is required when comparing the effectiveness of different countries' national plans over time?",
+    "expected_answer": "It should be considered that often consultative bodies have a changing composition as the representatives of the organisations that are members of such bodies may vary from meeting to meeting.",
+    "sub_type": "paraphrased",
+    "difficulty": "silver",
+    "gold_chunk_index": 12300,
+    "gold_chunk_id": "wmid_methodology_31032026.pdf::p89::c12",
+    "expected_chunks": [
+      {
+        "source": "wmid_methodology_31032026.pdf",
+        "page": 89
+      }
+    ],
+    "source": "wmid_methodology_31032026.pdf",
+    "page": 89,
+    "has_identifiers": false
+  },
+  {
+    "id": "s050",
+    "question": "What is NOT explicitly enshrined in early Council directives on gender equality?",
+    "expected_answer": "The principle of gender equality.",
+    "sub_type": "negation",
+    "difficulty": "silver",
+    "gold_chunk_index": 9908,
+    "gold_chunk_id": "gender-equality-index-methodological-report.pdf::p15::c1",
+    "expected_chunks": [
+      {
+        "source": "gender-equality-index-methodological-report.pdf",
+        "page": 15
+      }
+    ],
+    "source": "gender-equality-index-methodological-report.pdf",
+    "page": 15,
+    "has_identifiers": false
+  },
+  {
+    "id": "s051",
+    "question": "How long after the initial entry into force of a convention can a member state denounce it?",
+    "expected_answer": "Tout Membre ayant ratifié la présente convention peut la dénoncer à l’expiration d’une période de dix années après la date de la mise en vigueur initiale de la convention...",
+    "sub_type": "identifier",
+    "difficulty": "silver",
+    "gold_chunk_index": 10970,
+    "gold_chunk_id": "wcms_711570.pdf::p15::c2",
+    "expected_chunks": [
+      {
+        "source": "wcms_711570.pdf",
+        "page": 15
+      }
+    ],
+    "source": "wcms_711570.pdf",
+    "page": 15,
+    "has_identifiers": true
+  },
+  {
+    "id": "s052",
+    "question": "How much funding from EU funds is dedicated to promoting gender equality?",
+    "expected_answer": "EU funds will continue to promote gender equality.",
+    "sub_type": "numeric",
+    "difficulty": "silver",
+    "gold_chunk_index": 10326,
+    "gold_chunk_id": "gender-equality-strategy-2026-2030.pdf::p19::c4",
+    "expected_chunks": [
+      {
+        "source": "gender-equality-strategy-2026-2030.pdf",
+        "page": 19
+      }
+    ],
+    "source": "gender-equality-strategy-2026-2030.pdf",
+    "page": 19,
+    "has_identifiers": false
+  },
+  {
+    "id": "s053",
+    "question": "What is not guaranteed to Indian women by the Constitution?",
+    "expected_answer": "equality under Article 14, no discrimination by the State through Article 15(1), and equal pay for equal work under Article 39(d)",
+    "sub_type": "negation",
+    "difficulty": "silver",
+    "gold_chunk_index": 12816,
+    "gold_chunk_id": "Women_Safety.pdf::p4::c1",
+    "expected_chunks": [
+      {
+        "source": "Women_Safety.pdf",
+        "page": 4
+      }
+    ],
+    "source": "Women_Safety.pdf",
+    "page": 4,
+    "has_identifiers": true
+  },
+  {
+    "id": "s054",
+    "question": "What types of orders are member states not required to collect administrative and judicial data on?",
+    "expected_answer": "Member States are not required to collect administrative and judicial data on emergency barring orders, restraining order and protection orders under EU legislation.",
+    "sub_type": "negation",
+    "difficulty": "silver",
+    "gold_chunk_index": 1290,
+    "gold_chunk_id": "48802978de.pdf::p103::c2",
+    "expected_chunks": [
+      {
+        "source": "48802978de.pdf",
+        "page": 103
+      }
+    ],
+    "source": "48802978de.pdf",
+    "page": 103,
+    "has_identifiers": false
+  },
+  {
+    "id": "s055",
+    "question": "What is recommended for Member States to encourage women to report crimes?",
+    "expected_answer": "Member States should ensure that police and other justice practitioners receive training on victim-appropriate and gender-sensitive responses.",
+    "sub_type": "identifier",
+    "difficulty": "silver",
+    "gold_chunk_index": 4720,
+    "gold_chunk_id": "eu-gender-based-violence-survey-evidence-for-policy-and-practice_4.pdf::p19::c4",
+    "expected_chunks": [
+      {
+        "source": "eu-gender-based-violence-survey-evidence-for-policy-and-practice_4.pdf",
+        "page": 19
+      }
+    ],
+    "source": "eu-gender-based-violence-survey-evidence-for-policy-and-practice_4.pdf",
+    "page": 19,
+    "has_identifiers": false
+  },
+  {
+    "id": "s056",
+    "question": "How many EU member states have ratified the Optional Protocol?",
+    "expected_answer": "All EU member states have ratified the Optional Protocol.",
+    "sub_type": "numeric",
+    "difficulty": "silver",
+    "gold_chunk_index": 12737,
+    "gold_chunk_id": "women_safety_EU_RAG_resources (1).pdf::p6::c3",
+    "expected_chunks": [
+      {
+        "source": "women_safety_EU_RAG_resources (1).pdf",
+        "page": 6
+      }
+    ],
+    "source": "women_safety_EU_RAG_resources (1).pdf",
+    "page": 6,
+    "has_identifiers": true
+  },
+  {
+    "id": "s057",
+    "question": "What aspects of a job are considered when evaluating working conditions?",
+    "expected_answer": "All of the characteristics of the process (e.g. the task at hand, the person, the necessary means for the work, the work process, inputs, outputs and influences) and to all of the environmental influences that affect the person undertaking a task.",
+    "sub_type": "paraphrased",
+    "difficulty": "silver",
+    "gold_chunk_index": 6676,
+    "gold_chunk_id": "factor-and-subfactor-plan.pdf::p22::c0",
+    "expected_chunks": [
+      {
+        "source": "factor-and-subfactor-plan.pdf",
+        "page": 22
+      }
+    ],
+    "source": "factor-and-subfactor-plan.pdf",
+    "page": 22,
+    "has_identifiers": false
+  },
+  {
+    "id": "s058",
+    "question": "What percentage of countries have grown their social protection programmes?",
+    "expected_answer": "Social protection programmes have grown in 79% of countries.",
+    "sub_type": "identifier",
+    "difficulty": "silver",
+    "gold_chunk_index": 4038,
+    "gold_chunk_id": "beijing30-action-agenda-for-all-women-and-girls-en.pdf::p2::c1",
+    "expected_chunks": [
+      {
+        "source": "beijing30-action-agenda-for-all-women-and-girls-en.pdf",
+        "page": 2
+      }
+    ],
+    "source": "beijing30-action-agenda-for-all-women-and-girls-en.pdf",
+    "page": 2,
+    "has_identifiers": false
+  },
+  {
+    "id": "s059",
+    "question": "What is one of the rights that European Parliament members have called for the EU to guarantee?",
+    "expected_answer": "the right to a safe and legal abortion",
+    "sub_type": "paraphrased",
+    "difficulty": "silver",
+    "gold_chunk_index": 11,
+    "gold_chunk_id": "20210923STO13419_en.pdf::p3-4::stitch",
+    "expected_chunks": [
+      {
+        "source": "20210923STO13419_en.pdf",
+        "page": 3
+      }
+    ],
+    "source": "20210923STO13419_en.pdf",
+    "page": 3,
+    "has_identifiers": true
+  },
+  {
+    "id": "s060",
+    "question": "What specific mechanism was suggested by stakeholders for addressing systemic violations?",
+    "expected_answer": "EU Rule of Law Mechanisms (e.g., Article 7 TEU procedures)",
+    "sub_type": "identifier",
+    "difficulty": "silver",
+    "gold_chunk_index": 2591,
+    "gold_chunk_id": "JUST_template_comingsoon_standard_2.pdf::p17::c1",
+    "expected_chunks": [
+      {
+        "source": "JUST_template_comingsoon_standard_2.pdf",
+        "page": 17
+      }
+    ],
+    "source": "JUST_template_comingsoon_standard_2.pdf",
+    "page": 17,
+    "has_identifiers": true
+  },
+  {
+    "id": "s061",
+    "question": "What types of violence are not covered by the Beijing Declaration's definition of violence against women?",
+    "expected_answer": "The Council of Europe Convention on preventing and combating violence against women and domestic violence (Istanbul Convention), adopted in 2011, largely follows these earlier definitions.",
+    "sub_type": "negation",
+    "difficulty": "silver",
+    "gold_chunk_index": 6779,
+    "gold_chunk_id": "fra-2014-vaw-survey-main-results-apr14_en.pdf::p11::c3",
+    "expected_chunks": [
+      {
+        "source": "fra-2014-vaw-survey-main-results-apr14_en.pdf",
+        "page": 11
+      }
+    ],
+    "source": "fra-2014-vaw-survey-main-results-apr14_en.pdf",
+    "page": 11,
+    "has_identifiers": true
+  },
+  {
+    "id": "s062",
+    "question": "What types of organizations are involved in designing and implementing government policies on combating violence against women?",
+    "expected_answer": "Civil society organisations, including non-governmental organisations working with victims.",
+    "sub_type": "paraphrased",
+    "difficulty": "silver",
+    "gold_chunk_index": 2906,
+    "gold_chunk_id": "OJ_L_202401385_EN_TXT.pdf::p14::c3",
+    "expected_chunks": [
+      {
+        "source": "OJ_L_202401385_EN_TXT.pdf",
+        "page": 14
+      }
+    ],
+    "source": "OJ_L_202401385_EN_TXT.pdf",
+    "page": 14,
+    "has_identifiers": false
+  },
+  {
+    "id": "s063",
+    "question": "What is not included in the EU's plan to combat gender-based violence?",
+    "expected_answer": "Fully implement the Violence Against Women Directive (2024) ensuring all Member States criminalise cyberviolence.",
+    "sub_type": "negation",
+    "difficulty": "silver",
+    "gold_chunk_index": 2467,
+    "gold_chunk_id": "JUST_template_comingsoon_standard_0.pdf::p1::c0",
+    "expected_chunks": [
+      {
+        "source": "JUST_template_comingsoon_standard_0.pdf",
+        "page": 1
+      }
+    ],
+    "source": "JUST_template_comingsoon_standard_0.pdf",
+    "page": 1,
+    "has_identifiers": true
+  },
+  {
+    "id": "s064",
+    "question": "What year did scores for the health domain start to improve?",
+    "expected_answer": "Since 2010, scores for the health domain and its two subdomains have been improving.",
+    "sub_type": "identifier",
+    "difficulty": "silver",
+    "gold_chunk_index": 8783,
+    "gold_chunk_id": "gender-equality-index-2025-sharper-data-for-a-changing-world (1).pdf::p97::c1",
+    "expected_chunks": [
+      {
+        "source": "gender-equality-index-2025-sharper-data-for-a-changing-world (1).pdf",
+        "page": 97
+      }
+    ],
+    "source": "gender-equality-index-2025-sharper-data-for-a-changing-world (1).pdf",
+    "page": 97,
+    "has_identifiers": false
+  },
+  {
+    "id": "s065",
+    "question": "What is the name of the system that sets quality standards for EU statistical data?",
+    "expected_answer": "The European Statistical System",
+    "sub_type": "identifier",
+    "difficulty": "silver",
+    "gold_chunk_index": 9170,
+    "gold_chunk_id": "gender-equality-index-2025-sharper-data-for-a-changing-world.pdf::p18::c4",
+    "expected_chunks": [
+      {
+        "source": "gender-equality-index-2025-sharper-data-for-a-changing-world.pdf",
+        "page": 18
+      }
+    ],
+    "source": "gender-equality-index-2025-sharper-data-for-a-changing-world.pdf",
+    "page": 18,
+    "has_identifiers": false
+  },
+  {
+    "id": "s066",
+    "question": "What percentage of women with disabilities in the EU are at risk of poverty or social exclusion?",
+    "expected_answer": "The share of women with disabilities (over 16 years) at risk of poverty or social exclusion is 30.6%",
+    "sub_type": "paraphrased",
+    "difficulty": "silver",
+    "gold_chunk_index": 3675,
+    "gold_chunk_id": "annual_report_GE_2023_web_EN.pdf::p26::c1",
+    "expected_chunks": [
+      {
+        "source": "annual_report_GE_2023_web_EN.pdf",
+        "page": 26
+      }
+    ],
+    "source": "annual_report_GE_2023_web_EN.pdf",
+    "page": 26,
+    "has_identifiers": true
+  },
+  {
+    "id": "s067",
+    "question": "What aspects of the survey are not covered in this report?",
+    "expected_answer": "This report provides a comprehensive overview of the survey process, from design to data preparation: • Section 1 covers the pre-fieldwork phase, focusing on sampling design;",
+    "sub_type": "negation",
+    "difficulty": "silver",
+    "gold_chunk_index": 4072,
+    "gold_chunk_id": "care-survey-second-wave.pdf::p11::c4",
+    "expected_chunks": [
+      {
+        "source": "care-survey-second-wave.pdf",
+        "page": 11
+      }
+    ],
+    "source": "care-survey-second-wave.pdf",
+    "page": 11,
+    "has_identifiers": true
+  },
+  {
+    "id": "s068",
+    "question": "What is the purpose of this exercise?",
+    "expected_answer": "This exercise shows how quickly stereotypes about gender, skills and job value can appear, even before the evaluation starts.",
+    "sub_type": "factual",
+    "difficulty": "silver",
+    "gold_chunk_index": 5381,
+    "gold_chunk_id": "eu-wide-guidelines-on-gender-neutral-job-evaluation-and-classification-step-by-step-toolkit.pdf::p21::c0",
+    "expected_chunks": [
+      {
+        "source": "eu-wide-guidelines-on-gender-neutral-job-evaluation-and-classification-step-by-step-toolkit.pdf",
+        "page": 21
+      }
+    ],
+    "source": "eu-wide-guidelines-on-gender-neutral-job-evaluation-and-classification-step-by-step-toolkit.pdf",
+    "page": 21,
+    "has_identifiers": false
+  },
+  {
+    "id": "s069",
+    "question": "What year was Section 498a of the Indian Penal Code enacted?",
+    "expected_answer": "enacted in 1983",
+    "sub_type": "factual",
+    "difficulty": "silver",
+    "gold_chunk_index": 12746,
+    "gold_chunk_id": "ui-2026-04-17::p1::dyn1",
+    "expected_chunks": [
+      {
+        "source": "ui-2026-04-17",
+        "page": 1
+      }
+    ],
+    "source": "ui-2026-04-17",
+    "page": 1,
+    "has_identifiers": false
+  },
+  {
+    "id": "s070",
+    "question": "What types of EU directives have been implemented according to recent reports?",
+    "expected_answer": "Similar conclusions can be drawn from the implementation reports on the Child Sexual Abuse Directive and on the Directive on trafficking in human beings.",
+    "sub_type": "paraphrased",
+    "difficulty": "silver",
+    "gold_chunk_index": 2193,
+    "gold_chunk_id": "CELEX_52020DC0258_EN_TXT.pdf::p3::c4",
+    "expected_chunks": [
+      {
+        "source": "CELEX_52020DC0258_EN_TXT.pdf",
+        "page": 3
+      }
+    ],
+    "source": "CELEX_52020DC0258_EN_TXT.pdf",
+    "page": 3,
+    "has_identifiers": true
+  },
+  {
+    "id": "s071",
+    "question": "In what year was the Independent Observatory on Media against Toxic Narratives of Gender Violence established?",
+    "expected_answer": "It was established in October 2023.",
+    "sub_type": "numeric",
+    "difficulty": "silver",
+    "gold_chunk_index": 8167,
+    "gold_chunk_id": "gender-equality-index-2024-tackling-violence-against-women-tackling-gender-inequalities.pdf::p47::c3",
+    "expected_chunks": [
+      {
+        "source": "gender-equality-index-2024-tackling-violence-against-women-tackling-gender-inequalities.pdf",
+        "page": 47
+      }
+    ],
+    "source": "gender-equality-index-2024-tackling-violence-against-women-tackling-gender-inequalities.pdf",
+    "page": 47,
+    "has_identifiers": true
+  },
+  {
+    "id": "s072",
+    "question": "What changes have been made to the EU's equality index?",
+    "expected_answer": "These changes ensure the Index remains aligned with the issues shaping equality today. Alongside improved data and updated indicators, the way the Index calculates certain elements has been refined.",
+    "sub_type": "paraphrased",
+    "difficulty": "silver",
+    "gold_chunk_index": 4532,
+    "gold_chunk_id": "eige_index_brochure.pdf::p3-4::stitch",
+    "expected_chunks": [
+      {
+        "source": "eige_index_brochure.pdf",
+        "page": 3
+      }
+    ],
+    "source": "eige_index_brochure.pdf",
+    "page": 3,
+    "has_identifiers": false
+  },
+  {
+    "id": "s073",
+    "question": "Why cannot Member States achieve the necessary harmonisation and cooperation to ensure a safe online environment?",
+    "expected_answer": "They cannot achieve it by acting alone.",
+    "sub_type": "factual",
+    "difficulty": "silver",
+    "gold_chunk_index": 1782,
+    "gold_chunk_id": "CELEX_32022R2065_EN_TXT.pdf::p40::c5",
+    "expected_chunks": [
+      {
+        "source": "CELEX_32022R2065_EN_TXT.pdf",
+        "page": 40
+      }
+    ],
+    "source": "CELEX_32022R2065_EN_TXT.pdf",
+    "page": 40,
+    "has_identifiers": true
+  },
+  {
+    "id": "s074",
+    "question": "What measures were taken to minimize emotional discomfort for participants in a survey?",
+    "expected_answer": "Respondents received clear information about the General Data Protection Regulation.",
+    "sub_type": "paraphrased",
+    "difficulty": "silver",
+    "gold_chunk_index": 4572,
+    "gold_chunk_id": "eu-gbv-annexes_en.pdf::p8::c4",
+    "expected_chunks": [
+      {
+        "source": "eu-gbv-annexes_en.pdf",
+        "page": 8
+      }
+    ],
+    "source": "eu-gbv-annexes_en.pdf",
+    "page": 8,
+    "has_identifiers": true
+  },
+  {
+    "id": "s075",
+    "question": "What types of tasks can lead to physical strain for a person working in a caregiving role?",
+    "expected_answer": "Performing frequent lifting, including of adults or children (e.g. in caregiving jobs).",
+    "sub_type": "paraphrased",
+    "difficulty": "silver",
+    "gold_chunk_index": 10374,
+    "gold_chunk_id": "mh0125064enn_002.pdf::p3::c5",
+    "expected_chunks": [
+      {
+        "source": "mh0125064enn_002.pdf",
+        "page": 3
+      }
+    ],
+    "source": "mh0125064enn_002.pdf",
+    "page": 3,
+    "has_identifiers": false
+  },
+  {
+    "id": "s076",
+    "question": "What percentage of senior ministers in EU national governments were women at the end of 2004?",
+    "expected_answer": "20.9%",
+    "sub_type": "factual",
+    "difficulty": "silver",
+    "gold_chunk_index": 3317,
+    "gold_chunk_id": "annual_report_GE_2022_printable_EN.pdf::p42::c1",
+    "expected_chunks": [
+      {
+        "source": "annual_report_GE_2022_printable_EN.pdf",
+        "page": 42
+      }
+    ],
+    "source": "annual_report_GE_2022_printable_EN.pdf",
+    "page": 42,
+    "has_identifiers": true
+  },
+  {
+    "id": "s077",
+    "question": "What is the status of data comparability over time for the European Commission Coronavirus Response Team?",
+    "expected_answer": "Data are comparable over time.",
+    "sub_type": "factual",
+    "difficulty": "silver",
+    "gold_chunk_index": 12173,
+    "gold_chunk_id": "wmid_methodology_31032026.pdf::p82::c5",
+    "expected_chunks": [
+      {
+        "source": "wmid_methodology_31032026.pdf",
+        "page": 82
+      }
+    ],
+    "source": "wmid_methodology_31032026.pdf",
+    "page": 82,
+    "has_identifiers": true
+  },
+  {
+    "id": "s078",
+    "question": "In what year is there a break in the time series of the EU-LFS data?",
+    "expected_answer": "The data of the European Union Labour Force Survey (EU-LFS) includes a break in the time series in 2021.",
+    "sub_type": "identifier",
+    "difficulty": "silver",
+    "gold_chunk_index": 10073,
+    "gold_chunk_id": "gender-equality-index-methodological-report.pdf::p42::c5",
+    "expected_chunks": [
+      {
+        "source": "gender-equality-index-methodological-report.pdf",
+        "page": 42
+      }
+    ],
+    "source": "gender-equality-index-methodological-report.pdf",
+    "page": 42,
+    "has_identifiers": false
+  },
+  {
+    "id": "s079",
+    "question": "What percentage of people affected by violence and harassment in the world of work experience negative impacts on their psychological, physical, or sexual health?",
+    "expected_answer": "Acknowledging that violence and harassment in the world of work affects a person’s psychological, physical and sexual health, dignity, and family and social environment,",
+    "sub_type": "numeric",
+    "difficulty": "silver",
+    "gold_chunk_index": 10920,
+    "gold_chunk_id": "wcms_711570.pdf::p2::c0",
+    "expected_chunks": [
+      {
+        "source": "wcms_711570.pdf",
+        "page": 2
+      }
+    ],
+    "source": "wcms_711570.pdf",
+    "page": 2,
+    "has_identifiers": true
+  },
+  {
+    "id": "s080",
+    "question": "How much financial support does the EU plan to allocate for promoting gender equality?",
+    "expected_answer": "The EU's financial support will continue to reflect such priorities.",
+    "sub_type": "numeric",
+    "difficulty": "silver",
+    "gold_chunk_index": 10349,
+    "gold_chunk_id": "gender-equality-strategy-2026-2030.pdf::p23::c1",
+    "expected_chunks": [
+      {
+        "source": "gender-equality-strategy-2026-2030.pdf",
+        "page": 23
+      }
+    ],
+    "source": "gender-equality-strategy-2026-2030.pdf",
+    "page": 23,
+    "has_identifiers": false
+  },
+  {
+    "id": "s081",
+    "question": "How many laws were mentioned as being passed by the Government of India?",
+    "expected_answer": "The Immoral Traffic (Prevention) Act was passed in 1956, and In 1961, the GoI passed Dowry Prohibition Act.",
+    "sub_type": "numeric",
+    "difficulty": "silver",
+    "gold_chunk_index": 12817,
+    "gold_chunk_id": "Women_Safety.pdf::p4::c2",
+    "expected_chunks": [
+      {
+        "source": "Women_Safety.pdf",
+        "page": 4
+      }
+    ],
+    "source": "Women_Safety.pdf",
+    "page": 4,
+    "has_identifiers": true
+  },
+  {
+    "id": "s082",
+    "question": "What percentage or count of victims is covered by the Victims' Rights Directive?",
+    "expected_answer": "all victims of crime - including victims of violence against women and domestic violence",
+    "sub_type": "numeric",
+    "difficulty": "silver",
+    "gold_chunk_index": 616,
+    "gold_chunk_id": "48802978de.pdf::p10::c0",
+    "expected_chunks": [
+      {
+        "source": "48802978de.pdf",
+        "page": 10
+      }
+    ],
+    "source": "48802978de.pdf",
+    "page": 10,
+    "has_identifiers": true
+  },
+  {
+    "id": "s083",
+    "question": "What percentage of women with a lifetime history of partnership experience physical violence from an intimate partner?",
+    "expected_answer": "10.7%",
+    "sub_type": "paraphrased",
+    "difficulty": "silver",
+    "gold_chunk_index": 4705,
+    "gold_chunk_id": "eu-gender-based-violence-survey-evidence-for-policy-and-practice_4.pdf::p17::c2",
+    "expected_chunks": [
+      {
+        "source": "eu-gender-based-violence-survey-evidence-for-policy-and-practice_4.pdf",
+        "page": 17
+      }
+    ],
+    "source": "eu-gender-based-violence-survey-evidence-for-policy-and-practice_4.pdf",
+    "page": 17,
+    "has_identifiers": false
+  },
+  {
+    "id": "s084",
+    "question": "How many EU member states have ratified ILO C190?",
+    "expected_answer": "currently 12/27 states",
+    "sub_type": "numeric",
+    "difficulty": "silver",
+    "gold_chunk_index": 12742,
+    "gold_chunk_id": "women_safety_EU_RAG_resources (1).pdf::p7::c2",
+    "expected_chunks": [
+      {
+        "source": "women_safety_EU_RAG_resources (1).pdf",
+        "page": 7
+      }
+    ],
+    "source": "women_safety_EU_RAG_resources (1).pdf",
+    "page": 7,
+    "has_identifiers": false
+  },
+  {
+    "id": "s085",
+    "question": "Who was responsible for collecting data in eight EU countries?",
+    "expected_answer": "FRA and EIGE took responsibility for the data collection.",
+    "sub_type": "paraphrased",
+    "difficulty": "silver",
+    "gold_chunk_index": 2637,
+    "gold_chunk_id": "KS-01-24-013-EN-N.pdf::p13::c2",
+    "expected_chunks": [
+      {
+        "source": "KS-01-24-013-EN-N.pdf",
+        "page": 13
+      }
+    ],
+    "source": "KS-01-24-013-EN-N.pdf",
+    "page": 13,
+    "has_identifiers": true
+  },
+  {
+    "id": "s086",
+    "question": "What should be considered when evaluating a job's communication requirements?",
+    "expected_answer": "If the job requires them, they should count as part of the job.",
+    "sub_type": "identifier",
+    "difficulty": "silver",
+    "gold_chunk_index": 6535,
+    "gold_chunk_id": "factor-and-subfactor-plan.pdf::p5::c3",
+    "expected_chunks": [
+      {
+        "source": "factor-and-subfactor-plan.pdf",
+        "page": 5
+      }
+    ],
+    "source": "factor-and-subfactor-plan.pdf",
+    "page": 5,
+    "has_identifiers": false
+  },
+  {
+    "id": "s087",
+    "question": "What proportion of countries have not taken steps to ensure women's access to green jobs?",
+    "expected_answer": "Only 34% have taken steps to ensure women’s access to green jobs.",
+    "sub_type": "negation",
+    "difficulty": "silver",
+    "gold_chunk_index": 4044,
+    "gold_chunk_id": "beijing30-action-agenda-for-all-women-and-girls-en.pdf::p3::c2",
+    "expected_chunks": [
+      {
+        "source": "beijing30-action-agenda-for-all-women-and-girls-en.pdf",
+        "page": 3
+      }
+    ],
+    "source": "beijing30-action-agenda-for-all-women-and-girls-en.pdf",
+    "page": 3,
+    "has_identifiers": false
+  },
+  {
+    "id": "s088",
+    "question": "What aspects of combating violence against women are not addressed by the EU's first ever rules?",
+    "expected_answer": "The directive calls for stronger laws against cyberviolence, better assistance for victims, steps to prevent rape and increase understanding of sexual consent.",
+    "sub_type": "negation",
+    "difficulty": "silver",
+    "gold_chunk_index": 8,
+    "gold_chunk_id": "20210923STO13419_en.pdf::p3::c1",
+    "expected_chunks": [
+      {
+        "source": "20210923STO13419_en.pdf",
+        "page": 3
+      }
+    ],
+    "source": "20210923STO13419_en.pdf",
+    "page": 3,
+    "has_identifiers": true
+  },
+  {
+    "id": "s089",
+    "question": "What aspects of the EU Gender Equality Strategy 2026–2030 were not covered by the consultation process?",
+    "expected_answer": "The following consultation activities took place: an Open Public Consultation; a Call for Evidence; targeted consultations (social partners; international organisations and EU agencies; civil society organisations (CSOs)).",
+    "sub_type": "negation",
+    "difficulty": "silver",
+    "gold_chunk_index": 2483,
+    "gold_chunk_id": "JUST_template_comingsoon_standard_2.pdf::p4::c0",
+    "expected_chunks": [
+      {
+        "source": "JUST_template_comingsoon_standard_2.pdf",
+        "page": 4
+      }
+    ],
+    "source": "JUST_template_comingsoon_standard_2.pdf",
+    "page": 4,
+    "has_identifiers": true
+  },
+  {
+    "id": "s090",
+    "question": "What percentage of victims report the most serious incident of physical or sexual violence by a partner or a non-partner to the police?",
+    "expected_answer": "Up to about 30%",
+    "sub_type": "identifier",
+    "difficulty": "silver",
+    "gold_chunk_index": 7132,
+    "gold_chunk_id": "fra-2014-vaw-survey-main-results-apr14_en.pdf::p62::c4",
+    "expected_chunks": [
+      {
+        "source": "fra-2014-vaw-survey-main-results-apr14_en.pdf",
+        "page": 62
+      }
+    ],
+    "source": "fra-2014-vaw-survey-main-results-apr14_en.pdf",
+    "page": 62,
+    "has_identifiers": false
+  },
+  {
+    "id": "s091",
+    "question": "How many EU directives are mentioned as implementing principles of equal treatment?",
+    "expected_answer": "Two directives are mentioned: Directive 2004/113/EC and Directive 2006/54/EC.",
+    "sub_type": "numeric",
+    "difficulty": "silver",
+    "gold_chunk_index": 2860,
+    "gold_chunk_id": "OJ_L_202401385_EN_TXT.pdf::p9::c7",
+    "expected_chunks": [
+      {
+        "source": "OJ_L_202401385_EN_TXT.pdf",
+        "page": 9
+      }
+    ],
+    "source": "OJ_L_202401385_EN_TXT.pdf",
+    "page": 9,
+    "has_identifiers": true
+  },
+  {
+    "id": "s092",
+    "question": "What is the estimated increase in GDP that could result from closing gender gaps?",
+    "expected_answer": "Closing these gaps could lead to a 10% increase in GDP.",
+    "sub_type": "numeric",
+    "difficulty": "silver",
+    "gold_chunk_index": 2469,
+    "gold_chunk_id": "JUST_template_comingsoon_standard_0.pdf::p1::c2",
+    "expected_chunks": [
+      {
+        "source": "JUST_template_comingsoon_standard_0.pdf",
+        "page": 1
+      }
+    ],
+    "source": "JUST_template_comingsoon_standard_0.pdf",
+    "page": 1,
+    "has_identifiers": false
+  },
+  {
+    "id": "s093",
+    "question": "What aspect of equality is not considered by a high score on the gender-equality index?",
+    "expected_answer": "A high score is not merely a reflection of equality in poor conditions.",
+    "sub_type": "negation",
+    "difficulty": "silver",
+    "gold_chunk_index": 9168,
+    "gold_chunk_id": "gender-equality-index-2025-sharper-data-for-a-changing-world.pdf::p18::c2",
+    "expected_chunks": [
+      {
+        "source": "gender-equality-index-2025-sharper-data-for-a-changing-world.pdf",
+        "page": 18
+      }
+    ],
+    "source": "gender-equality-index-2025-sharper-data-for-a-changing-world.pdf",
+    "page": 18,
+    "has_identifiers": false
+  },
+  {
+    "id": "s094",
+    "question": "What kind of support is provided for people who have fled war?",
+    "expected_answer": "It offers access to education for children.",
+    "sub_type": "paraphrased",
+    "difficulty": "silver",
+    "gold_chunk_index": 3953,
+    "gold_chunk_id": "annual_report_GE_2023_web_EN.pdf::p67::c1",
+    "expected_chunks": [
+      {
+        "source": "annual_report_GE_2023_web_EN.pdf",
+        "page": 67
+      }
+    ],
+    "source": "annual_report_GE_2023_web_EN.pdf",
+    "page": 67,
+    "has_identifiers": false
+  },
+  {
+    "id": "s095",
+    "question": "What is the number of the Work–Life Balance Directive?",
+    "expected_answer": "Directive 2019/1158",
+    "sub_type": "identifier",
+    "difficulty": "silver",
+    "gold_chunk_index": 10537,
+    "gold_chunk_id": "sharing-care-closign-gender-gaps-care-survey-2024.pdf::p17::c4",
+    "expected_chunks": [
+      {
+        "source": "sharing-care-closign-gender-gaps-care-survey-2024.pdf",
+        "page": 17
+      }
+    ],
+    "source": "sharing-care-closign-gender-gaps-care-survey-2024.pdf",
+    "page": 17,
+    "has_identifiers": true
+  },
+  {
+    "id": "s096",
+    "question": "What directive is mentioned in relation to pay differences based on sex?",
+    "expected_answer": "The Pay Transparency Directive.",
+    "sub_type": "identifier",
+    "difficulty": "silver",
+    "gold_chunk_index": 6417,
+    "gold_chunk_id": "eu-wide-guidelines-on-gender-neutral-job-evaluation-and-classification-step-by-step-toolkit.pdf::p143::c14",
+    "expected_chunks": [
+      {
+        "source": "eu-wide-guidelines-on-gender-neutral-job-evaluation-and-classification-step-by-step-toolkit.pdf",
+        "page": 143
+      }
+    ],
+    "source": "eu-wide-guidelines-on-gender-neutral-job-evaluation-and-classification-step-by-step-toolkit.pdf",
+    "page": 143,
+    "has_identifiers": true
+  },
+  {
+    "id": "s097",
+    "question": "What is one action the European Commission will take regarding minimum standards on victims' physical protection?",
+    "expected_answer": "Assess introduction of minimum standards on victims’ physical protection, including minimum conditions on issuing and modalities of protection measures...",
+    "sub_type": "factual",
+    "difficulty": "silver",
+    "gold_chunk_index": 2282,
+    "gold_chunk_id": "CELEX_52020DC0258_EN_TXT.pdf::p16::c1",
+    "expected_chunks": [
+      {
+        "source": "CELEX_52020DC0258_EN_TXT.pdf",
+        "page": 16
+      }
+    ],
+    "source": "CELEX_52020DC0258_EN_TXT.pdf",
+    "page": 16,
+    "has_identifiers": false
+  },
+  {
+    "id": "s098",
+    "question": "What aspects of support for women experiencing violence are not mentioned as being addressed by the European Commission?",
+    "expected_answer": "It is also important to help women who experience violence to find a house or get a job so that they can be independent.",
+    "sub_type": "negation",
+    "difficulty": "silver",
+    "gold_chunk_index": 10913,
+    "gold_chunk_id": "stopping_violence_against_women_easy_to_read_en.pdf::p4::c0",
+    "expected_chunks": [
+      {
+        "source": "stopping_violence_against_women_easy_to_read_en.pdf",
+        "page": 4
+      }
+    ],
+    "source": "stopping_violence_against_women_easy_to_read_en.pdf",
+    "page": 4,
+    "has_identifiers": false
+  },
+  {
+    "id": "s099",
+    "question": "What is not a reason for opposition to the Istanbul Convention in countries that have yet to ratify it?",
+    "expected_answer": "the debate often centres around wanting to protect the ‘institution of marriage between a man and a woman’",
+    "sub_type": "negation",
+    "difficulty": "silver",
+    "gold_chunk_index": 8014,
+    "gold_chunk_id": "gender-equality-index-2024-tackling-violence-against-women-tackling-gender-inequalities.pdf::p18::c1",
+    "expected_chunks": [
+      {
+        "source": "gender-equality-index-2024-tackling-violence-against-women-tackling-gender-inequalities.pdf",
+        "page": 18
+      }
+    ],
+    "source": "gender-equality-index-2024-tackling-violence-against-women-tackling-gender-inequalities.pdf",
+    "page": 18,
+    "has_identifiers": true
+  },
+  {
+    "id": "s100",
+    "question": "How many years has it been since the Gender Equality Index launched?",
+    "expected_answer": "Europe has evolved since the Gender Equality Index launched in 2013.",
+    "sub_type": "numeric",
+    "difficulty": "silver",
+    "gold_chunk_index": 4524,
+    "gold_chunk_id": "eige_index_brochure.pdf::p1::c0",
+    "expected_chunks": [
+      {
+        "source": "eige_index_brochure.pdf",
+        "page": 1
+      }
+    ],
+    "source": "eige_index_brochure.pdf",
+    "page": 1,
+    "has_identifiers": false
+  },
+  {
+    "id": "s101",
+    "question": "What is the purpose of the annual report that Digital Services Coordinators must submit?",
+    "expected_answer": "They shall draw up annual reports on their activities under this Regulation, including the number of complaints received pursuant to Article 53 and an overview of their follow-up.",
+    "sub_type": "identifier",
+    "difficulty": "silver",
+    "gold_chunk_index": 2054,
+    "gold_chunk_id": "CELEX_32022R2065_EN_TXT.pdf::p83::c0",
+    "expected_chunks": [
+      {
+        "source": "CELEX_32022R2065_EN_TXT.pdf",
+        "page": 83
+      }
+    ],
+    "source": "CELEX_32022R2065_EN_TXT.pdf",
+    "page": 83,
+    "has_identifiers": true
+  },
+  {
+    "id": "s102",
+    "question": "Who are the copyright holders for the content in this document?",
+    "expected_answer": "The European Union Agency for Fundamental Rights (FRA) and European Institute for Gender Equality (EIGE)",
+    "sub_type": "factual",
+    "difficulty": "silver",
+    "gold_chunk_index": 4546,
+    "gold_chunk_id": "eu-gbv-annexes_en.pdf::p2::c0",
+    "expected_chunks": [
+      {
+        "source": "eu-gbv-annexes_en.pdf",
+        "page": 2
+      }
+    ],
+    "source": "eu-gbv-annexes_en.pdf",
+    "page": 2,
+    "has_identifiers": true
+  },
+  {
+    "id": "s103",
+    "question": "What has been the goal of various policies and initiatives over the past decades?",
+    "expected_answer": "These include laws on equal pay, such as those on equal value and equal pay.",
+    "sub_type": "factual",
+    "difficulty": "silver",
+    "gold_chunk_index": 10362,
+    "gold_chunk_id": "mh0125064enn_002.pdf::p1-2::stitch",
+    "expected_chunks": [
+      {
+        "source": "mh0125064enn_002.pdf",
+        "page": 1
+      }
+    ],
+    "source": "mh0125064enn_002.pdf",
+    "page": 1,
+    "has_identifiers": false
+  },
+  {
+    "id": "s104",
+    "question": "What year was the new European strategy for universities adopted?",
+    "expected_answer": "January 2022.",
+    "sub_type": "identifier",
+    "difficulty": "silver",
+    "gold_chunk_index": 3239,
+    "gold_chunk_id": "annual_report_GE_2022_printable_EN.pdf::p31::c0",
+    "expected_chunks": [
+      {
+        "source": "annual_report_GE_2022_printable_EN.pdf",
+        "page": 31
+      }
+    ],
+    "source": "annual_report_GE_2022_printable_EN.pdf",
+    "page": 31,
+    "has_identifiers": true
+  },
+  {
+    "id": "s105",
+    "question": "What percentage of overseas development assistance spending targeted gender-based violence in 2022?",
+    "expected_answer": "less than 1 %",
+    "sub_type": "paraphrased",
+    "difficulty": "silver",
+    "gold_chunk_index": 519,
+    "gold_chunk_id": "2024 Report on Gender Equality in the EU_coming soon.pdf::p77::c1",
+    "expected_chunks": [
+      {
+        "source": "2024 Report on Gender Equality in the EU_coming soon.pdf",
+        "page": 77
+      }
+    ],
+    "source": "2024 Report on Gender Equality in the EU_coming soon.pdf",
+    "page": 77,
+    "has_identifiers": false
+  },
+  {
+    "id": "s106",
+    "question": "What is not comparable between countries according to the passage?",
+    "expected_answer": "Apart from these points, data are comparable between countries.",
+    "sub_type": "negation",
+    "difficulty": "silver",
+    "gold_chunk_index": 11869,
+    "gold_chunk_id": "wmid_methodology_31032026.pdf::p60::c6",
+    "expected_chunks": [
+      {
+        "source": "wmid_methodology_31032026.pdf",
+        "page": 60
+      }
+    ],
+    "source": "wmid_methodology_31032026.pdf",
+    "page": 60,
+    "has_identifiers": true
+  },
+  {
+    "id": "s107",
+    "question": "What types of legislation were adopted by the European Parliament in 2019 and 2021?",
+    "expected_answer": "Directive (EU) 2019/1158 and Regulation (EU) 2021/522.",
+    "sub_type": "paraphrased",
+    "difficulty": "silver",
+    "gold_chunk_index": 10102,
+    "gold_chunk_id": "gender-equality-index-methodological-report.pdf::p48::c1",
+    "expected_chunks": [
+      {
+        "source": "gender-equality-index-methodological-report.pdf",
+        "page": 48
+      }
+    ],
+    "source": "gender-equality-index-methodological-report.pdf",
+    "page": 48,
+    "has_identifiers": true
+  },
+  {
+    "id": "s108",
+    "question": "What does the Commission explain in its 2025 DSA Guidelines?",
+    "expected_answer": "the measures that providers of online platforms accessible to minors should put in place to ensure a high level of privacy, security and safety to minors on their services, including measures to prevent the unwanted spread of sexualised or intimate content of children.",
+    "sub_type": "factual",
+    "difficulty": "silver",
+    "gold_chunk_index": 10239,
+    "gold_chunk_id": "gender-equality-strategy-2026-2030.pdf::p6::c3",
+    "expected_chunks": [
+      {
+        "source": "gender-equality-strategy-2026-2030.pdf",
+        "page": 6
+      }
+    ],
+    "source": "gender-equality-strategy-2026-2030.pdf",
+    "page": 6,
+    "has_identifiers": false
+  },
+  {
+    "id": "s109",
+    "question": "What aspects of sexual harassment are not covered by the Sexual Harassment At Workplace Act 2013?",
+    "expected_answer": "It comes 15 years after the landmark Vishaka Judgement in which the Supreme Court categorically said that harassment at workplace is a violation of right of gender equality and right to life and liberty, thus violating Article 14, 15, 21.",
+    "sub_type": "negation",
+    "difficulty": "silver",
+    "gold_chunk_index": 12781,
+    "gold_chunk_id": "Women_Safety.pdf::p8::c2",
+    "expected_chunks": [
+      {
+        "source": "Women_Safety.pdf",
+        "page": 8
+      }
+    ],
+    "source": "Women_Safety.pdf",
+    "page": 8,
+    "has_identifiers": true
+  },
+  {
+    "id": "s110",
+    "question": "How many people are represented by local agents in EU Delegations?",
+    "expected_answer": "Local agents represent half of the staff working in EU Delegations (+/- 3 000 people).",
+    "sub_type": "factual",
+    "difficulty": "silver",
+    "gold_chunk_index": 1036,
+    "gold_chunk_id": "48802978de.pdf::p66::c2",
+    "expected_chunks": [
+      {
+        "source": "48802978de.pdf",
+        "page": 66
+      }
+    ],
+    "source": "48802978de.pdf",
+    "page": 66,
+    "has_identifiers": true
+  },
+  {
+    "id": "s111",
+    "question": "What percentage of women reported an increase in psychological abuse from their current partner during the pandemic?",
+    "expected_answer": "12.9 %",
+    "sub_type": "paraphrased",
+    "difficulty": "silver",
+    "gold_chunk_index": 4920,
+    "gold_chunk_id": "eu-gender-based-violence-survey-evidence-for-policy-and-practice_4.pdf::p56::c10",
+    "expected_chunks": [
+      {
+        "source": "eu-gender-based-violence-survey-evidence-for-policy-and-practice_4.pdf",
+        "page": 56
+      }
+    ],
+    "source": "eu-gender-based-violence-survey-evidence-for-policy-and-practice_4.pdf",
+    "page": 56,
+    "has_identifiers": false
+  },
+  {
+    "id": "s112",
+    "question": "What is not included in the list of organisations provided by lilahelp.com?",
+    "expected_answer": "All listed organisations are vetted as safe, confidential and connected to wider crisis networks.",
+    "sub_type": "negation",
+    "difficulty": "silver",
+    "gold_chunk_index": 12730,
+    "gold_chunk_id": "women_safety_EU_RAG_resources (1).pdf::p5::c2",
+    "expected_chunks": [
+      {
+        "source": "women_safety_EU_RAG_resources (1).pdf",
+        "page": 5
+      }
+    ],
+    "source": "women_safety_EU_RAG_resources (1).pdf",
+    "page": 5,
+    "has_identifiers": false
+  },
+  {
+    "id": "s113",
+    "question": "What is not exempt from needing permission to reproduce?",
+    "expected_answer": "For any use or reproduction of photos or other material that is not under the European Union Agency for Fundamental Rights/Eurostat/European Institute for Gender Equality copyright, permission must be sought directly from the copyright holders.",
+    "sub_type": "negation",
+    "difficulty": "silver",
+    "gold_chunk_index": 2594,
+    "gold_chunk_id": "KS-01-24-013-EN-N.pdf::p2::c0",
+    "expected_chunks": [
+      {
+        "source": "KS-01-24-013-EN-N.pdf",
+        "page": 2
+      }
+    ],
+    "source": "KS-01-24-013-EN-N.pdf",
+    "page": 2,
+    "has_identifiers": true
+  },
+  {
+    "id": "s114",
+    "question": "What is one aspect considered in the organisational environment subfactor?",
+    "expected_answer": "It considers the need to adapt to unusual working hours.",
+    "sub_type": "numeric",
+    "difficulty": "silver",
+    "gold_chunk_index": 6694,
+    "gold_chunk_id": "factor-and-subfactor-plan.pdf::p23-24::stitch",
+    "expected_chunks": [
+      {
+        "source": "factor-and-subfactor-plan.pdf",
+        "page": 23
+      }
+    ],
+    "source": "factor-and-subfactor-plan.pdf",
+    "page": 23,
+    "has_identifiers": false
+  },
+  {
+    "id": "s115",
+    "question": "When did the European Parliament give its consent to the EU accession to the Convention?",
+    "expected_answer": "In May 2023, the Parliament gave its consent to the EU accession to the Convention.",
+    "sub_type": "identifier",
+    "difficulty": "silver",
+    "gold_chunk_index": 15,
+    "gold_chunk_id": "20210923STO13419_en.pdf::p4-5::stitch",
+    "expected_chunks": [
+      {
+        "source": "20210923STO13419_en.pdf",
+        "page": 4
+      }
+    ],
+    "source": "20210923STO13419_en.pdf",
+    "page": 4,
+    "has_identifiers": true
+  },
+  {
+    "id": "s116",
+    "question": "What is the purpose of a recent EU initiative?",
+    "expected_answer": "This initiative aims to build on progress under the 2020-2025 strategy and the Roadmap for Women’s Rights to advance gender equality, strengthen women’s rights, and combat gender-based discrimination in the European Union.",
+    "sub_type": "paraphrased",
+    "difficulty": "silver",
+    "gold_chunk_index": 2498,
+    "gold_chunk_id": "JUST_template_comingsoon_standard_2.pdf::p5::c0",
+    "expected_chunks": [
+      {
+        "source": "JUST_template_comingsoon_standard_2.pdf",
+        "page": 5
+      }
+    ],
+    "source": "JUST_template_comingsoon_standard_2.pdf",
+    "page": 5,
+    "has_identifiers": true
+  },
+  {
+    "id": "s117",
+    "question": "What percentage of victims of stalking selected four or more consequence categories?",
+    "expected_answer": "Close to one in 10 victims of stalking (9%) selected four or more consequence categories based on the most serious case of stalking.",
+    "sub_type": "factual",
+    "difficulty": "silver",
+    "gold_chunk_index": 7335,
+    "gold_chunk_id": "fra-2014-vaw-survey-main-results-apr14_en.pdf::p92::c1",
+    "expected_chunks": [
+      {
+        "source": "fra-2014-vaw-survey-main-results-apr14_en.pdf",
+        "page": 92
+      }
+    ],
+    "source": "fra-2014-vaw-survey-main-results-apr14_en.pdf",
+    "page": 92,
+    "has_identifiers": false
+  },
+  {
+    "id": "s118",
+    "question": "What percentage of the population is entitled to legal aid according to EU directive?",
+    "expected_answer": "According to Article 13 of Directive 2012/29/EU.",
+    "sub_type": "numeric",
+    "difficulty": "silver",
+    "gold_chunk_index": 2943,
+    "gold_chunk_id": "OJ_L_202401385_EN_TXT.pdf::p20::c2",
+    "expected_chunks": [
+      {
+        "source": "OJ_L_202401385_EN_TXT.pdf",
+        "page": 20
+      }
+    ],
+    "source": "OJ_L_202401385_EN_TXT.pdf",
+    "page": 20,
+    "has_identifiers": true
+  },
+  {
+    "id": "s119",
+    "question": "What license governs the reuse of this document?",
+    "expected_answer": "Creative Commons Attribution 4.0 International license.",
+    "sub_type": "factual",
+    "difficulty": "silver",
+    "gold_chunk_index": 2472,
+    "gold_chunk_id": "JUST_template_comingsoon_standard_0.pdf::p2::c0",
+    "expected_chunks": [
+      {
+        "source": "JUST_template_comingsoon_standard_0.pdf",
+        "page": 2
+      }
+    ],
+    "source": "JUST_template_comingsoon_standard_0.pdf",
+    "page": 2,
+    "has_identifiers": false
+  },
+  {
+    "id": "s120",
+    "question": "What percentage of seats were held by women in decision-making bodies of central banks in 2024?",
+    "expected_answer": "In 2024, decision-making bodies of these banks continued to be dominated by men, with 32 % of seats being held by women.",
+    "sub_type": "identifier",
+    "difficulty": "silver",
+    "gold_chunk_index": 8745,
+    "gold_chunk_id": "gender-equality-index-2025-sharper-data-for-a-changing-world (1).pdf::p88::c3",
+    "expected_chunks": [
+      {
+        "source": "gender-equality-index-2025-sharper-data-for-a-changing-world (1).pdf",
+        "page": 88
+      }
+    ],
+    "source": "gender-equality-index-2025-sharper-data-for-a-changing-world (1).pdf",
+    "page": 88,
+    "has_identifiers": true
+  }
+]

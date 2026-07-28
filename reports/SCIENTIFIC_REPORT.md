@@ -883,8 +883,12 @@ production system runs both.
 | **200** | **0.322** | **0.389** | **0.367** | none |
 
 Overlap improves ranking under all three retrievers and changes recall under
-none. That consistency across independent retrievers is what makes the effect
-credible at this sample size, where any single number would not be.
+none.
+
+> **Superseded by §5.8.** This pattern does not survive replication at n=135.
+> The apparent consistency across three retrievers was noise agreeing three
+> times, which is a useful reminder that agreement between correlated measures
+> is not independent confirmation.
 
 Judged on recall alone, overlap looks free to delete: it costs 9% more index
 entries (7,942 → 8,690 chunks) and finds nothing new. It is visible only in MRR,
@@ -933,7 +937,72 @@ which 8% are relevant is being set up to hallucinate.
 A marginal MRR gain, well within noise at n=15. Reported as **not demonstrated**
 rather than claimed as a win.
 
-### 5.8 Design choices selected
+### 5.8 Replication at n=135: two conclusions did not hold
+
+Every result above rests on 15 questions. `scripts/build_ground_truth.py`
+generated a 120-question silver set locally (120 accepted from 135 attempted;
+6 rejected as unsupported, 8 as malformed; 33 documents covered), and the
+chunking factorial was re-run over all 135 questions on the full 2,270-page
+corpus.
+
+**Chunk size, dense retriever (k=8):**
+
+| Size | n=15 (human) | **n=135** | Silver subset | Human subset |
+|---|---|---|---|---|
+| **400** | 40.0% | **62.2%** | 65.8% | 33.3% |
+| 800 | 40.0% | 51.8% | 53.3% | 40.0% |
+| 1200 | 33.3% | 47.4% | 49.2% | 33.3% |
+
+**Chunk size, BM25 (k=8):**
+
+| Size | n=15 (human) | **n=135** |
+|---|---|---|
+| 400 | 40.0% | 56.3% |
+| 800 | 46.7% | 56.3% |
+| 1200 | 46.7% | 56.3% |
+
+Two of our earlier conclusions fail to replicate:
+
+**1. The "reversal" was half an artefact.** At n=15 we reported that dense
+prefers smaller chunks while BM25 prefers larger ones, and chose 800 as the
+size penalising neither. At n=135 the dense half strengthens into a clean
+monotonic decline (62.2% → 51.8% → 47.4%), but the BM25 half disappears: BM25
+is **flat at 56.3%** across all three sizes. The correct statement is not
+"the effect reverses" but "dense prefers small chunks and BM25 is indifferent
+to size" — which points to **400 characters**, not 800: dense gains 10.4
+points and BM25 loses nothing.
+
+**2. Overlap does not consistently help.** At n=15, MRR improved with overlap
+under all three retrievers, and we argued recall-only reporting would have
+wrongly discarded it. At n=135 that pattern is gone: for dense at 400
+characters, recall runs 62.2% / 63.0% / 59.3% for overlap 0 / 100 / 200, and
+BM25 is best at zero overlap. The n=15 pattern was noise that happened to point
+the same way three times.
+
+**The two question sets disagree**, and we report that rather than smoothing it.
+On the human set 800 characters looks best (40.0% vs 33.3%); on the silver set
+400 is decisively better (65.8% vs 53.3%). Both readings cannot be right. The
+human set has 15 questions and cannot resolve a 6-point difference. The silver
+set has statistical power but a known bias: its questions were generated from
+corpus chunks, so they are answerable by construction and skew easier. Our
+reading is that the dense monotonic trend is real — it is large, ordered, and
+mechanistically explicable as dilution of a specific claim inside a longer
+vector — while the human-set ordering is noise.
+
+**What we changed, and what we did not.** We have not switched the production
+chunk size to 400 on the strength of this. The silver set is a proxy, the two
+sets conflict, and changing the corpus chunking invalidates every other number
+in this report. The honest position is that **400 characters is the better
+supported choice and 800 is what was measured end-to-end**, and that resolving
+it requires a larger *human*-annotated set, not more silver questions.
+
+This section is the reason the silver set was built. Its value was not to
+improve a score; it was to show that two published conclusions from a 15-question
+benchmark were unreliable — precisely the failure mode §7.3 warned about when it
+stated that every difference at n=15 was within sampling noise. We were right to
+warn, and wrong in two specific claims anyway.
+
+### 5.9 Design choices selected
 
 | Decision | Chosen | Evidence |
 |---|---|---|
