@@ -862,8 +862,21 @@ _STATIC = Path(__file__).parent / "static"
 _FLAG_PATH    = _ROOT / "european-union-flag-of-europe-flag-of-the-united-states-electrical-switches-others.jpg"
 _COLUMNS_PATH = _ROOT / "low-angle-greyscale-shot-ancient-roman-temple-bright-sun.jpg"
 
-_FLAG_URL    = _img_data_uri(str(_FLAG_PATH))            # ~46 KB base64, flag only
-_COLUMNS_URL = _img_data_uri(str(_COLUMNS_PATH), max_width=1600)  # ~170 KB compressed
+def _optional_img(path: Path, **kw) -> str:
+    """Decorative image, or an empty string if it is not present.
+
+    These are cosmetic hero images and are not redistributed with the
+    repository. A missing decoration must never stop the application from
+    starting — previously it raised FileNotFoundError on a fresh clone.
+    """
+    try:
+        return _img_data_uri(str(path), **kw)
+    except (FileNotFoundError, OSError):
+        return ""
+
+
+_FLAG_URL    = _optional_img(_FLAG_PATH)                      # decorative only
+_COLUMNS_URL = _optional_img(_COLUMNS_PATH, max_width=1600)   # decorative only
 
 
 # ---------------------------------------------------------------------------

@@ -1,0 +1,114 @@
+{
+  "k": 8,
+  "n": 15,
+  "substring_hit_rate": 0.3333,
+  "page_hit_rate": 0.5333,
+  "sufficiency_rate": 0.6,
+  "rows": [
+    {
+      "id": "q01",
+      "sub_type": "temporal",
+      "substring_hit": false,
+      "page_hit": false,
+      "sufficient": true
+    },
+    {
+      "id": "q02",
+      "sub_type": "exact_term",
+      "substring_hit": false,
+      "page_hit": false,
+      "sufficient": false
+    },
+    {
+      "id": "q03",
+      "sub_type": "multi_hop",
+      "substring_hit": true,
+      "page_hit": false,
+      "sufficient": true
+    },
+    {
+      "id": "q04",
+      "sub_type": "multi_part",
+      "substring_hit": false,
+      "page_hit": true,
+      "sufficient": false
+    },
+    {
+      "id": "q05",
+      "sub_type": "exact_term",
+      "substring_hit": true,
+      "page_hit": false,
+      "sufficient": true
+    },
+    {
+      "id": "q06",
+      "sub_type": "negation",
+      "substring_hit": false,
+      "page_hit": true,
+      "sufficient": true
+    },
+    {
+      "id": "q07",
+      "sub_type": "temporal",
+      "substring_hit": false,
+      "page_hit": true,
+      "sufficient": true
+    },
+    {
+      "id": "q08",
+      "sub_type": "table_list",
+      "substring_hit": false,
+      "page_hit": true,
+      "sufficient": false
+    },
+    {
+      "id": "q09",
+      "sub_type": "multi_part",
+      "substring_hit": false,
+      "page_hit": true,
+      "sufficient": false
+    },
+    {
+      "id": "q10",
+      "sub_type": "contradictory",
+      "substring_hit": true,
+      "page_hit": false,
+      "sufficient": false
+    },
+    {
+      "id": "q11",
+      "sub_type": "language_variation",
+      "substring_hit": true,
+      "page_hit": true,
+      "sufficient": true
+    },
+    {
+      "id": "q12",
+      "sub_type": "same_document",
+      "substring_hit": false,
+      "page_hit": true,
+      "sufficient": false
+    },
+    {
+      "id": "q13",
+      "sub_type": "edge_of_chunk",
+      "substring_hit": true,
+      "page_hit": false,
+      "sufficient": true
+    },
+    {
+      "id": "q14",
+      "sub_type": "paraphrased",
+      "substring_hit": false,
+      "page_hit": false,
+      "sufficient": true
+    },
+    {
+      "id": "q15",
+      "sub_type": "language_variation",
+      "substring_hit": false,
+      "page_hit": true,
+      "sufficient": true
+    }
+  ]
+}

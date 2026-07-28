@@ -10908,6 +10908,50 @@
       "total_tokens": 4020,
       "cost_usd": 0.0,
       "backend": "ollama"
+    },
+    {
+      "timestamp": "2026-07-28T05:12:19.756051+00:00",
+      "user": "127.0.0.1",
+      "type": "embedding",
+      "model": "nomic-embed-text",
+      "prompt_tokens": 33,
+      "completion_tokens": 0,
+      "total_tokens": 33,
+      "cost_usd": 0.0,
+      "backend": "ollama"
+    },
+    {
+      "timestamp": "2026-07-28T05:12:45.795180+00:00",
+      "user": "127.0.0.1",
+      "type": "chat",
+      "model": "llama3.1:8b",
+      "prompt_tokens": 1286,
+      "completion_tokens": 113,
+      "total_tokens": 1399,
+      "cost_usd": 0.0,
+      "backend": "ollama"
+    },
+    {
+      "timestamp": "2026-07-28T06:39:19.159774+00:00",
+      "user": "127.0.0.1",
+      "type": "embedding",
+      "model": "nomic-embed-text",
+      "prompt_tokens": 19,
+      "completion_tokens": 0,
+      "total_tokens": 19,
+      "cost_usd": 0.0,
+      "backend": "ollama"
+    },
+    {
+      "timestamp": "2026-07-28T06:39:45.414968+00:00",
+      "user": "127.0.0.1",
+      "type": "chat",
+      "model": "llama3.1:8b",
+      "prompt_tokens": 1551,
+      "completion_tokens": 36,
+      "total_tokens": 1587,
+      "cost_usd": 0.0,
+      "backend": "ollama"
     }
   ],
   "budget_usd": 5.0,

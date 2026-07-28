@@ -1,0 +1,309 @@
+{
+  "judge": "llama3.1:8b",
+  "k": 8,
+  "results": [
+    {
+      "model": "llama3.1:8b",
+      "n": 8,
+      "pass_rate": 0.25,
+      "groundedness": 0.5716,
+      "citation_rate": 0.75,
+      "empty_answers": 0,
+      "median_latency_s": 42.26,
+      "mean_completion_tokens": 74.4,
+      "total_s": 375.4,
+      "per_question": [
+        {
+          "id": "q01",
+          "empty": false,
+          "sub_type": "temporal",
+          "verdict": "FAIL",
+          "grounded": 0.3889,
+          "cited": true,
+          "latency_s": 40.45,
+          "completion_tokens": 83,
+          "answer": "According to passage [3], the exact deadline for EU Member States to transpose Directive (EU) 2024/1385 is by 2027. However, passage [4] states that the actual deadline is July 15, 2026.\n\nThere is no information in the provided passages about the conclusion of the Commission's evaluation of its impact on Directive (EU) 2024/1385."
+        },
+        {
+          "id": "q02",
+          "empty": false,
+          "sub_type": "exact_term",
+          "verdict": "FAIL",
+          "grounded": 0.4286,
+          "cited": false,
+          "latency_s": 34.11,
+          "completion_tokens": 21,
+          "answer": "I'm sorry, I cannot find any information about \"Condition (d)\" in the provided passages."
+        },
+        {
+          "id": "q03",
+          "empty": false,
+          "sub_type": "multi_hop",
+          "verdict": "FAIL",
+          "grounded": 0.7619,
+          "cited": true,
+          "latency_s": 47.61,
+          "completion_tokens": 136,
+          "answer": "There is no passage that directly answers this question. However, Passage [6] mentions that the 2024 VAW Directive (Directive (EU) 2024/1385) includes measures to enhance the rights of victims to protection and support, but it does not specifically mention how it utilizes the Digital Services Act to mitigate harm.\n\nPassage [8] discusses the obligations of very large online platforms under the Digi"
+        },
+        {
+          "id": "q04",
+          "empty": false,
+          "sub_type": "multi_part",
+          "verdict": "FAIL",
+          "grounded": 0.3333,
+          "cited": false,
+          "latency_s": 26.73,
+          "completion_tokens": 22,
+          "answer": "I'm sorry, I do not see any passage that mentions reopening proceedings under Article 71(2)."
+        },
+        {
+          "id": "q05",
+          "empty": false,
+          "sub_type": "exact_term",
+          "verdict": "FAIL",
+          "grounded": 0.4643,
+          "cited": true,
+          "latency_s": 46.22,
+          "completion_tokens": 103,
+          "answer": "Unfortunately, I must say that the passages do not contain information about the specific distinction between \"Score 1\" and \"Score 2\" interventions. The passage [6] mentions the scores, but it only provides a general description of what each score means (Score 0*: having the potential to contribute to gender equality; Score 0: not having a significant bearing on gender equality; Score 1: intervent"
+        },
+        {
+          "id": "q06",
+          "empty": false,
+          "sub_type": "negation",
+          "verdict": "FAIL",
+          "grounded": 0.7692,
+          "cited": true,
+          "latency_s": 40.3,
+          "completion_tokens": 83,
+          "answer": "There is no mention of an \"exception clause\" in the provided passages. However, passage [3] mentions that the requirement not to modify information does not cover manipulations of a technical nature which take place in the course of transmission or access, as long as those manipulations do not alter the integrity of the information (Source: CELEX_32022R2065_EN_TXT.pdf — Page 6)."
+        },
+        {
+          "id": "q07",
+          "empty": false,
+          "sub_type": "temporal",
+          "verdict": "PASS",
+          "grounded": 0.76,
+          "cited": true,
+          "latency_s": 42.26,
+          "completion_tokens": 75,
+          "answer": "According to passage [2], the specific reason for the decrease in total expenditure supporting gender equality in 2024 compared to 2023 is that the phasing out of Recovery and Resilience Facility commitments accounted for EUR 8.4 billion (underline 1 and 2 in 2023). Despite this, the proportion of funding directed towards gender equality increased."
+        },
+        {
+          "id": "q08",
+          "empty": false,
+          "sub_type": "table_list",
+          "verdict": "PASS",
+          "grounded": 0.6667,
+          "cited": true,
+          "latency_s": 64.09,
+          "completion_tokens": 72,
+          "answer": "Unfortunately, I couldn't find any information about the median CARE survey duration for respondents in Sweden or Malta in the provided passages.\n\nHowever, passage [3] mentions that \"Median duration times ranged from 11 minutes and 5 seconds in Belgium to 18 minutes and 15 seconds in Cyprus.\" But it does not provide specific data for Sweden or Malta."
+        }
+      ]
+    },
+    {
+      "model": "gemma4:e4b",
+      "n": 8,
+      "pass_rate": 0.25,
+      "groundedness": 0.7304,
+      "citation_rate": 0.5,
+      "empty_answers": 0,
+      "median_latency_s": 79.71,
+      "mean_completion_tokens": 629.1,
+      "total_s": 705.0,
+      "per_question": [
+        {
+          "id": "q01",
+          "empty": false,
+          "sub_type": "temporal",
+          "verdict": "FAIL",
+          "grounded": 0.6667,
+          "cited": true,
+          "latency_s": 79.71,
+          "completion_tokens": 622,
+          "answer": "The deadline for all states to operate the service required by Directive 2024/1385 free and 24/7 is 2027 (Source: women_safety_EU_RAG_resources (1).pdf — Page 5; Source: women_safety_EU_RAG_resources (1).pdf — Page 2). The provided passages do not state the specific year marking the conclusion of the Commission's evaluation of this directive."
+        },
+        {
+          "id": "q02",
+          "empty": false,
+          "sub_type": "exact_term",
+          "verdict": "FAIL",
+          "grounded": 0.5714,
+          "cited": false,
+          "latency_s": 67.27,
+          "completion_tokens": 518,
+          "answer": "The provided passages do not contain information regarding 'Condition (d)' under Article 5 of the Digital Services Act (Regulation EU 2022/2065) for caching service liability exemptions."
+        },
+        {
+          "id": "q03",
+          "empty": false,
+          "sub_type": "multi_hop",
+          "verdict": "FAIL",
+          "grounded": 0.8333,
+          "cited": true,
+          "latency_s": 108.0,
+          "completion_tokens": 1002,
+          "answer": "The provided passages do not specify how the 2024 VAW Directive utilizes the Digital Services Act, nor do they mention an \"Article 14.\" However, the passages indicate that Directive 2024/1385 criminalizes non-consensual sharing of intimate or manipulated material at the EU level (women_safety_EU_RAG_resources (1).pdf — Page 6; women_safety_EU_RAG_resources (1).pdf — Page 7). Regarding platform mit"
+        },
+        {
+          "id": "q04",
+          "empty": false,
+          "sub_type": "multi_part",
+          "verdict": "FAIL",
+          "grounded": 0.5714,
+          "cited": false,
+          "latency_s": 59.62,
+          "completion_tokens": 509,
+          "answer": "The provided passages do not contain the information specifying the three grounds that allow the Commission to reopen proceedings under Article 71(2) of the Digital Services Act."
+        },
+        {
+          "id": "q05",
+          "empty": false,
+          "sub_type": "exact_term",
+          "verdict": "PASS",
+          "grounded": 0.9,
+          "cited": true,
+          "latency_s": 91.59,
+          "completion_tokens": 708,
+          "answer": "According to the methodology, Score 2 interventions are those whose principal objective is to improve gender equality [2024 Report on Gender Equality in the EU_coming soon.pdf — Page 64]. In contrast, Score 1 interventions are those that have gender equality as an important and deliberate objective, but it is not the main reason for the intervention [2024 Report on Gender Equality in the EU_coming"
+        },
+        {
+          "id": "q06",
+          "empty": false,
+          "sub_type": "negation",
+          "verdict": "FAIL",
+          "grounded": 0.7647,
+          "cited": false,
+          "latency_s": 68.38,
+          "completion_tokens": 434,
+          "answer": "The provided passages do not contain information about an \"exception clause\" in the Digital Services Act where a hosting service provider is not required to provide a statement of reasons for content removal."
+        },
+        {
+          "id": "q07",
+          "empty": false,
+          "sub_type": "temporal",
+          "verdict": "PASS",
+          "grounded": 0.9524,
+          "cited": true,
+          "latency_s": 114.35,
+          "completion_tokens": 850,
+          "answer": "The total expenditure supporting gender equality was lower in 2024 due to the phasing out of the Recovery and Resilience Facility commitments in 2024, which accounted for EUR 8.4 billion (Source: 48802978de.pdf — Page 15). Despite the lower total expenditure, the proportion of funding directed towards gender equality increased (Source: 48802978de.pdf — Page 15)."
+        },
+        {
+          "id": "q08",
+          "empty": false,
+          "sub_type": "table_list",
+          "verdict": "FAIL",
+          "grounded": 0.5833,
+          "cited": false,
+          "latency_s": 69.96,
+          "completion_tokens": 390,
+          "answer": "The provided passages do not contain information comparing the median CARE survey duration for respondents in Sweden and Malta."
+        }
+      ]
+    },
+    {
+      "model": "qwen3.5:9b",
+      "n": 8,
+      "pass_rate": 0.0,
+      "groundedness": 0.0,
+      "citation_rate": 0.0,
+      "empty_answers": 8,
+      "median_latency_s": 373.99,
+      "mean_completion_tokens": 1500.0,
+      "total_s": 2938.5,
+      "per_question": [
+        {
+          "id": "q01",
+          "empty": true,
+          "sub_type": "temporal",
+          "verdict": "FAIL",
+          "grounded": 0.0,
+          "cited": false,
+          "latency_s": 373.99,
+          "completion_tokens": 1500,
+          "answer": ""
+        },
+        {
+          "id": "q02",
+          "empty": true,
+          "sub_type": "exact_term",
+          "verdict": "FAIL",
+          "grounded": 0.0,
+          "cited": false,
+          "latency_s": 395.43,
+          "completion_tokens": 1500,
+          "answer": ""
+        },
+        {
+          "id": "q03",
+          "empty": true,
+          "sub_type": "multi_hop",
+          "verdict": "FAIL",
+          "grounded": 0.0,
+          "cited": false,
+          "latency_s": 399.82,
+          "completion_tokens": 1500,
+          "answer": ""
+        },
+        {
+          "id": "q04",
+          "empty": true,
+          "sub_type": "multi_part",
+          "verdict": "FAIL",
+          "grounded": 0.0,
+          "cited": false,
+          "latency_s": 392.48,
+          "completion_tokens": 1500,
+          "answer": ""
+        },
+        {
+          "id": "q05",
+          "empty": true,
+          "sub_type": "exact_term",
+          "verdict": "FAIL",
+          "grounded": 0.0,
+          "cited": false,
+          "latency_s": 370.81,
+          "completion_tokens": 1500,
+          "answer": ""
+        },
+        {
+          "id": "q06",
+          "empty": true,
+          "sub_type": "negation",
+          "verdict": "FAIL",
+          "grounded": 0.0,
+          "cited": false,
+          "latency_s": 320.27,
+          "completion_tokens": 1500,
+          "answer": ""
+        },
+        {
+          "id": "q07",
+          "empty": true,
+          "sub_type": "temporal",
+          "verdict": "FAIL",
+          "grounded": 0.0,
+          "cited": false,
+          "latency_s": 334.24,
+          "completion_tokens": 1500,
+          "answer": ""
+        },
+        {
+          "id": "q08",
+          "empty": true,
+          "sub_type": "table_list",
+          "verdict": "FAIL",
+          "grounded": 0.0,
+          "cited": false,
+          "latency_s": 351.47,
+          "completion_tokens": 1500,
+          "answer": ""
+        }
+      ]
+    }
+  ]
+}

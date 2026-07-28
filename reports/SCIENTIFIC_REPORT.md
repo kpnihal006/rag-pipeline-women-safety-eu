@@ -630,7 +630,51 @@ against a $5.00 budget (3.3% consumed). A representative full five-agent run
 with the Visualizer enabled cost **$0.00536** for 22,820 tokens across 4 agents,
 9 LLM calls, and 11 tool invocations in 67.6 seconds wall time.
 
-### 5.2 Local stack versus hosted stack
+### 5.2 The retrieval metric was measuring the wrong thing
+
+Before any retrieval number can be interpreted, the metric producing it has to
+be trusted. The incumbent "retrieval hit rate" checks whether a >=6-character
+clause of the *reference answer* appears **verbatim** in the retrieved text.
+Reference answers are human paraphrases, not quotations, so a correct retrieval
+whose wording differs scores as a miss. Question q01 is the clearest case: it is
+labelled `retrieval_miss` while the judge simultaneously rates its answer
+correct.
+
+`scripts/retrieval_quality.py` measures the same retrievals three ways
+(n = 15, k = 8):
+
+| Metric | Score | What it asks |
+|---|---|---|
+| Verbatim substring (incumbent) | 33.3% | does reference wording appear literally? |
+| Page-level gold | 53.3% | did we return an annotated gold page? |
+| **Context sufficiency (judged)** | **60.0%** | **could the question be answered from these passages?** |
+
+Pairwise agreement between them:
+
+| Pair | Agreement |
+|---|---|
+| substring vs page | **26.7%** |
+| substring vs sufficiency | 60.0% |
+| page vs sufficiency | 40.0% |
+
+Two metrics for the same quantity agreeing on 26.7% of cases are not two
+estimates of one number; they are measuring different things. The incumbent
+metric understates retrieval by **26.7 percentage points** against the metric
+that actually states the question.
+
+This reframes the project's headline finding. Retrieval is not catastrophic at
+33%–53%; measured by whether the retrieved context can support an answer, it
+succeeds on **60%** of a benchmark that is 73% hard clause-level legal lookups.
+The remaining shortfall is real but far smaller than the original number
+implied, and a substantial part of the apparent "terrible" performance was an
+artefact of lexical scoring.
+
+We report all three rather than adopting the most flattering one. Sufficiency
+is judged by the same local model that generates answers, so it is not
+independent of the system under test — a shared blind spot would inflate it.
+That is precisely why the lexical metrics are retained alongside it.
+
+### 5.3 Local stack versus hosted stack
 
 The same 20-question benchmark was run end to end on both stacks. Retrieval and
 generation were re-measured after migrating every component to locally-executed
@@ -665,7 +709,7 @@ failure-type classifier keys off a lexical content check that disagrees with the
 judge, so the per-question failure labels are less reliable than the aggregate
 pass rate. This is the same measurement fragility discussed in §6.2.
 
-### 5.2 Where retrieval recall is lost
+### 5.4 Where retrieval recall is lost
 
 §4.3 attributed poor retrieval to table and date extraction. **That was wrong.**
 A staged diagnosis (`scripts/diagnose_retrieval.py`) measures the four stages at
@@ -701,7 +745,41 @@ questions. The figure is included precisely because it makes the sample-size
 limitation visible: these are per-category counts, not rates that can be
 compared. Read the direction, never the magnitude.*
 
-### 5.3 Design-decision factorial
+### 5.5 Generation model comparison
+
+Retrieval is executed once per question and every model answers from
+byte-identical passages, so the comparison isolates the generator. One judge
+scores all conditions, so judge bias applies equally. n = 8, all models local.
+
+| Model | Pass | Groundedness | Citation rate | Empty answers | Median latency |
+|---|---|---|---|---|---|
+| **llama3.1:8b** | 25.0% | 0.572 | **75.0%** | 0/8 | **42s** |
+| **gemma4:e4b** | 25.0% | **0.730** | 50.0% | 0/8 | 80s |
+| qwen3.5:9b | 0.0% | 0.000 | 0.0% | **8/8** | 374s |
+
+The two usable models tie on judged correctness and differ in character:
+gemma4 stays closer to its sources, llama3.1 cites far more reliably and runs
+roughly twice as fast. For a system whose output must carry references to the
+evidence, citation compliance is the deciding property, which is why
+`llama3.1:8b` remains the default.
+
+**The qwen3.5 family is unusable for this task, at every size tested.** All three
+(2b, 4b, 9b) are reasoning models that consume their entire token budget on
+internal reasoning and return an empty string. qwen3.5:9b produced no answer on
+8 of 8 questions at a 1,500-token budget, taking 374 seconds each to produce
+nothing.
+
+This was nearly missed. A short smoke prompt ("what is the Istanbul
+Convention?") returned a perfectly good answer from qwen3.5:9b, and on that
+basis it was admitted to the comparison. Only under a realistic eight-passage
+context did it fail completely. A capability probe must use the real workload;
+a toy prompt certifies nothing.
+
+Two evaluation defects surfaced here and are recorded in §7.2: the harness
+originally allotted 400 tokens, and the judge rated a whitespace-only answer as
+PASS — so an empty answer scored groundedness 0.00 and was awarded a pass.
+
+### 5.6 Design-decision factorial
 
 `scripts/experiment_grid.py` runs a factorial over corpus-processing and
 retrieval decisions, entirely locally. Gold is defined at **page** level, which
@@ -789,7 +867,7 @@ which 8% are relevant is being set up to hallucinate.
 A marginal MRR gain, well within noise at n=15. Reported as **not demonstrated**
 rather than claimed as a win.
 
-### 5.4 Design choices selected
+### 5.7 Design choices selected
 
 | Decision | Chosen | Evidence |
 |---|---|---|
