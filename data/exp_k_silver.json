@@ -1,0 +1,276 @@
+{
+  "n_questions": 135,
+  "n_pages": 2270,
+  "results": [
+    {
+      "embedder": "MiniLM-L6",
+      "dim": 384,
+      "chunk_size": 800,
+      "overlap": 200,
+      "structure": false,
+      "retriever": "dense",
+      "k": 3,
+      "n_chunks": 10567,
+      "recall": 0.4,
+      "mrr": 0.3123,
+      "precision": 0.1827,
+      "by_set": {
+        "questions": 0.4,
+        "ground_truth_silver": 0.4
+      },
+      "build_s": 76.4
+    },
+    {
+      "embedder": "MiniLM-L6",
+      "dim": 384,
+      "chunk_size": 800,
+      "overlap": 200,
+      "structure": false,
+      "retriever": "dense",
+      "k": 5,
+      "n_chunks": 10567,
+      "recall": 0.4815,
+      "mrr": 0.3309,
+      "precision": 0.1496,
+      "by_set": {
+        "questions": 0.4,
+        "ground_truth_silver": 0.492
+      },
+      "build_s": 76.4
+    },
+    {
+      "embedder": "MiniLM-L6",
+      "dim": 384,
+      "chunk_size": 800,
+      "overlap": 200,
+      "structure": false,
+      "retriever": "dense",
+      "k": 8,
+      "n_chunks": 10567,
+      "recall": 0.5259,
+      "mrr": 0.3378,
+      "precision": 0.1148,
+      "by_set": {
+        "questions": 0.4,
+        "ground_truth_silver": 0.542
+      },
+      "build_s": 76.4
+    },
+    {
+      "embedder": "MiniLM-L6",
+      "dim": 384,
+      "chunk_size": 800,
+      "overlap": 200,
+      "structure": false,
+      "retriever": "dense",
+      "k": 12,
+      "n_chunks": 10567,
+      "recall": 0.6,
+      "mrr": 0.3449,
+      "precision": 0.0951,
+      "by_set": {
+        "questions": 0.467,
+        "ground_truth_silver": 0.617
+      },
+      "build_s": 76.4
+    },
+    {
+      "embedder": "MiniLM-L6",
+      "dim": 384,
+      "chunk_size": 800,
+      "overlap": 200,
+      "structure": false,
+      "retriever": "dense",
+      "k": 20,
+      "n_chunks": 10567,
+      "recall": 0.6222,
+      "mrr": 0.3462,
+      "precision": 0.067,
+      "by_set": {
+        "questions": 0.533,
+        "ground_truth_silver": 0.633
+      },
+      "build_s": 76.4
+    },
+    {
+      "embedder": "MiniLM-L6",
+      "dim": 384,
+      "chunk_size": 800,
+      "overlap": 200,
+      "structure": false,
+      "retriever": "bm25",
+      "k": 3,
+      "n_chunks": 10567,
+      "recall": 0.4815,
+      "mrr": 0.4235,
+      "precision": 0.2222,
+      "by_set": {
+        "questions": 0.467,
+        "ground_truth_silver": 0.483
+      },
+      "build_s": 76.4
+    },
+    {
+      "embedder": "MiniLM-L6",
+      "dim": 384,
+      "chunk_size": 800,
+      "overlap": 200,
+      "structure": false,
+      "retriever": "bm25",
+      "k": 5,
+      "n_chunks": 10567,
+      "recall": 0.5333,
+      "mrr": 0.4346,
+      "precision": 0.1719,
+      "by_set": {
+        "questions": 0.467,
+        "ground_truth_silver": 0.542
+      },
+      "build_s": 76.4
+    },
+    {
+      "embedder": "MiniLM-L6",
+      "dim": 384,
+      "chunk_size": 800,
+      "overlap": 200,
+      "structure": false,
+      "retriever": "bm25",
+      "k": 8,
+      "n_chunks": 10567,
+      "recall": 0.5556,
+      "mrr": 0.4378,
+      "precision": 0.1259,
+      "by_set": {
+        "questions": 0.467,
+        "ground_truth_silver": 0.567
+      },
+      "build_s": 76.4
+    },
+    {
+      "embedder": "MiniLM-L6",
+      "dim": 384,
+      "chunk_size": 800,
+      "overlap": 200,
+      "structure": false,
+      "retriever": "bm25",
+      "k": 12,
+      "n_chunks": 10567,
+      "recall": 0.5926,
+      "mrr": 0.4413,
+      "precision": 0.0975,
+      "by_set": {
+        "questions": 0.467,
+        "ground_truth_silver": 0.608
+      },
+      "build_s": 76.4
+    },
+    {
+      "embedder": "MiniLM-L6",
+      "dim": 384,
+      "chunk_size": 800,
+      "overlap": 200,
+      "structure": false,
+      "retriever": "bm25",
+      "k": 20,
+      "n_chunks": 10567,
+      "recall": 0.6296,
+      "mrr": 0.4435,
+      "precision": 0.0659,
+      "by_set": {
+        "questions": 0.467,
+        "ground_truth_silver": 0.65
+      },
+      "build_s": 76.4
+    },
+    {
+      "embedder": "MiniLM-L6",
+      "dim": 384,
+      "chunk_size": 800,
+      "overlap": 200,
+      "structure": false,
+      "retriever": "hybrid",
+      "k": 3,
+      "n_chunks": 10567,
+      "recall": 0.4593,
+      "mrr": 0.3716,
+      "precision": 0.2222,
+      "by_set": {
+        "questions": 0.4,
+        "ground_truth_silver": 0.467
+      },
+      "build_s": 76.4
+    },
+    {
+      "embedder": "MiniLM-L6",
+      "dim": 384,
+      "chunk_size": 800,
+      "overlap": 200,
+      "structure": false,
+      "retriever": "hybrid",
+      "k": 5,
+      "n_chunks": 10567,
+      "recall": 0.5111,
+      "mrr": 0.3838,
+      "precision": 0.1748,
+      "by_set": {
+        "questions": 0.4,
+        "ground_truth_silver": 0.525
+      },
+      "build_s": 76.4
+    },
+    {
+      "embedder": "MiniLM-L6",
+      "dim": 384,
+      "chunk_size": 800,
+      "overlap": 200,
+      "structure": false,
+      "retriever": "hybrid",
+      "k": 8,
+      "n_chunks": 10567,
+      "recall": 0.563,
+      "mrr": 0.3913,
+      "precision": 0.138,
+      "by_set": {
+        "questions": 0.4,
+        "ground_truth_silver": 0.583
+      },
+      "build_s": 76.4
+    },
+    {
+      "embedder": "MiniLM-L6",
+      "dim": 384,
+      "chunk_size": 800,
+      "overlap": 200,
+      "structure": false,
+      "retriever": "hybrid",
+      "k": 12,
+      "n_chunks": 10567,
+      "recall": 0.6074,
+      "mrr": 0.3955,
+      "precision": 0.1025,
+      "by_set": {
+        "questions": 0.4,
+        "ground_truth_silver": 0.633
+      },
+      "build_s": 76.4
+    },
+    {
+      "embedder": "MiniLM-L6",
+      "dim": 384,
+      "chunk_size": 800,
+      "overlap": 200,
+      "structure": false,
+      "retriever": "hybrid",
+      "k": 20,
+      "n_chunks": 10567,
+      "recall": 0.6889,
+      "mrr": 0.4007,
+      "precision": 0.0741,
+      "by_set": {
+        "questions": 0.4,
+        "ground_truth_silver": 0.725
+      },
+      "build_s": 76.4
+    }
+  ]
+}

@@ -1,0 +1,222 @@
+{
+  "n_questions": 135,
+  "n_pages": 2270,
+  "results": [
+    {
+      "embedder": "MiniLM-L6",
+      "dim": 384,
+      "chunk_size": 400,
+      "overlap": 200,
+      "structure": false,
+      "retriever": "dense",
+      "k": 8,
+      "n_chunks": 22442,
+      "recall": 0.5926,
+      "mrr": 0.3959,
+      "precision": 0.1574,
+      "by_set": {
+        "questions": 0.333,
+        "ground_truth_silver": 0.625
+      },
+      "build_s": 103.0
+    },
+    {
+      "embedder": "MiniLM-L6",
+      "dim": 384,
+      "chunk_size": 400,
+      "overlap": 200,
+      "structure": false,
+      "retriever": "bm25",
+      "k": 8,
+      "n_chunks": 22442,
+      "recall": 0.5333,
+      "mrr": 0.3988,
+      "precision": 0.1472,
+      "by_set": {
+        "questions": 0.4,
+        "ground_truth_silver": 0.55
+      },
+      "build_s": 103.0
+    },
+    {
+      "embedder": "MiniLM-L6",
+      "dim": 384,
+      "chunk_size": 400,
+      "overlap": 200,
+      "structure": false,
+      "retriever": "hybrid",
+      "k": 8,
+      "n_chunks": 22442,
+      "recall": 0.6074,
+      "mrr": 0.4159,
+      "precision": 0.163,
+      "by_set": {
+        "questions": 0.333,
+        "ground_truth_silver": 0.642
+      },
+      "build_s": 103.0
+    },
+    {
+      "embedder": "MiniLM-L6",
+      "dim": 384,
+      "chunk_size": 400,
+      "overlap": 200,
+      "structure": true,
+      "retriever": "dense",
+      "k": 8,
+      "n_chunks": 22442,
+      "recall": 0.5852,
+      "mrr": 0.3734,
+      "precision": 0.1509,
+      "by_set": {
+        "questions": 0.333,
+        "ground_truth_silver": 0.617
+      },
+      "build_s": 106.5
+    },
+    {
+      "embedder": "MiniLM-L6",
+      "dim": 384,
+      "chunk_size": 400,
+      "overlap": 200,
+      "structure": true,
+      "retriever": "bm25",
+      "k": 8,
+      "n_chunks": 22442,
+      "recall": 0.5333,
+      "mrr": 0.3988,
+      "precision": 0.1472,
+      "by_set": {
+        "questions": 0.4,
+        "ground_truth_silver": 0.55
+      },
+      "build_s": 106.5
+    },
+    {
+      "embedder": "MiniLM-L6",
+      "dim": 384,
+      "chunk_size": 400,
+      "overlap": 200,
+      "structure": true,
+      "retriever": "hybrid",
+      "k": 8,
+      "n_chunks": 22442,
+      "recall": 0.6148,
+      "mrr": 0.4286,
+      "precision": 0.162,
+      "by_set": {
+        "questions": 0.333,
+        "ground_truth_silver": 0.65
+      },
+      "build_s": 106.5
+    },
+    {
+      "embedder": "MiniLM-L6",
+      "dim": 384,
+      "chunk_size": 800,
+      "overlap": 200,
+      "structure": false,
+      "retriever": "dense",
+      "k": 8,
+      "n_chunks": 10567,
+      "recall": 0.5259,
+      "mrr": 0.3378,
+      "precision": 0.1148,
+      "by_set": {
+        "questions": 0.4,
+        "ground_truth_silver": 0.542
+      },
+      "build_s": 67.0
+    },
+    {
+      "embedder": "MiniLM-L6",
+      "dim": 384,
+      "chunk_size": 800,
+      "overlap": 200,
+      "structure": false,
+      "retriever": "bm25",
+      "k": 8,
+      "n_chunks": 10567,
+      "recall": 0.5556,
+      "mrr": 0.4378,
+      "precision": 0.1259,
+      "by_set": {
+        "questions": 0.467,
+        "ground_truth_silver": 0.567
+      },
+      "build_s": 67.0
+    },
+    {
+      "embedder": "MiniLM-L6",
+      "dim": 384,
+      "chunk_size": 800,
+      "overlap": 200,
+      "structure": false,
+      "retriever": "hybrid",
+      "k": 8,
+      "n_chunks": 10567,
+      "recall": 0.563,
+      "mrr": 0.3913,
+      "precision": 0.138,
+      "by_set": {
+        "questions": 0.4,
+        "ground_truth_silver": 0.583
+      },
+      "build_s": 67.0
+    },
+    {
+      "embedder": "MiniLM-L6",
+      "dim": 384,
+      "chunk_size": 800,
+      "overlap": 200,
+      "structure": true,
+      "retriever": "dense",
+      "k": 8,
+      "n_chunks": 10567,
+      "recall": 0.5185,
+      "mrr": 0.3322,
+      "precision": 0.1111,
+      "by_set": {
+        "questions": 0.4,
+        "ground_truth_silver": 0.533
+      },
+      "build_s": 70.7
+    },
+    {
+      "embedder": "MiniLM-L6",
+      "dim": 384,
+      "chunk_size": 800,
+      "overlap": 200,
+      "structure": true,
+      "retriever": "bm25",
+      "k": 8,
+      "n_chunks": 10567,
+      "recall": 0.5556,
+      "mrr": 0.4378,
+      "precision": 0.1259,
+      "by_set": {
+        "questions": 0.467,
+        "ground_truth_silver": 0.567
+      },
+      "build_s": 70.7
+    },
+    {
+      "embedder": "MiniLM-L6",
+      "dim": 384,
+      "chunk_size": 800,
+      "overlap": 200,
+      "structure": true,
+      "retriever": "hybrid",
+      "k": 8,
+      "n_chunks": 10567,
+      "recall": 0.5778,
+      "mrr": 0.3941,
+      "precision": 0.137,
+      "by_set": {
+        "questions": 0.4,
+        "ground_truth_silver": 0.6
+      },
+      "build_s": 70.7
+    }
+  ]
+}

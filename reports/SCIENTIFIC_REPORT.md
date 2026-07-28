@@ -921,11 +921,12 @@ differently and a max across them hides exactly that:
 
 Dense retrieval keeps finding new gold pages as k grows (40.0% → 53.3%), which
 says its recall pool is good but its ranking is weak. BM25 is flat at 46.7% for
-every k — whatever it finds, it finds by rank 3, and a larger window adds only
-noise. Precision falls monotonically in both. Chosen k = 8 sits where dense
-precision has not yet collapsed; pushing to k=20 for 13 more points of recall
-would cut precision by a further 38%, and a generator handed 20 passages of
-which 8% are relevant is being set up to hallucinate.
+every k. Precision falls monotonically in both.
+
+> **Partly retracted — see §5.9.** The claim that dense recall is flat below
+> k=12 does not replicate: at n=135 recall climbs monotonically from 40.0% to
+> 62.2%. The precision trend holds, but the trade-off is real rather than
+> one-sided, and k=12 is better supported than the k=8 chosen here.
 
 **Structure preservation** (metadata headers prepended before embedding):
 
@@ -937,7 +938,7 @@ which 8% are relevant is being set up to hallucinate.
 A marginal MRR gain, well within noise at n=15. Reported as **not demonstrated**
 rather than claimed as a win.
 
-### 5.8 Replication at n=135: two conclusions did not hold
+### 5.8 Replication at n=135: chunk size and overlap
 
 Every result above rests on 15 questions. `scripts/build_ground_truth.py`
 generated a 120-question silver set locally (120 accepted from 135 attempted;
@@ -1002,7 +1003,74 @@ benchmark were unreliable — precisely the failure mode §7.3 warned about when
 stated that every difference at n=15 was within sampling noise. We were right to
 warn, and wrong in two specific claims anyway.
 
-### 5.9 Design choices selected
+### 5.9 Full replication: embedding model, k, and structure
+
+The remaining three factorials were re-run at n=135 on the full corpus. Leaving
+them at n=15 would have been inconsistent with §5.8, which argues that
+conclusions at that sample size are unreliable.
+
+**Embedding model** (dense, k=8) — the winner replicates, the ordering below it
+does not:
+
+| Model | recall n=15 | **recall n=135** | MRR n=15 | **MRR n=135** |
+|---|---|---|---|---|
+| **e5-small** | 40.0% | **63.0%** | 0.356 | **0.451** |
+| bge-small | 33.3% | 56.3% | 0.250 | 0.359 |
+| MiniLM-L6 | 40.0% | 52.6% | 0.322 | 0.338 |
+
+e5-small was best at n=15 on MRR and is now clearly best on both measures, with
+a 10-point recall margin. But MiniLM-L6 moves from *tied first* to *last*, and
+bge-small from last to second. Only the top of the ranking survived; the rest
+was noise. This also strengthens §5.3: the choice of embedding model does matter
+— roughly 10 points of recall — which the 15-question set was too small to show.
+
+**k (passages retrieved)** — this conclusion is retracted:
+
+| k | recall n=15 | **recall n=135** | **precision n=135** |
+|---|---|---|---|
+| 3 | 40.0% | 40.0% | 0.183 |
+| 5 | 40.0% | 48.1% | 0.150 |
+| 8 | 40.0% | 52.6% | 0.115 |
+| 12 | 46.7% | 60.0% | 0.095 |
+| 20 | 53.3% | **62.2%** | 0.067 |
+
+§5.7 stated that "recall is flat from k=3 to k=12 — anything findable is already
+in the top 3" and used that to justify k=8 as the point where precision had not
+yet collapsed. **At n=135 recall is not flat**: it climbs monotonically from
+40.0% to 62.2%, gaining 22 points. The premise of the argument was an artefact of
+15 questions.
+
+The trade-off is therefore real rather than one-sided, and the correct reading is
+a genuine tension: k=12 buys 7.4 points of recall over k=8 for 0.02 of precision,
+which now looks worth taking; k=20 buys a further 2.2 points for another 0.03,
+which does not. **k=12 is the better-supported choice**, and k=8 is what was
+measured end-to-end.
+
+**Structure preservation** — direction flips, conclusion unchanged:
+
+| Chunk size | metadata off | metadata on |
+|---|---|---|
+| 400 | 59.3% | 58.5% |
+| 800 | 52.6% | 51.8% |
+
+At n=15 the metadata header gave a marginal MRR gain and we reported it as *not
+demonstrated*. At n=135 it is marginally **negative** on both sizes. The verdict
+is unchanged — the effect is not distinguishable from noise in either direction
+— but it is worth noting that the small-sample result pointed the wrong way. Had
+we reported it as a win, replication would have contradicted it.
+
+**Summary of what replication cost us.** Of the conclusions drawn from the
+15-question benchmark, five did not survive: the BM25 half of the chunk-size
+interaction, the overlap effect, the MiniLM/bge ordering, the flat-recall
+premise behind the choice of k, and the sign of the structure-preservation
+effect. Three survived: dense retrieval prefers smaller chunks, e5-small is the
+strongest embedding model, and precision falls monotonically with k.
+
+That ratio is the single most useful number in this report. It is not evidence
+that the experiments were badly run; it is evidence about what a 15-question
+benchmark can support, which is considerably less than it appears to.
+
+### 5.10 Design choices selected
 
 | Decision | Chosen | Evidence |
 |---|---|---|
@@ -1010,8 +1078,9 @@ warn, and wrong in two specific claims anyway.
 | Overlap | 200 chars | Recall unchanged under all three retrievers; MRR improves under all three (§7.4) |
 | Structure preservation | retained | MRR +0.011 — **not demonstrated**, within noise at n=15 |
 | Sentence-aware splitting | retained | `edge_of_chunk` and `multi_part` categories score 100% |
-| k | 8 | Dense precision has not yet collapsed; k=20 costs 38% more precision for 13 points of recall |
-| Embedding model | e5-small (experiments) | Best MRR at equal recall, with correct prefix handling |
+| k | 8 *(12 better supported)* | Recall is not flat as first measured: it climbs 40.0% → 62.2% across k at n=135 (§5.9) |
+| Embedding model | e5-small | Best on both recall and MRR at n=135, by a 10-point margin (§5.9) |
+| Structure preservation | retained, unproven | Marginally negative at n=135, within noise either way (§5.9) |
 
 ![Where retrieval recall is lost](figures/fig1_failure_stages.png)
 
