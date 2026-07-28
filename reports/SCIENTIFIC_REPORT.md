@@ -31,10 +31,20 @@ auditable after the fact.
 We evaluate retrieval and generation on a 20-question adversarial benchmark
 using an LLM-as-judge protocol and the RAGAS framework, and evaluate the
 security layer against a corpus of injection, exfiltration, SSRF, and path
-traversal payloads. Retrieval hit rate is 53.3% and generation pass rate is
-53.3% on a benchmark deliberately weighted toward hard cases (11 of 15 scored
-questions); RAGAS faithfulness is 0.60. The security layer blocks 100% of the
-tested attack payloads across 207 automated tests. Total measured API
+traversal payloads.
+
+A central methodological finding is that the retrieval metric we began with was
+measuring the wrong quantity. Scoring retrieval by whether a clause of the
+reference answer appears verbatim in the retrieved text reports 33.3%; scoring
+the same retrievals by whether the passages actually contain the answer reports
+**60.0%**, and the two metrics agree on only 26.7% of questions. Local RAGAS
+corroborates the higher figure with a context recall of 0.854. Much of the
+apparent weakness of this system was an artefact of lexical scoring, and we
+report all three metrics rather than the most favourable one.
+
+Generation pass rate is 46.7% on a benchmark deliberately weighted toward hard
+clause-level legal lookups (11 of 15 scored questions). The security layer
+blocks every tested attack payload across 253 automated tests. Total API
 expenditure across all development and evaluation was $0.17.
 
 ---
@@ -709,7 +719,45 @@ failure-type classifier keys off a lexical content check that disagrees with the
 judge, so the per-question failure labels are less reliable than the aggregate
 pass rate. This is the same measurement fragility discussed in §6.2.
 
-### 5.4 Where retrieval recall is lost
+### 5.4 RAGAS on the local stack
+
+| Metric | Hosted baseline (n=20) | **Local stack (n=8)** | Change |
+|---|---|---|---|
+| Faithfulness | 0.600 | **0.606** | +0.006 |
+| Context precision | 0.432 | **0.641** | +0.209 |
+| Context recall | 0.550 | **0.854** | +0.304 |
+
+Context recall of 0.854 says the retriever is now surfacing most of the material
+the reference answers depend on, and it corroborates the sufficiency result in
+§5.2 (60.0%) from an independent implementation: two different methods, one
+judged by RAGAS and one by our own harness, both place retrieval far above the
+33.3% the incumbent lexical metric reported.
+
+Faithfulness barely moved. That is the expected shape: faithfulness measures
+whether the generator invents beyond its context, which is a property of the
+model and prompt, not of retrieval. Improving what is retrieved does not make
+the generator more or less inclined to embellish.
+
+**This comparison is confounded and must not be read as a clean A/B.** Four
+things differ between the two columns: the embedding model (1536-dim hosted vs
+768-dim local), the generator, the retrieval configuration (the identifier boost
+of §3 is present only in the local run), and the sample size (20 vs 8). The
+large gains in precision and recall are most plausibly attributable to the
+identifier boost, since that is the only change that targets retrieval — but
+this experiment cannot separate the four, and we do not claim it does. An
+isolating run would hold everything fixed except one factor at a time.
+
+**A defect worth recording.** The first local RAGAS run failed completely: all
+60 jobs timed out, every metric returned NaN, and the script then crashed
+formatting a bar chart from NaN. RAGAS defaults to 16 concurrent workers with a
+180-second deadline; a local backend serves one request at a time, so the
+workers queued behind each other and every job exceeded the deadline. Serialising
+to one worker with a 900-second budget fixed it. The failure mode is worth
+naming because it is silent in the wrong way — a framework tuned for hosted APIs
+does not fail loudly on a local backend, it returns NaN that a careless harness
+will format into a plausible-looking zero.
+
+### 5.5 Where retrieval recall is lost
 
 §4.3 attributed poor retrieval to table and date extraction. **That was wrong.**
 A staged diagnosis (`scripts/diagnose_retrieval.py`) measures the four stages at
@@ -745,7 +793,7 @@ questions. The figure is included precisely because it makes the sample-size
 limitation visible: these are per-category counts, not rates that can be
 compared. Read the direction, never the magnitude.*
 
-### 5.5 Generation model comparison
+### 5.6 Generation model comparison
 
 Retrieval is executed once per question and every model answers from
 byte-identical passages, so the comparison isolates the generator. One judge
@@ -779,7 +827,7 @@ Two evaluation defects surfaced here and are recorded in §7.2: the harness
 originally allotted 400 tokens, and the judge rated a whitespace-only answer as
 PASS — so an empty answer scored groundedness 0.00 and was awarded a pass.
 
-### 5.6 Design-decision factorial
+### 5.7 Design-decision factorial
 
 `scripts/experiment_grid.py` runs a factorial over corpus-processing and
 retrieval decisions, entirely locally. Gold is defined at **page** level, which
@@ -867,7 +915,7 @@ which 8% are relevant is being set up to hallucinate.
 A marginal MRR gain, well within noise at n=15. Reported as **not demonstrated**
 rather than claimed as a win.
 
-### 5.7 Design choices selected
+### 5.8 Design choices selected
 
 | Decision | Chosen | Evidence |
 |---|---|---|

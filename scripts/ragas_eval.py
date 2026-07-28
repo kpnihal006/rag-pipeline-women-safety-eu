@@ -55,6 +55,10 @@ def run_ragas(input_path: Path, output_path: Path) -> None:
         eval_data = json.load(fh)
 
     rows = eval_data["results"]
+    limit = int(os.environ.get("RAGAS_LIMIT", "0"))
+    if limit:
+        rows = rows[:limit]
+        print(f"  limited to the first {limit} questions (RAGAS_LIMIT)")
 
     dataset = EvaluationDataset.from_list([
         {
@@ -71,11 +75,27 @@ def run_ragas(input_path: Path, output_path: Path) -> None:
     judge_llm, judge_emb = _local_judge()
     print(f"  judge: {_llm.chat_model()}  ·  embeddings: {_llm.embed_model()} (local)")
 
+    # A local backend serves one request at a time. RAGAS defaults to 16
+    # concurrent workers with a 180s deadline, so every job queues behind the
+    # others and times out — the first local run returned NaN for all three
+    # metrics because all 60 jobs failed this way. Serialise and allow a
+    # realistic per-call budget instead.
+    from ragas.run_config import RunConfig
+
+    run_config = RunConfig(
+        timeout=int(os.environ.get("RAGAS_TIMEOUT", "900")),
+        max_workers=int(os.environ.get("RAGAS_WORKERS", "1")),
+        max_retries=2,
+    )
+    print(f"  run config: max_workers={run_config.max_workers}, "
+          f"timeout={run_config.timeout}s (local backends are serial)")
+
     result = evaluate(
         dataset,
         metrics=[faithfulness, context_precision, context_recall],
         llm=judge_llm,
         embeddings=judge_emb,
+        run_config=run_config,
     )
 
     df = result.to_pandas()
@@ -84,11 +104,20 @@ def run_ragas(input_path: Path, output_path: Path) -> None:
     print("\nRAGAS scores:")
     summary = {}
     for metric in metric_cols:
-        score  = round(float(df[metric].mean()), 4)
+        raw = float(df[metric].mean())
+        if raw != raw:  # NaN — every job for this metric failed
+            summary[metric] = None
+            print(f"  {metric:<22} FAILED — all jobs errored or timed out")
+            continue
+        score = round(raw, 4)
         summary[metric] = score
-        bar    = "#" * int(score * 20)
+        bar    = "#" * max(0, int(score * 20))
         rating = "good" if score > 0.8 else "moderate" if score >= 0.5 else "poor"
         print(f"  {metric:<22} {score:.4f}  [{bar:<20}]  {rating}")
+
+    if all(v is None for v in summary.values()):
+        print("\n  Every metric failed. With a local backend this is almost"
+              "\n  always concurrency: lower RAGAS_WORKERS or raise RAGAS_TIMEOUT.")
 
     output = {
         "summary":      summary,

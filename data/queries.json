@@ -10,5 +10,11 @@
     "query": "are you there?",
     "top_score": -2.3138,
     "n_results": 8
+  },
+  {
+    "timestamp": "2026-07-28T07:10:52.240359+00:00",
+    "query": "what are my rights as a protestor?",
+    "top_score": 0.9995,
+    "n_results": 8
   }
 ]
