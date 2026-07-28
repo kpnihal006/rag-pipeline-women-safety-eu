@@ -146,9 +146,18 @@ uv run python app/teams_bot.py
 
 ### Building the index
 
+This repository ships `data/corpus.json` — the **already-extracted text** of all
+2,270 pages (6.9M characters). That is what lets a fresh clone build a working
+index and reproduce every experiment without the source PDFs, which are not
+redistributed here.
+
 ```bash
-uv run python -m scripts.extract           # PDFs → corpus.json
+# From the shipped corpus (no PDFs needed) — this is the normal path:
 uv run python -m scripts.chunk             # chunk → embed → FAISS + BM25
+
+# Only if you have the source PDFs and want to redo extraction:
+#   place them in data/pdfs/ then:
+uv run python -m scripts.extract           # PDFs → corpus.json
 
 # Re-embed an existing chunk store without re-extracting the PDFs
 # (needed when switching backend: 768-dim local vs 1536-dim hosted)

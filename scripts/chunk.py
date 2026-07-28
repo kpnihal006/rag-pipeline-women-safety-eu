@@ -70,6 +70,8 @@ CROSS_ENCODER_MODEL = "cross-encoder/ms-marco-MiniLM-L-6-v2"
 OPENAI_EMBED_MODEL  = _llm.embed_model()
 OPENAI_MODEL        = _llm.chat_model()
 EMBED_BATCH_SIZE    = 512       # well under the 2 048-input API limit
+OLLAMA_EMBED_BATCH  = 32        # local server is happiest with small batches
+MAX_EMBED_CHARS     = 6000      # nomic-embed-text context is 2048 tokens
 
 CONFIDENCE_THRESHOLD = 0.50     # top retrieval score below this → low-confidence flag
 
@@ -297,17 +299,43 @@ def embed_chunks(chunks: list[dict], user: str | None = None) -> np.ndarray:
     texts = [c["text"] for c in chunks]
     log.info("Embedding %d chunks …", len(texts))
 
+    # Local embedding models have a hard context limit (nomic-embed-text:
+    # 2048 tokens). A handful of stitched or table-derived chunks exceed it,
+    # and an unguarded request aborts the whole build — losing every chunk
+    # embedded so far. Truncate up front, and if a batch still fails, fall
+    # back to per-item embedding rather than discarding the run.
+    texts = [x[:MAX_EMBED_CHARS] for x in texts]
+    batch_size = EMBED_BATCH_SIZE if not _llm.is_ollama() else OLLAMA_EMBED_BATCH
+
     vectors: list[list[float]] = []
-    for i in range(0, len(texts), EMBED_BATCH_SIZE):
-        batch = texts[i : i + EMBED_BATCH_SIZE]
-        response = client.embeddings.create(
-            model=_llm.embed_model(),
-            input=batch,
-            encoding_format="float",
-        )
-        track_cost(response, call_type="embedding", user=user)
-        vectors.extend([d.embedding for d in response.data])
-        log.info("  embedded %d / %d", min(i + EMBED_BATCH_SIZE, len(texts)), len(texts))
+    for i in range(0, len(texts), batch_size):
+        batch = texts[i : i + batch_size]
+        try:
+            response = client.embeddings.create(
+                model=_llm.embed_model(),
+                input=batch,
+                encoding_format="float",
+            )
+            track_cost(response, call_type="embedding", user=user)
+            vectors.extend([d.embedding for d in response.data])
+        except Exception as exc:
+            log.warning("Batch at %d failed (%s) — retrying item by item",
+                        i, type(exc).__name__)
+            dim = len(vectors[0]) if vectors else None
+            for one in batch:
+                try:
+                    r1 = client.embeddings.create(
+                        model=_llm.embed_model(),
+                        input=[one[: MAX_EMBED_CHARS // 2]],
+                        encoding_format="float",
+                    )
+                    v = r1.data[0].embedding
+                    dim = dim or len(v)
+                    vectors.append(v)
+                except Exception as exc2:
+                    log.warning("  chunk skipped, zero-filled: %s", exc2)
+                    vectors.append([0.0] * (dim or _llm.embed_dim()))
+        log.info("  embedded %d / %d", min(i + batch_size, len(texts)), len(texts))
 
     return np.array(vectors, dtype="float32")
 
@@ -604,8 +632,8 @@ def generate_answer(
 def main() -> None:
     configure_logging()
 
-    input_dir   = Path(os.environ["PDF_INPUT_DIR"])
-    output_dir  = Path(os.environ["PDF_OUTPUT_DIR"])
+    input_dir   = Path(os.environ.get("PDF_INPUT_DIR", "data/pdfs"))
+    output_dir  = Path(os.environ.get("PDF_OUTPUT_DIR", "data"))
     corpus_path = output_dir / "corpus.json"
     index_path  = output_dir / "my_index.faiss"
     chunks_path = output_dir / "chunks.json"

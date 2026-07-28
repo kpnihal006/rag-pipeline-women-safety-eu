@@ -346,8 +346,8 @@ def main() -> None:
     """Entry point: extract PDFs, save outputs, generate report, print stats."""
     configure_logging()
 
-    input_dir = Path(os.environ["PDF_INPUT_DIR"])
-    output_dir = Path(os.environ["PDF_OUTPUT_DIR"])
+    input_dir = Path(os.environ.get("PDF_INPUT_DIR", "data/pdfs"))
+    output_dir = Path(os.environ.get("PDF_OUTPUT_DIR", "data"))
 
     if not input_dir.is_dir():
         log.error("Input directory does not exist: %s", input_dir)
