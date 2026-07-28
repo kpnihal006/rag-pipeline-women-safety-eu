@@ -11238,6 +11238,138 @@
       "total_tokens": 21,
       "cost_usd": 0.0,
       "backend": "ollama"
+    },
+    {
+      "timestamp": "2026-07-28T11:51:30.406538+00:00",
+      "user": "moxievil",
+      "type": "chat",
+      "model": "llama3.1:8b",
+      "prompt_tokens": 343,
+      "completion_tokens": 234,
+      "total_tokens": 577,
+      "cost_usd": 0.0,
+      "backend": "ollama"
+    },
+    {
+      "timestamp": "2026-07-28T11:51:38.118127+00:00",
+      "user": "moxievil",
+      "type": "embedding",
+      "model": "nomic-embed-text",
+      "prompt_tokens": 21,
+      "completion_tokens": 0,
+      "total_tokens": 21,
+      "cost_usd": 0.0,
+      "backend": "ollama"
+    },
+    {
+      "timestamp": "2026-07-28T11:53:16.419425+00:00",
+      "user": "moxievil",
+      "type": "chat",
+      "model": "llama3.1:8b",
+      "prompt_tokens": 1815,
+      "completion_tokens": 187,
+      "total_tokens": 2002,
+      "cost_usd": 0.0,
+      "backend": "ollama"
+    },
+    {
+      "timestamp": "2026-07-28T11:53:16.661077+00:00",
+      "user": "moxievil",
+      "type": "embedding",
+      "model": "nomic-embed-text",
+      "prompt_tokens": 17,
+      "completion_tokens": 0,
+      "total_tokens": 17,
+      "cost_usd": 0.0,
+      "backend": "ollama"
+    },
+    {
+      "timestamp": "2026-07-28T11:56:17.396733+00:00",
+      "user": "moxievil",
+      "type": "chat",
+      "model": "llama3.1:8b",
+      "prompt_tokens": 3601,
+      "completion_tokens": 77,
+      "total_tokens": 3678,
+      "cost_usd": 0.0,
+      "backend": "ollama"
+    },
+    {
+      "timestamp": "2026-07-28T12:00:16.213593+00:00",
+      "user": "moxievil",
+      "type": "chat",
+      "model": "llama3.1:8b",
+      "prompt_tokens": 3760,
+      "completion_tokens": 121,
+      "total_tokens": 3881,
+      "cost_usd": 0.0,
+      "backend": "ollama"
+    },
+    {
+      "timestamp": "2026-07-28T12:05:50.265022+00:00",
+      "user": "moxievil",
+      "type": "chat",
+      "model": "llama3.1:8b",
+      "prompt_tokens": 3522,
+      "completion_tokens": 539,
+      "total_tokens": 4061,
+      "cost_usd": 0.0,
+      "backend": "ollama"
+    },
+    {
+      "timestamp": "2026-07-28T12:06:40.703894+00:00",
+      "user": "moxievil",
+      "type": "chat",
+      "model": "llama3.1:8b",
+      "prompt_tokens": 939,
+      "completion_tokens": 61,
+      "total_tokens": 1000,
+      "cost_usd": 0.0,
+      "backend": "ollama"
+    },
+    {
+      "timestamp": "2026-07-28T12:07:28.431790+00:00",
+      "user": "moxievil",
+      "type": "chat",
+      "model": "llama3.1:8b",
+      "prompt_tokens": 1041,
+      "completion_tokens": 65,
+      "total_tokens": 1106,
+      "cost_usd": 0.0,
+      "backend": "ollama"
+    },
+    {
+      "timestamp": "2026-07-28T12:07:47.306564+00:00",
+      "user": "moxievil",
+      "type": "chat",
+      "model": "llama3.1:8b",
+      "prompt_tokens": 950,
+      "completion_tokens": 56,
+      "total_tokens": 1006,
+      "cost_usd": 0.0,
+      "backend": "ollama"
+    },
+    {
+      "timestamp": "2026-07-28T12:08:00.298544+00:00",
+      "user": "moxievil",
+      "type": "chat",
+      "model": "llama3.1:8b",
+      "prompt_tokens": 1031,
+      "completion_tokens": 57,
+      "total_tokens": 1088,
+      "cost_usd": 0.0,
+      "backend": "ollama"
+    },
+    {
+      "timestamp": "2026-07-28T12:10:47.241525+00:00",
+      "user": "moxievil",
+      "type": "chat",
+      "model": "llama3.1:8b",
+      "prompt_tokens": 1011,
+      "completion_tokens": 567,
+      "total_tokens": 1578,
+      "cost_usd": 0.0,
+      "backend": "ollama"
     }
   ],
   "budget_usd": 5.0,

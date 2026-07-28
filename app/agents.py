@@ -50,6 +50,15 @@ AGENT_MODEL = _llm.chat_model()
 MAX_TOKENS = 4096
 MAX_ITERATIONS = 15
 
+#: Tool calls an agent may make before it is required to answer. A small local
+#: model will keep proposing searches indefinitely — the first verification run
+#: had the Internal Researcher issue six corpus searches over seventeen minutes
+#: without converging, because every additional result gave it more to react to.
+#: Capping the calls and then withdrawing the tools forces synthesis, bounding
+#: both latency and context growth. Frontier models stop on their own; this is a
+#: concession to running locally.
+MAX_TOOL_CALLS_PER_AGENT = int(os.environ.get("MAX_TOOL_CALLS_PER_AGENT", "4"))
+
 _client: openai.OpenAI | None = None
 
 
@@ -425,15 +434,37 @@ def _run_agentic_loop(
             # call on the FIRST turn restores structured output; later turns
             # stay on "auto" so the agent can finish rather than looping
             # forever on required tool use.
-            choice = "required" if (iteration == 0 and tools) else "auto"
+            budget_spent = agent_tool_calls >= MAX_TOOL_CALLS_PER_AGENT
+            if budget_spent:
+                # Withdraw the tools entirely and ask for the answer. Leaving
+                # them available with tool_choice="none" still invites the model
+                # to narrate further calls it cannot make.
+                active_tools, choice = None, None
+            else:
+                active_tools = tools
+                choice = "required" if (iteration == 0 and tools) else "auto"
+
+            if budget_spent and full_messages[-1].get("role") != "user":
+                full_messages.append({
+                    "role": "user",
+                    "content": (
+                        "You have gathered enough material. Do not request any "
+                        "further searches or tools. Write your final response "
+                        "now, using only the results already returned above."
+                    ),
+                })
+
             with tracer.span("llm", f"{label}:turn{iteration + 1}") as llm_span:
-                response = client.chat.completions.create(
-                    model=AGENT_MODEL,
-                    max_tokens=MAX_TOKENS,
-                    tools=tools,
-                    tool_choice=choice,
-                    messages=full_messages,
-                )
+                kwargs = {
+                    "model": AGENT_MODEL,
+                    "max_tokens": MAX_TOKENS,
+                    "messages": full_messages,
+                }
+                if active_tools:
+                    kwargs["tools"] = active_tools
+                    kwargs["tool_choice"] = choice
+                response = client.chat.completions.create(**kwargs)
+                llm_span.attributes["tools_offered"] = bool(active_tools)
 
                 msg = response.choices[0].message
                 finish_reason = response.choices[0].finish_reason
@@ -472,7 +503,10 @@ def _run_agentic_loop(
                 # Belt and braces: a model may still describe a tool call in
                 # prose. Recover it rather than silently returning an answer
                 # that was never grounded in a tool result.
-                recovered = _recover_text_tool_calls(msg.content or "", tools)
+                recovered = (
+                    _recover_text_tool_calls(msg.content or "", tools)
+                    if agent_tool_calls < MAX_TOOL_CALLS_PER_AGENT else []
+                )
                 if recovered and iteration + 1 < max_iterations:
                     tracer.event("recovered tool call emitted as text",
                                  count=len(recovered))

@@ -1105,16 +1105,39 @@ recovery parser extracts tool calls a model printed as text and dispatches them,
 restricted to the tools that agent is actually granted, so stray JSON in an
 answer cannot invoke anything out of role.
 
-**Verified effect, with an honest cost.** After the fix the Internal Researcher
-issues real corpus searches — six in the verification run against zero before —
-and the recovery path fires repeatedly, confirming the model continues to lapse
-into prose on later turns where `tool_choice` is `"auto"`. The cost is latency:
-each recovery adds a turn, and the first agent alone ran for over seventeen
-minutes. A small local model driving a five-agent pipeline is functional but
-markedly slower and less reliable at tool use than the hosted model the
-architecture was developed against, and §7.4 records the end-to-end verification
-as still in progress at the time of writing rather than claiming a result not
-yet obtained.
+**A third layer was required: a tool-call budget.** With the first two fixes the
+pipeline used its tools but did not converge — the Internal Researcher issued
+search after search for over seventeen minutes, because each new result gave it
+more material to react to. Frontier models stop on their own; this one did not.
+After four tool calls the tools are now *withdrawn from the request entirely*
+and the agent is instructed to answer from what it has. Withdrawal is necessary:
+leaving the tools visible with `tool_choice="none"` still invites the model to
+narrate calls it cannot make.
+
+**Verified end to end.** The complete four-agent pipeline was then re-run on the
+local backend:
+
+| Measure | Before fix | After fix |
+|---|---|---|
+| Tool spans in trace | **0** | **8** |
+| Corpus searches | 0 | 4 |
+| Web searches | 0 | 4 |
+| Report grounded in retrieval | no | yes |
+| Wall time | 241s | 1,266s |
+| Cost | $0.00 | $0.00 |
+
+The trace now shows `internal_researcher` alternating five reasoning turns with
+four `search_corpus` calls, `external_fact_checker` doing the same against
+`web_search`, and the Synthesizer producing the report from both streams.
+
+**Two costs are worth stating plainly.** The grounded pipeline is roughly five
+times slower than the ungrounded one, which is the true price of running a
+five-agent architecture on an 8B local model. And the recovery layer is
+load-bearing rather than defensive: two of the Fact-Checker's dispatch spans
+completed in 0.4 ms and 0.2 ms, which are recovered text-emitted calls rather
+than real round trips. Even with a forced opening turn, this model lapses back
+into prose mid-conversation, so removing the recovery parser would return tool
+use to being intermittent.
 
 ### 6.3 Criticism of that finding before acting on it
 
@@ -1279,13 +1302,11 @@ wrong and would survive review: the numbers were real, the comparison was not.
 
 Stated plainly rather than omitted:
 
-- **End-to-end verification of the five-agent pipeline on the local backend was
-  still running when this report was finalised.** The tool-calling defect and its
-  fix are documented in §6.2 and the fix is confirmed to restore tool use, but a
-  complete four-agent run had not yet finished. Claims elsewhere in this report
-  about the agentic pipeline as a whole derive from hosted-backend runs and
-  should be read that way. The single-agent and `corpus_only` paths are fully
-  verified locally.
+- **The agentic pipeline is verified on the local backend but is slow.** A
+  complete four-agent run takes about 21 minutes and depends on a recovery layer
+  that repairs malformed tool calls (§6.2). It is functional, not comfortable.
+  Latency figures quoted elsewhere for the agentic path derive from
+  hosted-backend runs and are roughly five times optimistic for local execution.
 
 These are gaps in evidence, not in implementation: every harness is present,
 tested and documented in the README.
