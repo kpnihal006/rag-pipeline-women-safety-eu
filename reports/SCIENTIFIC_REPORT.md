@@ -1056,7 +1056,67 @@ Retriever ablation on the same questions:
 
 The full pipeline scores below its own simplest component.
 
-### 6.2 Criticism of that finding before acting on it
+### 6.2 The agentic pipeline silently stopped using its tools on the local backend
+
+The most serious defect found in this project was invisible in the output.
+
+After migrating to local models, the five-agent pipeline still ran, still cost
+nothing, and still produced a fluent comparative report. The execution trace
+showed something else: **one LLM turn per agent and zero tool spans.** The
+Internal Researcher never called `search_corpus`. The External Fact-Checker
+never called `web_search`. Every agent answered from the model's own parametric
+memory — precisely the behaviour a retrieval-augmented system exists to prevent
+— and the result was indistinguishable from a working pipeline without opening
+the trace.
+
+The Visualizer made the mechanism visible. Instead of emitting a tool call it
+printed, as prose:
+
+```
+The JSON function call(s) that best answers the given prompt are:
+{ "name": "generate_chart", "parameters": { ... } }
+```
+
+**Isolated cause.** A controlled probe separates prompt length from model
+capability:
+
+| Condition | Structured tool call emitted? |
+|---|---|
+| Short prompt, one tool | yes |
+| The real agent system prompt, one tool | **no** — JSON printed as text |
+| The real agent system prompt + `tool_choice="required"` | yes |
+
+`llama3.1:8b` is capable of structured tool calling and drops out of it when the
+system prompt is long and instruction-dense. This is a general hazard when
+porting agentic code from a frontier model to a small local one: the API
+contract is identical, the failure is silent, and the output still looks right.
+
+**Why it was not caught earlier.** Every previous full-pipeline run used the
+hosted backend, where tool calling was reliable. On the local backend only the
+Gradio application and the `corpus_only` route had been exercised, both of which
+work. A single-tool smoke probe passed. The defect lived exactly in the gap
+between what was migrated and what was re-tested — and the observability layer
+built in §3 is what surfaced it, since no output-level check would have.
+
+**Fix.** Two layers. First, `tool_choice="required"` on the opening turn of each
+agent forces structured output; subsequent turns return to `"auto"` so an agent
+can still terminate rather than being compelled to call tools forever. Second, a
+recovery parser extracts tool calls a model printed as text and dispatches them,
+restricted to the tools that agent is actually granted, so stray JSON in an
+answer cannot invoke anything out of role.
+
+**Verified effect, with an honest cost.** After the fix the Internal Researcher
+issues real corpus searches — six in the verification run against zero before —
+and the recovery path fires repeatedly, confirming the model continues to lapse
+into prose on later turns where `tool_choice` is `"auto"`. The cost is latency:
+each recovery adds a turn, and the first agent alone ran for over seventeen
+minutes. A small local model driving a five-agent pipeline is functional but
+markedly slower and less reliable at tool use than the hosted model the
+architecture was developed against, and §7.4 records the end-to-end verification
+as still in progress at the time of writing rather than claiming a result not
+yet obtained.
+
+### 6.3 Criticism of that finding before acting on it
 
 The cross-encoder was **not** removed, for three reasons:
 
@@ -1077,7 +1137,7 @@ re-ranker refines the fusion ranking instead of overriding it. Blend weights of
 0.3–0.5 recovered 70.6% while keeping the re-ranker in place. This is offered as
 a recommendation, not applied silently.
 
-### 6.3 A superseded analysis, retained for the record
+### 6.4 A superseded analysis, retained for the record
 
 > **This analysis is incorrect.** It attributes the retrieval shortfall to
 > table and date extraction. A stage-by-stage attribution (§7.2) later showed
@@ -1219,14 +1279,13 @@ wrong and would survive review: the numbers were real, the comparison was not.
 
 Stated plainly rather than omitted:
 
-- **Generation-model comparison** (`scripts/compare_generators.py`) is
-  implemented and lint-clean but had not finished executing. The harness holds
-  retrieval identical across models and scores correctness, groundedness,
-  citation compliance and latency.
-- **The silver ground-truth set** had not been generated, so every figure here
-  rests on n = 15–18 and all differences are within sampling noise.
-- **RAGAS on the local stack** had not been re-run; the RAGAS figures in §5 are
-  hosted-backend measurements taken before migration and are labelled as such.
+- **End-to-end verification of the five-agent pipeline on the local backend was
+  still running when this report was finalised.** The tool-calling defect and its
+  fix are documented in §6.2 and the fix is confirmed to restore tool use, but a
+  complete four-agent run had not yet finished. Claims elsewhere in this report
+  about the agentic pipeline as a whole derive from hosted-backend runs and
+  should be read that way. The single-agent and `corpus_only` paths are fully
+  verified locally.
 
 These are gaps in evidence, not in implementation: every harness is present,
 tested and documented in the README.

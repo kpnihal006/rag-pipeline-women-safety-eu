@@ -19,6 +19,7 @@ Usage:
 
 import json
 import logging
+import re
 import os
 import sys
 from pathlib import Path
@@ -417,12 +418,20 @@ def _run_agentic_loop(
         agent_tool_calls = 0
 
         for iteration in range(max_iterations):
+            # Small local models drop out of structured tool-calling when the
+            # system prompt is long: llama3.1:8b answers a research instruction
+            # by printing a JSON object as prose instead of emitting a
+            # tool_call, so the agent never touches the corpus. Forcing a tool
+            # call on the FIRST turn restores structured output; later turns
+            # stay on "auto" so the agent can finish rather than looping
+            # forever on required tool use.
+            choice = "required" if (iteration == 0 and tools) else "auto"
             with tracer.span("llm", f"{label}:turn{iteration + 1}") as llm_span:
                 response = client.chat.completions.create(
                     model=AGENT_MODEL,
                     max_tokens=MAX_TOKENS,
                     tools=tools,
-                    tool_choice="auto",
+                    tool_choice=choice,
                     messages=full_messages,
                 )
 
@@ -460,6 +469,25 @@ def _run_agentic_loop(
             full_messages.append(msg)
 
             if finish_reason in ("stop", "end_turn"):
+                # Belt and braces: a model may still describe a tool call in
+                # prose. Recover it rather than silently returning an answer
+                # that was never grounded in a tool result.
+                recovered = _recover_text_tool_calls(msg.content or "", tools)
+                if recovered and iteration + 1 < max_iterations:
+                    tracer.event("recovered tool call emitted as text",
+                                 count=len(recovered))
+                    log.warning("%s emitted %d tool call(s) as text — recovering",
+                                label, len(recovered))
+                    for name, args in recovered:
+                        agent_tool_calls += 1
+                        with tracer.span("tool", f"dispatch:{name}"):
+                            result = _dispatch_tool(name, args, role=role)
+                        full_messages.append({
+                            "role": "user",
+                            "content": f"Result of {name}:\n{result}",
+                        })
+                    continue
+
                 agent_span.attributes["iterations"] = iteration + 1
                 agent_span.attributes["tool_calls"] = agent_tool_calls
                 return msg.content or ""
@@ -490,6 +518,31 @@ def _run_agentic_loop(
         agent_span.attributes["iterations"] = max_iterations
         agent_span.attributes["hit_iteration_cap"] = True
         return "[loop] Maximum iterations reached."
+
+
+def _recover_text_tool_calls(content: str, tools: list[dict]) -> list[tuple[str, str]]:
+    """Extract tool calls a model printed as text instead of emitting properly.
+
+    Returns a list of (tool_name, arguments_json). Only names present in the
+    supplied tool list are accepted, so stray JSON in an answer cannot invoke
+    anything the agent was not granted.
+    """
+    if not content or "{" not in content:
+        return []
+    allowed = {t["function"]["name"] for t in tools}
+    found: list[tuple[str, str]] = []
+    for block in re.findall(r"\{[^{}]*(?:\{[^{}]*\}[^{}]*)*\}", content, re.DOTALL):
+        try:
+            obj = json.loads(block)
+        except json.JSONDecodeError:
+            continue
+        if not isinstance(obj, dict):
+            continue
+        name = obj.get("name") or obj.get("tool") or obj.get("function")
+        args = obj.get("parameters", obj.get("arguments", {}))
+        if isinstance(name, str) and name in allowed:
+            found.append((name, json.dumps(args) if isinstance(args, dict) else "{}"))
+    return found
 
 
 # ---------------------------------------------------------------------------
